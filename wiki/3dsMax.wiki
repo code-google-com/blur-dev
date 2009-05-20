@@ -1,0 +1,5 @@
+#summary Quick overview of Blur's main 3d Studio Max tools.
+
+= Introduction =
+
+This is just a quick overview of some of the Main tools that come with the 3d Studio Max installation package.
