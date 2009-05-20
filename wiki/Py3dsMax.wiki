@@ -14,17 +14,20 @@ function moveToOrigin objs = (
        o.position = [0,0,0]
    )
 )
+
 moveToOrigin( objects )
 }}}
 
 *Python Equivalent*
 {{{
 from Py3dsMax import mxs # Py3dsMax is the root max module created from blurPython.dlx
+
 def moveToOrigin( objs ):
    origin = mxs.Point3( 0, 0, 0 )
    for o in objs:
       print "Moving %s from %s to [0,0,0]." % (o.name,o.position)
       o.position = origin
+
 moveToOrigin( mxs.objects )
 }}}
 
