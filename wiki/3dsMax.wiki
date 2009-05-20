@@ -7,9 +7,9 @@ This is just a quick overview of some of the Main tools that come with the 3d St
  * *Main Tools*
   * [3dsMax#Treegrunt Treegrunt]
   * [3dsMax#blurSelectByName blurSelectByName]
-  * [3dsMax#simpleRenamer simpleRenamer]
-  * [3dsMax#quickName quickName]
-  * [3dsMax#Onion Onion]
+  * [3dsMax#Simple_Renamer Simple Renamer]
+  * [3dsMax#Quick_Name Quick Name]
+  * [3dsMax#the_Onion the Onion]
   * [3dsMax#Render_Elements Render Elements]
 
 == Treegrunt ==
@@ -18,10 +18,10 @@ Blur Script Distribution, an explorer like interface where you can run scripts
 == blurSelectByName ==
 Selection window with renaming using Blur's naming convention
 
-== simpleRenamer ==
+== Simple Renamer ==
 Simple renaming without naming convention
 
-== quickName ==
+== Quick Name ==
 Simple renaming using fast C++ algorithm from BlurDLX.dlx, renames thousands of objects in milliseconds.
 
 == Render Elements ==
