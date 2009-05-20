@@ -4,8 +4,8 @@
 
 This is just a quick overview of some of the Main tools that come with the 3d Studio Max installation package.
 
-* Main Tools
- * [3dsMax#Treegrunt Treegrunt]
- * [3dsMax#BlurSelectByName BlurSelectByName]
- * [3dsMax#SimpleRenamer SimpleRenamer]
- * [3dsMax#QuickName QuickName]
+ * Main Tools
+  * [3dsMax#Treegrunt Treegrunt]
+  * [3dsMax#BlurSelectByName BlurSelectByName]
+  * [3dsMax#SimpleRenamer SimpleRenamer]
+  * [3dsMax#QuickName QuickName]
