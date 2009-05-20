@@ -13,13 +13,11 @@ This is just a quick overview of some of the Main tools that come with the 3d St
 -----------------------------------
 
 === Treegrunt ===
-
 Blur Script Distribution, an explorer like interface where you can run scripts
 
 -----------------------------------
 
 === BlurSelectByName ===
-
 Selection window with renaming using Blur's naming convention
 
 === SimpleRenamer ===
