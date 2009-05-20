@@ -1,2 +1,0 @@
-#labels 3d,studio,max
-# Various tools developed and used inside of 3d Studio Max
