@@ -6,14 +6,14 @@ This is just a quick overview of some of the Main tools that come with the 3d St
 
  * *Main Tools*
   * [3dsMax#Treegrunt Treegrunt]
-  * [3dsMax#BlurSelectByNameBlurSelectByName]
+  * [3dsMax#blurSelectByName blurSelectByName]
   * [3dsMax#SimpleRenamer SimpleRenamer]
   * [3dsMax#QuickName QuickName]
 
 == Treegrunt ==
 Blur Script Distribution, an explorer like interface where you can run scripts
 
-== BlurSelectByName ==
+== blurSelectByName ==
 Selection window with renaming using Blur's naming convention
 
 == SimpleRenamer ==
