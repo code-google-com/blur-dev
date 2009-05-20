@@ -1,4 +1,4 @@
-#summary Python integration into 3d Studio Max
+#summary Integration of Python into 3d Studio Max
 
 = Introduction =
 
