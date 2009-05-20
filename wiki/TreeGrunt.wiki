@@ -1,0 +1,7 @@
+#summary The main code browser
+
+= Introduction =
+
+Blur's Script Distribution system, it is an explorer like interface from where you can startup scripts.
+
+[[Category:3dsMax]]
