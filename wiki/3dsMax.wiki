@@ -6,7 +6,7 @@ This is just a quick overview of some of the Main tools that come with the 3d St
 
  * *Main Tools*
   * [3dsMax#Treegrunt Treegrunt]
-  * [BlurSelectByName]
+  * BlurSelectByName
   * [3dsMax#SimpleRenamer SimpleRenamer]
   * [3dsMax#QuickName QuickName]
 
