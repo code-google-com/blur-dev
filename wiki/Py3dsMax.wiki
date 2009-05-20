@@ -1,0 +1,31 @@
+#summary Python integration into 3d Studio Max
+
+= Introduction =
+
+We've developed a plugin (blurPython.dlx) that connects Python to 3d Studio Max.  All maxscript methods are available using the mxs module and run the same way as they would normally in maxscript, only using a pythonic syntax.
+
+= Examples =
+
+*Maxscript Example*
+{{{
+function moveToOrigin objs = (
+   for o in objs do (
+       print ( "Moving " + o.name + " from " + o.position as string + " to [0,0,0]" )
+       o.position = [0,0,0]
+   )
+)
+moveToOrigin( objects )
+}}}
+
+*Python Equivalent*
+{{{
+from Py3dsMax import mxs # Py3dsMax is the root max module created from blurPython.dlx
+def moveToOrigin( objs ):
+   origin = mxs.Point3( 0, 0, 0 )
+   for o in objs:
+      print "Moving %s from %s to [0,0,0]." % (o.name,o.position)
+      o.position = origin
+moveToOrigin( mxs.objects )
+}}}
+
+-----------------------
