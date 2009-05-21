@@ -21,7 +21,9 @@ moveToOrigin( objects )
 *Python Equivalent*
 {{{
 # Py3dsMax is the root max module created from blurPython.dlx
-# mxs is a class instance within Py3dsMax essentially representing the global namespace of maxscript
+# mxs is an interface to the global namespace of maxscript, whatever methods or variables
+# you would call globally in maxscript (e.g. objects, selection, meshOp, etc.) is
+# accessible by getting it through the mxs instance (e.g. mxs.objects, mxs.selection, etc.)
 from Py3dsMax import mxs 
 
 def moveToOrigin( objs ):
