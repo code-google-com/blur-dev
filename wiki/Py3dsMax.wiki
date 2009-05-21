@@ -20,7 +20,9 @@ moveToOrigin( objects )
 
 *Python Equivalent*
 {{{
-from Py3dsMax import mxs # Py3dsMax is the root max module created from blurPython.dlx
+# Py3dsMax is the root max module created from blurPython.dlx
+# mxs is a class instance within Py3dsMax essentially representing the global namespace of maxscript
+from Py3dsMax import mxs 
 
 def moveToOrigin( objs ):
    # [0,0,0] creates a Point3 in maxscript, but in python creates a list
