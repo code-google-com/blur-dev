@@ -1,5 +1,5 @@
 #summary Tools and Workgroup designed for Softimage | XSI
 
-= Introduction =
-
-There are a variety of tools here.
+= Prerequisites =
+ # Softimage | XSI (http://www.softimage.com/)
+ # Python (the version of the python you will need is on the installer file) (http://www.python.org/)
