@@ -3,11 +3,14 @@
 
 == Prerequisites ==
  # *Softimage | XSI* (http://www.softimage.com/)
- # *Python* (http://www.python.org/download/)
+ # *Python* (http://www.python.org)
   * *Q: What is Python?*
   * *A:* Python is a free, powerful scripting language commonly used in 3d production.  We've decided to use it here at Blur for the basis of most of our scripts and tools and has become an integral part of our pipeline
   * *Q: What version do I need?*
-  * *A:* Depending on the installer you choose, you will need different versions.  Mostly, we've been using Python24 to date, but will be upgrading soon to Python26 & Python26_64 for x64 bit support.  The version & bit information is in the installer name you choose - so for example, BlurSoftimage_python24_x32 is for 32 bit XSI, python24.
+  * *A:* Depending on the installer you choose, you will need different versions.  Mostly, we've been using *Python24* to date, but will be upgrading soon to Python26 & Python26_64 for x64 bit support.  Simply match the version name on the installer to the python version you need (if the installer says python24, you will need Python 2.4, etc.)
+  * *Q: Where can I get it?*
+  * *A:* You can download or see python at its webpage at http://www.python.org/download, but here is a short cut to the links you'll need now:
+   * [http://www.python.org/ftp/python/2.4.4/python-2.4.4.msi Python 2.4 (windows)]
 
 == Installation ==
  # Go to the *[http://code.google.com/p/blur-dev/downloads downloads]* page and select the latest installer for the python version you want.
