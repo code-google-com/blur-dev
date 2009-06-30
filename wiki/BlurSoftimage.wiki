@@ -10,11 +10,11 @@
 
 == Installation ==
  # Go to the [http://code.google.com/p/blur-dev/downloads downloads] page and select the latest installer for the python version you want.
- # Run the installer, this will install code in a variety of places (for more info, see [[#Whats Installed]])
+ # Run the installer, this will install code in a variety of places (for more info, see [#Whats Installed])
  # Once you have run the installer, startup XSI
  # Go to File->Plugin Manager, click on Workgroups->Connect...
  # This will bring up a folder picker, navigate to the blur Workgroup in c:/blur/dev/offline/code/maxscript/treegrunt/XSIWorkgroup
- # If everything is installed correctly, you should receive no errors on the connect, and you should see a Blur menu at the top of your XSI session.  Just click that to bring up the [[Treegrunt]] utility, and you're all connected to the Blur Softimage Toolset!
+ # If everything is installed correctly, you should receive no errors on the connect, and you should see a Blur menu at the top of your XSI session.  Just click that to bring up the TreeGrunt utility, and you're all connected to the Blur Softimage Toolset!
 
 == Whats Installed ==
 
