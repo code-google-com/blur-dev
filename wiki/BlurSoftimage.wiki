@@ -19,12 +19,18 @@
 
 == Production Tools ==
 
- * *BlurBuildShot*
- * *BlurCachePreview*
- * *BlurCacheTool*
- * *BlurImporter*
- * *BlurRenamer*
- * *NotificationManager*
- * *TreeGrunt*
- * *blurOpenScene*
- * *blurRender_Submit*
+The Production Tools are the scripts that are specifically designed to push shots and assets through our pipeline here at Blur.  They may be useful for people outside the studio, but their main use is for pipeline specific needs here - feel free to browse and use, but they may not work for you unless you have installed the full studio toolset.
+
+ * BlurBuildShot - _Generate shots based on layout assets_
+ * BlurCachePreview - _Submits a preview up to the farm_
+ * BlurCacheTool - _Exports out Point Cache & Transform cache information_
+ * BlurImporter - _Import assets from the network_
+ * BlurRenamer - _Rename objects within the scene based on the Blur naming convention_
+ * NotificationManager - _Register for notifications on changes to your shots_
+ * TreeGrunt - _Access all the scripts available on the network_
+ * blurOpenScene - _Handles proper opening and onloading of models to the scene_
+ * blurRender_Submit - _Submit the scene to the farm for rendering_
+
+== General Use Tools ==
+
+The General Use Tools section is more general artist utilities.  Some of these tools are pipeline specific, but most should be just useful scripts to help an artist get their work done.  Since we use Softimage only for Rigging & Animation here, the tools for Softimage are mostly written with those two departments in mind.
