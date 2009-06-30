@@ -11,6 +11,11 @@
   * *Q: Where can I get it?*
   * *A:* You can download or see python at its webpage at http://www.python.org/download, but here is a short cut to the links you'll need now:
    * [http://www.python.org/ftp/python/2.4.4/python-2.4.4.msi Python 2.4 (windows)]
+ # *win32 python packages*
+  * *Q: What are the win32 python packages?*
+  * *A:* This is a free python package that provides access to Windows functionality.  It is needed by Softimage to run Python, as well as our blur code calls methods from it as well.
+  * *Q: Where can I get them?*
+  * *A:* You can download them from source forge [http://sourceforge.net/project/showfiles.php?group_id=78018&package_id=79063 here].  Simply choose the build that corresponds with your version of python.
 
 == Installation ==
  # Make sure you have *Softimage | XSI* and *Python* installed on your machine
