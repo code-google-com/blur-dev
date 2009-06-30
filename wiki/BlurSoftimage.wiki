@@ -3,5 +3,7 @@
 == Prerequisites ==
  # *Softimage | XSI* (http://www.softimage.com/)
  # *Python* (http://www.python.org/download/)
-  * *What is Python?*  -  Python is a free, powerful scripting language commonly used in 3d production.  We've decided to use it here at Blur for the basis of most of our scripts and tools and has become an integral part of our pipeline
-  * *What version do I need?*  -  Depending on the installer you choose, you will need different versions.  Mostly, we've been using Python24 to date, but will be upgrading soon to Python26 & Python26_64 for x64 bit support.  The version & bit information is in the installer name you choose - so for example, BlurSoftimage_python24_x32 is for 32 bit XSI, python24.
+  * *Q: What is Python?*
+  * *A:* Python is a free, powerful scripting language commonly used in 3d production.  We've decided to use it here at Blur for the basis of most of our scripts and tools and has become an integral part of our pipeline
+  * *Q: What version do I need?*
+  * *A:* Depending on the installer you choose, you will need different versions.  Mostly, we've been using Python24 to date, but will be upgrading soon to Python26 & Python26_64 for x64 bit support.  The version & bit information is in the installer name you choose - so for example, BlurSoftimage_python24_x32 is for 32 bit XSI, python24.
