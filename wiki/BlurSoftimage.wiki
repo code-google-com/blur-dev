@@ -1,4 +1,5 @@
 #summary Tools and Workgroup designed for Softimage | XSI
+#labels Documentation
 
 == Prerequisites ==
  # *Softimage | XSI* (http://www.softimage.com/)
