@@ -13,7 +13,7 @@
    * [http://www.python.org/ftp/python/2.4.4/python-2.4.4.msi Python 2.4 (windows)]
 
 == Installation ==
- # Make sure you have Softimage | XSI and Python installed on your machine
+ # Make sure you have *Softimage | XSI* and *Python* installed on your machine
  # Go to the *[http://code.google.com/p/blur-dev/downloads downloads]* page and select the latest installer for the python version you want.
  # Run the installer, this will install code in a variety of places
  # Once you have run the installer, startup XSI
