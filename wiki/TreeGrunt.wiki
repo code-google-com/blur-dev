@@ -1,5 +1,0 @@
-#summary TreeGrunt is the main tool for accessing all the scripts and utilities provided here
-
-= Introduction =
-
-Add your content here.
