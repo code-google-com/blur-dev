@@ -16,3 +16,15 @@
  # Go to File->Plugin Manager, click on Workgroups->Connect...
  # This will bring up a folder picker, navigate to the blur Workgroup in c:/blur/dev/offline/code/maxscript/treegrunt/XSIWorkgroup
  # If everything is installed correctly, you should receive no errors on the connect, and you should see a Blur menu at the top of your XSI session.  Just click that to bring up the TreeGrunt utility, and you're all connected to the Blur Softimage Toolset!
+
+== Production Tools ==
+
+ * *BlurBuildShot*
+ * *BlurCachePreview*
+ * *BlurCacheTool*
+ * *BlurImporter*
+ * *BlurRenamer*
+ * *NotificationManager*
+ * *TreeGrunt*
+ * *blurOpenScene*
+ * *blurRender_Submit*
