@@ -10,26 +10,26 @@
   * *A:* Depending on the installer you choose, you will need different versions.  Mostly, we've been using Python24 to date, but will be upgrading soon to Python26 & Python26_64 for x64 bit support.  The version & bit information is in the installer name you choose - so for example, BlurSoftimage_python24_x32 is for 32 bit XSI, python24.
 
 == Installation ==
- # Go to the [http://code.google.com/p/blur-dev/downloads downloads] page and select the latest installer for the python version you want.
+ # Go to the *[http://code.google.com/p/blur-dev/downloads downloads]* page and select the latest installer for the python version you want.
  # Run the installer, this will install code in a variety of places
  # Once you have run the installer, startup XSI
- # Go to File->Plugin Manager, click on Workgroups->Connect...
- # This will bring up a folder picker, navigate to the blur Workgroup in c:/blur/dev/offline/code/maxscript/treegrunt/XSIWorkgroup
- # If everything is installed correctly, you should receive no errors on the connect, and you should see a Blur menu at the top of your XSI session.  Just click that to bring up the TreeGrunt utility, and you're all connected to the Blur Softimage Toolset!
+ # Go to *File->Plugin Manager*, click on *Workgroups*, then *Connect...*
+ # This will bring up a folder picker, navigate to the blur Workgroup in *c:/blur/dev/offline/code/maxscript/treegrunt/XSIWorkgroup*
+ # If everything is installed correctly, you should receive no errors on the connect, and you should see a Blur menu at the top of your XSI session.  Just click that to bring up the *TreeGrunt* utility, and you're all connected to the Blur Softimage Toolset!
 
 == Production Tools ==
 
 The Production Tools are the scripts that are specifically designed to push shots and assets through our pipeline here at Blur.  They may be useful for people outside the studio, but their main use is for pipeline specific needs here - feel free to browse and use, but they may not work for you unless you have installed the full studio toolset.
 
- * BlurBuildShot - _Generate shots based on layout assets_
- * BlurCachePreview - _Submits a preview up to the farm_
- * BlurCacheTool - _Exports out Point Cache & Transform cache information_
- * BlurImporter - _Import assets from the network_
- * BlurRenamer - _Rename objects within the scene based on the Blur naming convention_
- * NotificationManager - _Register for notifications on changes to your shots_
- * TreeGrunt - _Access all the scripts available on the network_
- * blurOpenScene - _Handles proper opening and onloading of models to the scene_
- * blurRender_Submit - _Submit the scene to the farm for rendering_
+ * *BlurBuildShot* - _Generate shots based on layout assets_
+ * *BlurCachePreview* - _Submits a preview up to the farm_
+ * *BlurCacheTool* - _Exports out Point Cache & Transform cache information_
+ * *BlurImporter* - _Import assets from the network_
+ * *BlurRenamer* - _Rename objects within the scene based on the Blur naming convention_
+ * *NotificationManager* - _Register for notifications on changes to your shots_
+ * *TreeGrunt* - _Access all the scripts available on the network_
+ * *blurOpenScene* - _Handles proper opening and onloading of models to the scene_
+ * *blurRender_Submit* - _Submit the scene to the farm for rendering_
 
 == General Use Tools ==
 
