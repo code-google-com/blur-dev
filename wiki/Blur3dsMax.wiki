@@ -9,7 +9,11 @@
  # Go to the *[http://code.google.com/p/blur-dev/downloads downloads]* page and select the latest installer for the blur 3dsMax package you want to install.
  # Run the installer, this will install code in a variety of places
  # Once you have run the installer, startup 3dsMax
- # Go to your *Customize->User Macros*
+ # Go to your *Customize->Customize User Inteface*
+ # To add a Keyboard map, stay in Keyboard, to create a Toolbar, go to Toolbars
+ # All the default User-Macros are found under the *Blur Grunt Macros* category
+ # You should map the *TreeGrunt* tool to either a hotkey or toolbar, as that is the root tool to run all others.
+ # Start playing away!
 
 == Production Tools ==
 
