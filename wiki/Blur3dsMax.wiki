@@ -1,38 +1,27 @@
 #summary Tools and Libraries designed for Discreet | 3dsMax
 #labels Documentation
 
-== Tools ==
+== Prerequisites ==
+ # *Autodesk | 3dsMax* (http://www.autodesk.com/3dsmax)
 
-This is just a quick overview of some of the Main tools that come with the 3d Studio Max installation package.
+== Installation ==
+ # Make sure you have *Autodesk | XSI*
+ # Go to the *[http://code.google.com/p/blur-dev/downloads downloads]* page and select the latest installer for the blur 3dsMax package you want to install.
+ # Run the installer, this will install code in a variety of places
+ # Once you have run the installer, startup 3dsMax
+ # Go to your *Customize->User Macros*
 
- * *Main Tools*
-  * [3dsMax#Treegrunt Treegrunt]
-  * [3dsMax#the_Onion the Onion]
-  * [3dsMax#Render_Elements Render Elements]
-  * [3dsMax#Element_Storm Element Storm]
-  * [3dsMax#blurSelectByName blurSelectByName]
-  * [3dsMax#Simple_Renamer Simple Renamer]
-  * [3dsMax#Quick_Name Quick Name]
+== Production Tools ==
 
-== Treegrunt ==
-Blur Script Distribution, an explorer like interface where you can run scripts
+The Production Tools are the scripts that are specifically designed to push shots and assets through our pipeline here at Blur.  They may be useful for people outside the studio, but their main use is for pipeline specific needs here - feel free to browse and use, but they may not work for you unless you have installed the full studio toolset.
 
-== the Onion ==
-The Onion is a helper script used to add some advanced features to layer and scene management within 3dsMax.
+ * *blurSelectByName* - _selection window with renaming using blur's naming convention_
+ * *Element Storm* - _beta level node-based system for managing scene states (requires 3rd-Party Heliumn 3dsMax controller)_
+ * *Quick Name* - _simple renaming using fast C++ algorithm from BlurDLX.dlx, renames thousands of objects in milliseconds_
+ * *Render Elements* - _render Pass/Element tools to save and load scene states_
+ * *TreeGrunt* - _access all the scripts available on the network_
+ * *the Onion* - _a helper used to add some advanced features to layer and scene management_
 
-There are a couple versions of the Onion as of current (though we are working on consolidating this).  "the Onion" is the main, production tested version of the tool to be used in conjunction with [3dsMax#Render_Elements Render Elements], "Onion" is a newer version of the tool that has not been pushed past Beta stage to be used in conjunction with [3dsMax#Element_Storm Element Storm].
+== General Use Tools ==
 
-== Render Elements ==
-Render Pass/Element tools to save and load scene states of 3dsMax.  Manages Light Layers (turns on and off lights and their layers) along with atmospherics and alternate properties and materials to allow for advanced render control.
-
-== Element Storm ==
-Currently in Beta stage (and soon to be pushed to the new [Py3dsMax#PyQt Python-3dsMax bindings]), it is the next evolution of [3dsMax#Render_Elements Render Elements].  Using the Helium controller, it creates a node-based flow of scene and render management.
-
-== blurSelectByName ==
-Selection window with renaming using Blur's naming convention
-
-== Simple Renamer ==
-Simple renaming without naming convention
-
-== Quick Name ==
-Simple renaming using fast C++ algorithm from BlurDLX.dlx, renames thousands of objects in milliseconds.
+The General Use Tools section is more general artist utilities.  Some of these tools are pipeline specific, but most should be just useful scripts to help an artist get their work done.  Since we use Softimage only for Rigging & Animation here, the tools for Softimage are mostly written with those two departments in mind.
