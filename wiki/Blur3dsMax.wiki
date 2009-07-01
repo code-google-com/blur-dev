@@ -1,5 +1,5 @@
 #summary Tools and Libraries designed for Autodesk | 3dsMax
-#labels Documentation
+#labels Documentation,Autodesk,3dsMax
 
 == Prerequisites ==
  # *Autodesk | 3dsMax* (http://www.autodesk.com/3dsmax)
@@ -25,3 +25,10 @@ The Production Tools are the scripts that are specifically designed to push shot
 == General Use Tools ==
 
 The General Use Tools section is more general artist utilities.  Some of these tools are pipeline specific, but most should be just useful scripts to help an artist get their work done.
+
+== Libraries ==
+
+We've also developed a few DLL libraries over the years that we are willing to share.  Here are a list of the current ones available in the Blur3dsMax packages.
+
+ * *blurDLX.dlx* - _maxscript utility methods designed for tools developers_
+ * *TransformCache.dlc* - _cache controller that works at the transform level instead of the vertex level - good for working with non-deforming objects (much lighter than PointCache)_
