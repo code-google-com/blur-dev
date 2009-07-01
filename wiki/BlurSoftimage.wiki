@@ -1,8 +1,8 @@
-#summary Tools and Workgroup designed for Softimage | XSI
+#summary Tools and Workgroup designed for Autodesk | Softimage
 #labels Documentation
 
 == Prerequisites ==
- # *Softimage | XSI* (http://www.softimage.com/)
+ # *Autodesk| Softimage* (http://www.softimage.com/)
  # *Python* (http://www.python.org)
   * *Q: What is Python?*
   * *A:* Python is a free, powerful scripting language commonly used in 3d production.  We've decided to use it here at Blur for the basis of most of our scripts and tools and has become an integral part of our pipeline
@@ -18,13 +18,13 @@
   * *A:* You can download them from source forge [http://sourceforge.net/project/showfiles.php?group_id=78018&package_id=79063 here].  Simply choose the build that corresponds with your version of python.
 
 == Installation ==
- # Make sure you have *Softimage | XSI* and *Python* installed on your machine
+ # Make sure you have *Autodesk | Softimage* and *Python* installed on your machine
  # Go to the *[http://code.google.com/p/blur-dev/downloads downloads]* page and select the latest installer for the python version you want.
  # Run the installer, this will install code in a variety of places
- # Once you have run the installer, startup XSI
+ # Once you have run the installer, startup Softimage
  # Go to *File->Plugin Manager*, click on *Workgroups*, then *Connect...*
  # This will bring up a folder picker, navigate to the blur Workgroup in *c:/blur/dev/offline/code/maxscript/treegrunt/XSIWorkgroup*
- # If everything is installed correctly, you should receive no errors on the connect, and you should see a Blur menu at the top of your XSI session.  Just click that to bring up the *TreeGrunt* utility, and you're all connected to the Blur Softimage Toolset!
+ # If everything is installed correctly, you should receive no errors on the connect, and you should see a Blur menu at the top of your Softimage session.  Just click that to bring up the *TreeGrunt* utility, and you're all connected to the Blur Softimage Toolset!
 
 == Production Tools ==
 
