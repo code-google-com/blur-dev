@@ -1,6 +1,7 @@
-#summary Quick overview of Blur's main 3d Studio Max tools.
+#summary Libraries and Tools designed for Discreet | 3dsMax
+#labels Documentation
 
-= Introduction =
+== Tools ==
 
 This is just a quick overview of some of the Main tools that come with the 3d Studio Max installation package.
 
