@@ -1,0 +1,37 @@
+#summary Quick overview of Blur's main 3d Studio Max tools.
+
+= Introduction =
+
+This is just a quick overview of some of the Main tools that come with the 3d Studio Max installation package.
+
+ * *Main Tools*
+  * [3dsMax#Treegrunt Treegrunt]
+  * [3dsMax#the_Onion the Onion]
+  * [3dsMax#Render_Elements Render Elements]
+  * [3dsMax#Element_Storm Element Storm]
+  * [3dsMax#blurSelectByName blurSelectByName]
+  * [3dsMax#Simple_Renamer Simple Renamer]
+  * [3dsMax#Quick_Name Quick Name]
+
+== Treegrunt ==
+Blur Script Distribution, an explorer like interface where you can run scripts
+
+== the Onion ==
+The Onion is a helper script used to add some advanced features to layer and scene management within 3dsMax.
+
+There are a couple versions of the Onion as of current (though we are working on consolidating this).  "the Onion" is the main, production tested version of the tool to be used in conjunction with [3dsMax#Render_Elements Render Elements], "Onion" is a newer version of the tool that has not been pushed past Beta stage to be used in conjunction with [3dsMax#Element_Storm Element Storm].
+
+== Render Elements ==
+Render Pass/Element tools to save and load scene states of 3dsMax.  Manages Light Layers (turns on and off lights and their layers) along with atmospherics and alternate properties and materials to allow for advanced render control.
+
+== Element Storm ==
+Currently in Beta stage (and soon to be pushed to the new [Py3dsMax#PyQt Python-3dsMax bindings]), it is the next evolution of [3dsMax#Render_Elements Render Elements].  Using the Helium controller, it creates a node-based flow of scene and render management.
+
+== blurSelectByName ==
+Selection window with renaming using Blur's naming convention
+
+== Simple Renamer ==
+Simple renaming without naming convention
+
+== Quick Name ==
+Simple renaming using fast C++ algorithm from BlurDLX.dlx, renames thousands of objects in milliseconds.
