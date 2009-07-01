@@ -1,5 +1,5 @@
 #summary Tools and Workgroup designed for Autodesk | Softimage
-#labels Documentation
+#labels Documentation,Softimage,XSI
 
 == Prerequisites ==
  # *Autodesk| Softimage* (http://www.softimage.com/)
