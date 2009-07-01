@@ -1,4 +1,4 @@
-#summary Tools and Libraries designed for Discreet | 3dsMax
+#summary Tools and Libraries designed for Autodesk | 3dsMax
 #labels Documentation
 
 == Prerequisites ==
