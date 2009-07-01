@@ -24,4 +24,4 @@ The Production Tools are the scripts that are specifically designed to push shot
 
 == General Use Tools ==
 
-The General Use Tools section is more general artist utilities.  Some of these tools are pipeline specific, but most should be just useful scripts to help an artist get their work done.  Since we use Softimage only for Rigging & Animation here, the tools for Softimage are mostly written with those two departments in mind.
+The General Use Tools section is more general artist utilities.  Some of these tools are pipeline specific, but most should be just useful scripts to help an artist get their work done.
