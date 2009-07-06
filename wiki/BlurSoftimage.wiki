@@ -24,7 +24,7 @@
   * *Q: I have installed the Blur software, but it still does not show up in XSI, why?*
   * *A:* You need to make sure that XSI can see the Python scripting language and has it set as its language of choice...follow [http://softimage.wiki.softimage.com/index.php/Python_(XSISDK) this XSISDK link] for a tutorial on setting up Python for XSI.
   * *Q: I am still getting errors running python, why?*
-  * *A: * You may need to uninstall your [PYTHON_PAH]\win32com\client\gen_py folder (as described [http://softimage.wiki.softimage.com/index.php/Python_(XSISDK)#Errors_after_re-installation here])
+  * *A: * You may need to uninstall your [PYTHON_PAH]\lib\site-packages\win32com\client\gen_py folder (as described [http://softimage.wiki.softimage.com/index.php/Python_(XSISDK)#Errors_after_re-installation here])
 
 == Installation ==
  # Make sure you have *Autodesk | Softimage* and *Python* installed on your machine
