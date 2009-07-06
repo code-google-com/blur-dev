@@ -2,8 +2,9 @@
 #labels Documentation,Softimage,XSI
 
 == Prerequisites ==
- # *Autodesk| Softimage* (http://www.softimage.com/)
- # *Python* (http://www.python.org)
+ * *Autodesk| Softimage* (http://www.softimage.com/)
+
+ * *Python* (http://www.python.org)
   * *Q: What is Python?*
   * *A:* Python is a free, powerful scripting language commonly used in 3d production.  We've decided to use it here at Blur for the basis of most of our scripts and tools and has become an integral part of our pipeline
   * *Q: What version do I need?*
@@ -11,12 +12,14 @@
   * *Q: Where can I get it?*
   * *A:* You can download or see python at its webpage at http://www.python.org/download, but here is a short cut to the links you'll need now:
    * [http://www.python.org/ftp/python/2.4.4/python-2.4.4.msi Python 2.4 (windows)]
- # *win32 python packages*
+
+ * *win32 python packages*
   * *Q: What are the win32 python packages?*
   * *A:* This is a free python package that provides access to Windows functionality.  It is needed by Softimage to run Python, as well as our blur code calls methods from it as well.
   * *Q: Where can I get them?*
   * *A:* You can download them from source forge [http://sourceforge.net/project/showfiles.php?group_id=78018&package_id=79063 here].  Simply choose the build that corresponds with your version of python.
- # *Python as the scripting Language of XSI*
+
+ * *Python as the Scripting Language of XSI*
   * *Q: I have installed the Blur software, but it still does not show up in XSI, why?*
   * *A:* You need to make sure that XSI can see the Python scripting language and has it set as its language of choice...follow [http://softimage.wiki.softimage.com/index.php/Python_(XSISDK) this XSISDK link] for a tutorial on setting up Python for XSI.
 
