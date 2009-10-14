@@ -1,6 +1,6 @@
 #summary Core modules and libraries needed to run Blur code
 
-= What is it? =
+== Getting Started ==
 
 The BlurCore is a series of installers that'll install the base libraries and code needed to run all other blur modules.  These include:
 
