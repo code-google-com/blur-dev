@@ -12,9 +12,9 @@ Python is a powerful scripting language that is both fast and flexible.  To run 
 
 === Additional Info ===
 
-Learn more about Python: [http://www.python.org]
-Download Python24 (x32): [http://www.python.org/download/releases/2.4.6/]
-Download Python26 (x64): [http://www.python.org/download/releases/2.6.3/]
+ * Learn more about Python: [http://www.python.org]
+ * Download Python24 (x32): [http://www.python.org/download/releases/2.4.6/]
+ * Download Python26 (x64): [http://www.python.org/download/releases/2.6.3/]
 
 == Qt ==
 
@@ -24,22 +24,29 @@ Qt is a powerful programming framework developed by Trolltech (now ownded by Nok
 
 Its also completely open-source under the LGPL license, allowing you to easily get started coding in a standard, elegant way.
 
+We are currently using Qt 4.5 from Nokia.
+
 === Why do I need Blur's installer? ===
 
 Our installers will create our own compiled Qt Dll's in the c:/blur/common folder.  You will need these libraries if you want to run the Blur packages, but they are not full Qt installs.  They don't replace out any default Qt installations, and it is recommended for developers (not needed in distribution) to download the open-source Qt development set.  We use the Qt Designer for almost all of our graphics as its the fastest and easiest way to abstract the Model from the View.
 
 === Additional Info ===
 
-Learn more about Qt: [http://www.trolltech.org]
-Download: [http://blur-dev.googlecode.com/download]
+ * Learn more about Qt: [http://qt.nokia.com/]
+ * Download Qt: [http://qt.nokia.com/downloads]
+ * Download Blur Dlls: [http://blur-dev.googlecode.com/download]
 
 == PyQt ==
 
 === What is PyQt? ===
 
-PyQt is the pythonic bindings to the Qt framework - opening up all that amazing power of Qt to the Python language.  With it, we're able to keep developing cross-platform applications, but with the speed and ease that Python offers.
+PyQt is the pythonic bindings to the Qt framework - opening up all that amazing power of Qt to the Python language.  With it, we're able to keep developing cross-platform applications, but with the speed and ease that Python offers. 
+
+=== Why do I need Blur's installer? ===
+
+We have made our own compilation of PyQt that you will need to run in conjunction with our Dll's (we have x32 and x64 bit versions)
 
 === Additional Info ===
 
-Learn more about PyQt: [http://www.riverbankcomputing.co.uk/news]
-Download: [http://blur-dev.googlecode.com/download]
+ * Learn more about PyQt: [http://www.riverbankcomputing.co.uk/news]
+ * Download Blur PyQt: [http://blur-dev.googlecode.com/download]
