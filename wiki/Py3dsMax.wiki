@@ -2,7 +2,7 @@
 
 == Prerequisites ==
 
- * You will need the *[BlurCore]* modules
+ * You will need *[BlurCore]*
  * You will need *Python*
  * You will need *Autodesk | 3dsMax* ([http://www.autodesk.com/3dsmax])
 
@@ -12,15 +12,24 @@ Here at Blur we've developed a way to integrate the Python ([http://www.python.o
 
 For faster development, we've also integrated the PyQt framework to allow development of Qt applications instead of MAXScript rollouts.
 
-== How do I get it? ==
-
-You'll need to first download the BlurCore libraries, and then decide upon which version of 3dsMax & Python you'll need.
+== What versions does it support? ==
 
 Currently, we are supporting:
 
-  * 3dsMax 9, 2008 (as Max10), and 2009
-  * For all x32 bit versions, we're supporting Python24
-  * For all x64 bit versions, we're supporting Python26
+  * Autodesk|3dsMax 
+
+     * max9
+     * max2008 (as max10)
+     * max2009
+
+  * For all x32 bit versions: Python24
+  * For all x64 bit versions: Python26 x64
+
+
+== How do I get it? ==
+
+ # Download and install [BlurCore]
+ # Download and install the Py3dsMax package from the downloads site
 
 == How Does it Work? ==
 
