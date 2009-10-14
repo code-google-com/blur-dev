@@ -1,0 +1,31 @@
+#summary Integration of Python and PyQt into 3d Studio Max
+
+== Prerequisites ==
+
+ * You will need *[BlurCore]*
+ * You will need *Python*
+ * You will need *Autodesk | Softimage* ([http://www.autodesk.com/3dsmax])
+
+== What is it? ==
+
+Here at Blur we've developed a way to integrate the PyQt PyQt framework to allow development of Qt applications instead of default Softimage GUI development.  This allows for much faster and more robust tools applications to tie together production.
+
+== What versions does it support? ==
+
+Currently, we are supporting:
+
+  * Python24 (x32)
+  * Python26 (x64)
+  * Autodesk | Softimage
+  * Softimage| XSI
+
+== How do I get it? ==
+
+ # Download and install [BlurCore]
+ # Download and install PySoftimage from [http://code.google.com/p/blur-dev/downloads/list]
+
+This will install a workgroup into c:/blur/dev/offline/workgroups folder called xsi_all.  This package will link to the blur site-package's wingui module to allow the connection to PyQt.  
+
+It also develops a site-package within the workgroup itself (under xsi_all/data/site-packages) to allow you to easily install your own modules into the workgroup - as well as register a global PySoftimage package with common functionality, registering a Python menu for the Softimage side bar that contains the PyQt logger and script execution.
+
+== How Does it Work? ==
