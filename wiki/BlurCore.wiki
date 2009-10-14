@@ -48,7 +48,7 @@ We have made our own compilation of PyQt that you will need to run in conjunctio
 
 ==== Additional Info ====
 
- * Learn more about PyQt: [http://www.riverbankcomputing.co.uk/news]
+ * Learn more about PyQt: [http://www.riverbankcomputing.com]
  * Download Blur PyQt: [http://code.google.com/p/blur-dev/downloads/list]
 
 == Blur Libs ==
