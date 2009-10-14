@@ -1,3 +1,21 @@
-=== Getting Started ===
+=== Quick Links ===
 
- # PreRequisites: [BlurCore|Python]
+*Required Modules*
+
+ * [BlurCore]
+
+*Python Packages*
+
+ * [Py3dsMax]
+ * [PySoftimage]
+ 
+*Applications*
+
+ * [Assburner]
+ * [Assfreezer]
+ * [Trax]
+
+*Tools & Scripts*
+
+ * [Blur3dsMax]
+ * [BlurSoftimage]
