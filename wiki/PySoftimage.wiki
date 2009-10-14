@@ -4,7 +4,7 @@
 
  * You will need *[BlurCore]*
  * You will need *Python*
- * You will need *Autodesk | Softimage* ([http://www.autodesk.com/Softimage])
+ * You will need *Autodesk | Softimage* ([http://usa.autodesk.com/adsk/servlet/pc/index?id=13571168&siteID=123112])
 
 == What is it? ==
 
