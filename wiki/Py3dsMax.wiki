@@ -17,7 +17,6 @@ For faster development, we've also integrated the PyQt framework to allow develo
 Currently, we are supporting:
 
   * Autodesk|3dsMax 
-
      * max9
      * max2008 (as max10)
      * max2009
