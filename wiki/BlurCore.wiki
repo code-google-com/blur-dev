@@ -6,7 +6,7 @@ The BlurCore is a series of installers that'll install the base libraries and co
 
 == Python ==
 
-=== What is Python? ===
+==== What is Python? ====
 
 Python is a powerful scripting language that is both fast and flexible.  To run Blur code, you will need to download and install python onto your box.  Currently, we use Python24 for x32 bit python/applications and Python26 for x64 bit python/applications.
 
