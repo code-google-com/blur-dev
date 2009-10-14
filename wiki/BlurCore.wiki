@@ -34,7 +34,7 @@ Our installers will create our own compiled Qt Dll's in the c:/blur/common folde
 
  * Learn more about Qt: [http://qt.nokia.com/]
  * Download Qt: [http://qt.nokia.com/downloads]
- * Download Blur Dlls: [http://blur-dev.googlecode.com/download]
+ * Download Blur Dlls: [http://blur-dev.googlecode.com/downloads/list]
 
 == PyQt ==
 
@@ -49,4 +49,4 @@ We have made our own compilation of PyQt that you will need to run in conjunctio
 ==== Additional Info ====
 
  * Learn more about PyQt: [http://www.riverbankcomputing.co.uk/news]
- * Download Blur PyQt: [http://blur-dev.googlecode.com/download]
+ * Download Blur PyQt: [http://blur-dev.googlecode.com/downloads/list]
