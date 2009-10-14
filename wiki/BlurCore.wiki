@@ -50,3 +50,32 @@ We have made our own compilation of PyQt that you will need to run in conjunctio
 
  * Learn more about PyQt: [http://www.riverbankcomputing.co.uk/news]
  * Download Blur PyQt: [http://code.google.com/p/blur-dev/downloads/list]
+
+== Blur Libs ==
+
+==== What are the Blur Libs? ====
+
+These are common libraries that we have developed that are used across multiple applications in the studio.  They'll be installed into the c:/blur/common folder and accessed by most of our applications, which may or may not be used or needed depending on the additional modules and packages you download.
+
+==== What libraries are included? ===
+
+ * LibStone    -- Database connectivity and management
+ * LibClasses  -- Base C++ Database model for the Blur Studio database
+
+==== Additional Info ====
+
+ * Download Blur Libs: [http://code.google.com/p/blur-dev/downloads/list]
+
+== Blur Python ==
+
+==== What is the Blur Python? ====
+
+Blur Python is a site package that is treated as the root starting point for all blur python scripts.  It connects to the general management system for the studio and initializes all the base import paths for additional libraries, modules and packages not installed into the python site-packages.
+
+This also contains the wingui package which utilizes the PyQt binding of the QtWinMigrate module to allow the connection of PyQt into any MFC application.
+
+This will be installed into your [PYTHON_PATH]/Lib/site-packages/blur folder.
+
+==== Additional Info ====
+
+ * Download Blur Python: [http://code.google.com/p/blur-dev/downloads/list]
