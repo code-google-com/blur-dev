@@ -26,7 +26,7 @@ Currently, we are supporting:
 == How do I get it? ==
 
  # Download and install [BlurCore]
- # Download and install the Py3dsMax package from the downloads site
+ # Download and install Py3dsMax from [http://code.google.com/p/blur-dev/downloads/list]
 
 == How Does it Work? ==
 
