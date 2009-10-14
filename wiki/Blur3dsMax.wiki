@@ -2,12 +2,30 @@
 #labels Documentation,Autodesk,3dsMax
 
 == Prerequisites ==
- # *Autodesk | 3dsMax* (http://www.autodesk.com/3dsmax)
 
-== Installation ==
- # Make sure you have *Autodesk | XSI*
- # Go to the *[http://code.google.com/p/blur-dev/downloads downloads]* page and select the latest installer for the blur 3dsMax package you want to install.
- # Run the installer, this will install code in a variety of places
+ * You will need *[BlurCore]*
+ * You will need *Python*
+ * You will need *Autodesk | 3dsMax* ([http://www.autodesk.com/3dsmax])
+
+== What is it? ==
+
+These are various tools and utilities developed over the years to speed up the creation of creative content using 3d Studio Max.
+
+== What versions does it support? ==
+
+Currently, we are supporting:
+
+  * Python24 (x32)
+  * Python26 (x64)
+  * Autodesk|3dsMax (x32 & x64)
+     * max9
+     * max2008 (as max10)
+     * max2009
+
+== How do I get it? ==
+
+ # Download and install [BlurCore]
+ # Download and install Blur3dsMax from [http://code.google.com/p/blur-dev/downloads/list]
  # Once you have run the installer, startup 3dsMax
  # Go to your *Customize->Customize User Inteface*
  # To add a Keyboard map, stay in Keyboard, to create a Toolbar, go to Toolbars
@@ -15,7 +33,9 @@
  # You should map the *TreeGrunt* tool to either a hotkey or toolbar, as that is the root tool to run all others.
  # Start playing away!
 
-== Production Tools ==
+== How Does it Work? ==
+
+=== Production Tools ===
 
 The Production Tools are the scripts that are specifically designed to push shots and assets through our pipeline here at Blur.  They may be useful for people outside the studio, but their main use is for pipeline specific needs here - feel free to browse and use, but they may not work for you unless you have installed the full studio toolset.
 
@@ -26,11 +46,11 @@ The Production Tools are the scripts that are specifically designed to push shot
  * *TreeGrunt* - _access all the scripts available on the network_
  * *the Onion* - _a helper used to add some advanced features to layer and scene management_
 
-== General Use Tools ==
+=== General Use Tools ====
 
 The General Use Tools section is more general artist utilities.  Some of these tools are pipeline specific, but most should be just useful scripts to help an artist get their work done.
 
-== Libraries ==
+=== Libraries ===
 
 We've also developed a few DLL libraries over the years that we are willing to share.  Here are a list of the current ones available in the Blur3dsMax packages.
 
