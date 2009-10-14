@@ -1,8 +1,10 @@
-#summary Integration of Python into 3d Studio Max
+#summary Integration of Python and PyQt into 3d Studio Max
 
-= Introduction =
+= What is it? =
 
-We've developed a plugin (blurPython.dlx) that connects Python to 3d Studio Max.  All maxscript methods are available using the mxs module and run the same way as they would normally in maxscript, only using a pythonic syntax.
+Here at Blur we've developed a way to integrate the Python [www.python.org] programming language into the 3d Studio Max application.  By mapping the basic MAXScript value class to the basic Python PyObject class, we're able to expose MAXScript functionality as a Python module.  All maxscript methods are available using the mxs module and run the same way as they would normally in maxscript, only using a pythonic syntax.
+
+For faster development, we've also integrated the PyQt framework to allow development of Qt applications instead of MAXScript rollouts.
 
 = Examples =
 
