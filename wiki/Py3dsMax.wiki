@@ -16,14 +16,12 @@ For faster development, we've also integrated the PyQt framework to allow develo
 
 Currently, we are supporting:
 
-  * Autodesk|3dsMax 
+  * Python24 (x32)
+  * Python26 (x64)
+  * Autodesk|3dsMax (x32 & x64)
      * max9
      * max2008 (as max10)
      * max2009
-
-  * For all x32 bit versions: Python24
-  * For all x64 bit versions: Python26 x64
-
 
 == How do I get it? ==
 
