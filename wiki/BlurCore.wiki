@@ -74,7 +74,7 @@ Blur Python is a site package that is treated as the root starting point for all
 
 This also contains the wingui package which utilizes the PyQt binding of the QtWinMigrate module to allow the connection of PyQt into any MFC application.
 
-This will be installed into your [PYTHON_PATH]/Lib/site-packages/blur folder.
+This will be installed into your PYTHON_PATH/Lib/site-packages/blur folder.
 
 ==== Additional Info ====
 
@@ -89,7 +89,7 @@ Once you have installed and are running all the prerequisites for the BlurCore p
 
  * AssBurner
  * AssFreezer
- * TraX
+ * [Trax]
 
  * Blur3dsMax
  * BlurSoftimage
