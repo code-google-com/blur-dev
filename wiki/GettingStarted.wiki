@@ -11,5 +11,5 @@
  # Py3dsMax   - Integrates Python and PyQt into the 3dsMax application
  # Blur3dsMax - Scripts and Tools that help make 3dsMax better (includes Py3dsMax)
 
- # PySoftimage   - Standard Workgroup for common Softimage functions and PyQt integration
+ # PySoftimage   - Integrates PyQt as a GUI framework into Softimage
  # BlurSoftimage - Scripts and Tools that help make Softimage better (includes PySoftimage)
