@@ -1,0 +1,15 @@
+#summary Step-by-step installation instructions for the Blur API
+
+=== Download and Installation ===
+
+*Step 1:* You'll need to download and install the core libraries that all the packages require:
+
+ # BlurCore
+
+*Step 2:* Next you can download and install any additional packages that suit your needs
+
+ # Py3dsMax   - Integrates Python and PyQt into the 3dsMax application
+ # Blur3dsMax - Scripts and Tools that help make 3dsMax better (includes Py3dsMax)
+
+ # PySoftimage   - Standard Workgroup for common Softimage functions and PyQt integration
+ # BlurSoftimage - Scripts and Tools that help make Softimage better (includes PySoftimage)
