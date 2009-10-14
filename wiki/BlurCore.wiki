@@ -1,0 +1,45 @@
+#summary Core modules and libraries needed to run Blur code
+
+= What is it? =
+
+The BlurCore is a series of installers that'll install the base libraries and code needed to run all other blur modules.  These include:
+
+== Python ==
+
+=== What is Python? ===
+
+Python is a powerful scripting language that is both fast and flexible.  To run Blur code, you will need to download and install python onto your box.  Currently, we use Python24 for x32 bit python/applications and Python26 for x64 bit python/applications.
+
+=== Additional Info ===
+
+Learn more about Python: [http://www.python.org]
+Download Python24 (x32): [http://www.python.org/download/releases/2.4.6/]
+Download Python26 (x64): [http://www.python.org/download/releases/2.6.3/]
+
+== Qt ==
+
+=== What is Qt? ===
+
+Qt is a powerful programming framework developed by Trolltech (now ownded by Nokia).  It is a cross-platform framework that allows a programmer to easily develop for all the major operating systems without having to change any code.
+
+Its also completely open-source under the LGPL license, allowing you to easily get started coding in a standard, elegant way.
+
+=== Why do I need Blur's installer? ===
+
+Our installers will create our own compiled Qt Dll's in the c:/blur/common folder.  You will need these libraries if you want to run the Blur packages, but they are not full Qt installs.  They don't replace out any default Qt installations, and it is recommended for developers (not needed in distribution) to download the open-source Qt development set.  We use the Qt Designer for almost all of our graphics as its the fastest and easiest way to abstract the Model from the View.
+
+=== Additional Info ===
+
+Learn more about Qt: [http://www.trolltech.org]
+Download: [http://blur-dev.googlecode.com/download]
+
+== PyQt ==
+
+=== What is PyQt? ===
+
+PyQt is the pythonic bindings to the Qt framework - opening up all that amazing power of Qt to the Python language.  With it, we're able to keep developing cross-platform applications, but with the speed and ease that Python offers.
+
+=== Additional Info ===
+
+Learn more about PyQt: [http://www.riverbankcomputing.co.uk/news]
+Download: [http://blur-dev.googlecode.com/download]
