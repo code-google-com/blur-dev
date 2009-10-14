@@ -1,12 +1,18 @@
 #summary Integration of Python and PyQt into 3d Studio Max
 
-= What is it? =
+== Prerequisites ==
+
+ * You will need the [BlurCore] modules
+ * You will need Python (see [BlurCore] for specific info)
+ * You will need Autodesk | 3dsMax
+
+== What is it? ==
 
 Here at Blur we've developed a way to integrate the Python ([http://www.python.org]) programming language into the 3d Studio Max application.  By mapping the basic MAXScript value class to the basic Python PyObject class, we're able to expose MAXScript functionality as a Python module.  All maxscript methods are available using the mxs module and run the same way as they would normally in maxscript, only using a pythonic syntax.
 
 For faster development, we've also integrated the PyQt framework to allow development of Qt applications instead of MAXScript rollouts.
 
-= How do I get it? =
+== How do I get it? ==
 
 You'll need to first download the BlurCore libraries, and then decide upon which version of 3dsMax & Python you'll need.
 
@@ -16,7 +22,7 @@ Currently, we are supporting:
   * For all x32 bit versions, we're supporting Python24
   * For all x64 bit versions, we're supporting Python26
 
-= Examples =
+== How Does it Work? ==
 
 *Maxscript Example*
 {{{
