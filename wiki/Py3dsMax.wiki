@@ -2,9 +2,9 @@
 
 == Prerequisites ==
 
- * You will need the [BlurCore] modules
- * You will need Python (see [BlurCore] for specific info)
- * You will need Autodesk | 3dsMax
+ * You will need the *[BlurCore]* modules
+ * You will need *Python* (see [BlurCore] for specific info)
+ * You will need *Autodesk|3dsMax* ([http://www.autodesk.com/3dsmax])
 
 == What is it? ==
 
