@@ -6,6 +6,16 @@ Here at Blur we've developed a way to integrate the Python ([http://www.python.o
 
 For faster development, we've also integrated the PyQt framework to allow development of Qt applications instead of MAXScript rollouts.
 
+= How do I get it? =
+
+You'll need to first download the BlurCore libraries, and then decide upon which version of 3dsMax & Python you'll need.
+
+Currently, we are supporting:
+
+  * 3dsMax 9, 2008 (as Max10), and 2009
+  * For all x32 bit versions, we're supporting Python24
+  * For all x64 bit versions, we're supporting Python26
+
 = Examples =
 
 *Maxscript Example*
