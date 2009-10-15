@@ -45,7 +45,7 @@ dialog.show()
 
 }}}
 
-So, this is a very simple example.  And while it may seem right now in this simple of an example that there is much benefit from creating PyQt dialogs vs. Maxscript Rollouts - believe me, as you start designing more complex tools, it becomes invaluable.
+So, this is a very simple example.  And while it may seem right now in this simple of an example that there is not much benefit from creating PyQt dialogs vs. Maxscript Rollouts - believe me, as you start designing more complex tools, it becomes invaluable.
 
 === Dialogs vs. Windows ===
 
