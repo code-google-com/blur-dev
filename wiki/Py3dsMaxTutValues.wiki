@@ -1,12 +1,14 @@
 #summary Working with the Py3dsMax module
 #labels Python,3dsMax,Tutorial
 
-== Accessing 3dsMx Values ==
+== Accessing 3dsMax Values ==
 
 So, now that we know a little bit about the basic differences and similarities between MAXScript and Python as languages...how do we work with Python and 3dsMax together?
 
-There are actually two ways, depending on how you want to go about designing your tool (and this decision should be made entirely based on your needs)
+The blurPython dll generates a Py3dsMax python module from which you can access basic 3dsMax values and methods.  The main one you'll be working with is the mxs submodule:
 
-== Running Python inside MAXScript ==
+{{{
+from Py3dsMax import mxs
+}}}
 
-== Running MAXScript inside Python ==
+=== What is the mxs module? ===
