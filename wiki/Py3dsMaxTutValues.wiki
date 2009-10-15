@@ -85,3 +85,5 @@ mxs.redrawViews()             # update the scene to reflect the position & radiu
 }}}
 
 === Next Topic ===
+
+[Py3dsMaxTutDiffs Maxscript/Python Differences ]
