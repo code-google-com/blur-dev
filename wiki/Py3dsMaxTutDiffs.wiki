@@ -71,3 +71,5 @@ mxs.getProperty( obj, 'pos.controller' ) # returns a controller
 While this isn't true for every property, you will run into some quirks when converting a script from one language to another.  When this happens, you'll have to look up for an alternative way to access the information you're trying to get at.
 
 === Next Topic ===
+
+[Py3dsMaxTutQt PyQt User Interfaces]
