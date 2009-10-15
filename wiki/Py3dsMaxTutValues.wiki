@@ -66,8 +66,8 @@ s.pos = [20,20,20]  # set the position to a ... list?
 If you just ran the above code - you'll notice that a couple things didn't turn out the way you were expecting.  Why?
 
 A couple reasons:
- * In MAXScript, every line inherently calls a refresh to the scene, unless you disable the scene redraw, in Python - the scene won't refresh automatically.
- * In MAXScript, typing [20,20,20] creates a Point3 value instance.  In Python, typing [20,20,20] creates a list with 3 items.  Obviously, you cannot set a sphere's location to a list.
+ * In Maxscript, every line inherently calls a refresh to the scene, unless you disable the scene redraw, in Python - the scene won't refresh automatically.
+ * In Maxscript, typing [[20,20,20]] creates a Point3 value instance.  In Python, typing [[20,20,20]] creates a list with 3 items.  Obviously, you cannot set a sphere's location to a list.
 
 *What now? Can Python not do everything MAXScript can do?*
 
