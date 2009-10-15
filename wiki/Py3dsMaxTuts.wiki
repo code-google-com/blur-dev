@@ -1,4 +1,5 @@
 #summary Python and 3dsMax Tutorials
+#labels Python,3dsMax,Tutorial
 
 == Introduction ==
 
@@ -37,6 +38,8 @@ print a[1]          /* result: 1  - MAXScript has 1 based arrays */
 print a[a.count]    /* result: 20 - MAXScript can access the last index of their arrays */
 print a.count       /* result: 5 */
 
+a[1] = 10           /* set the item at the first index to 10 */
+a[a.count] 
 append a 15         /* adds item to the end of the array */
 insertItem a 1 15   /* inserts 15 at the very beginning of the array */
 findItem a 15       /* returns the index of the first instance of the item */
@@ -51,11 +54,13 @@ a = for obj in objects where isKindOf obj Editable_Mesh collect obj
 # Lists - Python's Array
 a = [ 1, 2, 3, 8, 20 ]
 print a[0]          # result: 1 - Python has 0 based lists
-print a[len(a)-1]   # result: 20 - Python cannot access the last index of their lists
-print a[-1]         # result: 20 - But, they can do a reverse lookup: if an index is
+print a[-1]         # result: 20 - Python cannot access the last index of their lists
+                    # but they can do a reverse lookup: if an index is
                     # negative, then its taking the index relative to the end
 print len(a)        # result: 5  - The way to calculate the length of a list
 
+a[0] = 10           # set the item at first index to 10
+a[-1] = 10          # set the item at the last index to 10
 a.append( 15 )      # adds item to the end of the list
 a.insert( 0, 15 )   # inserts 15 at the very beginning of the list
 a.index( 15 )       # returns the index of the first instance of the item
@@ -63,4 +68,37 @@ a.remove( 15 )      # removes the first item from the desired list
 
 # Creating a list as a collection
 a = [ obj for obj in mxs.objects if mxs.isKindOf( obj, mxs.Editable_Mesh ) ]
+
+#--------------------------
+
+# Tuples - Static Lists
+t = (1,2,3,8,20)
+
+# Accessing is the same as lists
+print a[0]
+print a[-1]
+print len(a)
+
+# But you cannot change or modify tuples
+a[0] = 10         # Crashes
+a.append( 10 )    # Crashes
+# etc.
+
+#--------------------------
+
+# Dictionaries - Not available in MAXscript - but these are hash table containers
+# Instead of storing indexes, you can store anything as a key
+
+d  = { 'a': 10, 'b': 20, 'c': 30 }
+d2 = { 1: 'a', 20: 'b', 30: 'c' }
+
+# Dictionaries are very useful for storing data, and is very fast lookups
+# however they are not ordered, so you will not get your data back in the order you store it
+
+print d[ 'a' ]     # Access the 'a' key
+print d2[ 1 ]      # Access the 1 key
+
+# For more information on dictionaries, visit the python documentation online
+}}}
+
 }}}
