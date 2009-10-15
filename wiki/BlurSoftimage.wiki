@@ -5,8 +5,9 @@
 
  * You will need *[BlurCore]*
  * You will need *Python*
- * You will need *win32 python packages* (required for XSI: download [http://sourceforge.net/project/showfiles.php?group_id=78018&package_id=79063 here])
  * You will need *Autodesk| Softimage* (http://www.softimage.com/)
+
+ * You will need *win32 python packages* (required for XSI: download [http://sourceforge.net/project/showfiles.php?group_id=78018&package_id=79063 here])
 
  * You will need to setup *Python as the Scripting Language of XSI*
   * *Q: I have installed the Blur software, but it still does not show up in XSI, why?*
