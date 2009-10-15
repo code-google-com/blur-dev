@@ -29,6 +29,8 @@ Why does the python code break?  Why can I access the controller property in max
 
 === Controller Example #2 ===
 
+Consider the following code:
+
 *Maxscript Test*
 {{{
 obj = Sphere()
