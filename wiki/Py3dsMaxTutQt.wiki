@@ -21,38 +21,58 @@ To really get started understanding Qt, you should read up about it on their [ht
 {{{
 rollout uiMainROLL "Rollout Item" (
    button uiTestBTN "Test"
-
-   on uiTestBTN clicked do ( print "Button Clicked" )
 )
 createDialog uiMainROLL
 }}}
 
 Now, there are a bunch of ways to create Qt widgets and dialogs.  This would be the simplest:
 
-*Python & PyQt*
+*Python*
 {{{
 # Use the blur.wingui package vs. the default PyQt4 packages for windows and dialogs
 # because these items contain 3dsMax specific code needed to run
 
 from blur.wingui import Dialog
-
-# Every other widget can come from default PyQt
 from PyQt4.QtGui import QPushButton
 
-# Create the dialog and add the button
+# Create the dialog
 dialog = Dialog()
 button = QPushButton( dialog )
 button.setText( 'Test' )
 
-# Widgets in PyQt are connected to methods through signals and slots
-from PyQt4.QtCore import SIGNAL
-
-def handleClicked():
-   print 'Button Clicked'
-
-dialog.connect( button, SIGNAL( 'clicked()' ), handleClicked )
-
-# Create the dialog
+# Launch the dialog
 dialog.show()
 
 }}}
+
+So, this is a very simple example.  And while it may seem right now in this simple of an example that there is much benefit from creating PyQt dialogs vs. Maxscript Rollouts - believe me, as you start designing more complex tools, it becomes invaluable.
+
+=== Dialogs vs. Windows ===
+
+=== Sub-Classing ===
+
+While the above example created a dialog and then added a button to it, that is not the generally preferred method to creating dialogs.  Normally, you will subclass a Dialog and create your own Dialog instance.
+
+If you aren't up to speed on subclassing from the [Py3dsMaxTutClasses Structs & Classes] page, then you should get up to speed on how it works doing Python/PyQt docs and tutorials.
+
+*Python*
+{{{
+from blur.wingui  import Dialog
+from PyQt4.QtGui  import QPushButton
+
+class MyDialog( Dialog ):
+   def __init__( self ):
+      Dialog.__init__( self )
+      
+      button = QPushButton( self )
+      button.setText( 'Test' )
+
+dialog = MyDialog()
+dialog.show()
+}}}
+
+=== Qt Designer ===
+
+One of the main strengths that you can get from Qt is the Designer.  Qt does a good job of creating a true separation between code and graphics.
+
+You can drag and drop widgets onto your dialog, save out an xml (*.ui) file that can be loaded in on the fly.  It also has Layouts.  Layouts allow you to easily create *resizable* dialogs (something that was always a problem in Maxscript rollouts)
