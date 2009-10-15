@@ -1,0 +1,7 @@
+#summary Difference between Structs and Classes
+
+= Structs & Classes =
+
+== Next Topic ==
+
+[Py3dsMaxTutValues Accessing 3dsMax Values]
