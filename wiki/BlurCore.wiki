@@ -82,14 +82,4 @@ This will be installed into your PYTHON_PATH/Lib/site-packages/blur folder.
 
 == Where to from here? ==
 
-Once you have installed and are running all the prerequisites for the BlurCore packages, you can decide what additional tools, scripts and packages you wish to run.
-
- * Py3dsMax
- * PySoftimage
-
- * AssBurner
- * AssFreezer
- * [Trax]
-
- * Blur3dsMax
- * BlurSoftimage
+Once you have installed and are running all the prerequisites for the BlurCore packages, you can decide what additional tools, scripts and packages you wish to run.  All of our packages can be located on the SideBar of the current page (on your left)
