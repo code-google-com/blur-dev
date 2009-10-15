@@ -95,4 +95,4 @@ print d2[ 1 ]      # Access the 1 key
 
 === Next Topic ===
 
-[Py3dsMaxTutValues Accessing 3dsMax Values]
+[Py3dsMaxTutClasses Structs & Classes]
