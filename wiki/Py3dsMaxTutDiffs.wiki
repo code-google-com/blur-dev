@@ -1,14 +1,71 @@
 #summary Examples of some differences between MAXScript and Python
 #labels Python,3dsMax,Tutorial
 
-= Introduction =
+== Maxscript/Python Differences ==
 
-Add your content here.
+Everything that you can do with maxscript, you can do with python.  However, a lot of us aren't programming maxscript the way it was originally designed, we've become very accustomed to some of the programmatic shortcuts that have been provided to us.
 
+A lot of the times, we don't even know that they are shortcuts.
 
-= Details =
+=== Controller Example ===
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+*Maxscript Test*
+{{{
+obj = Sphere()
+print obj.pos               /* Prints out a point3 */
+print obj.pos.controller    /* Prints out a controller */
+}}}
+
+*Python Test*
+{{{
+from Py3dsMax import mxs
+
+obj = mxs.Sphere()
+print obj.pos              /* Prints out a point3 */
+print obj.pos.controller   /* Error: No property controller in Point3 */
+}}}
+
+Why does the python code break?  Why can I access the controller property in maxscript but not in python?
+
+=== Controller Example #2 ===
+
+*Maxscript Test*
+{{{
+obj = Sphere()
+pos = obj.pos              /* Store the point3 to a variable */
+print pos.controller       /* Error: No property conroller in Point3 */
+}}}
+
+Wait...why would *this* code break?  I can access the controller without storing the property, but when I store it, it becomes inaccessible?  Why?
+
+*Maxscript has programmed 'shortcuts' to standard programming practices*
+
+Calling obj.pos.controller is not getting the controller property from the pos member, as one would imagine.  Its actually calling a *double_nested_parameter* from the object node itself.
+
+This only exists in Maxscript, no other language as far as I know.  Its one of the many quirks of the language.
+
+=== Controller Example #3 ===
+
+So how is this actually being processed then?
+
+*Maxscript Test*
+{{{
+obj = Sphere()
+getProperty obj "pos"              /* returns a point3 */
+getProperty obj "pos.controller"   /* returns a controller */
+}}}
+
+So, as this example shows, the property "pos" and the property "pos.controller" are both properties of obj.
+
+*Python Test*
+{{{
+from Py3dsMax import mxs
+
+obj = mxs.Sphere()
+mxs.getProperty( obj, 'pos' )            # returns a point3
+mxs.getProperty( obj, 'pos.controller' ) # returns a controller
+}}}
+
+While this isn't true for every property, you will run into some quirks when converting a script from one language to another.  When this happens, you'll have to look up for an alternative way to access the information you're trying to get at.
+
+=== Next Topic ===
