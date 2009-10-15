@@ -42,7 +42,7 @@ Wait...why would *this* code break?  I can access the controller without storing
 
 *Maxscript has programmed 'shortcuts' that bypass standard programming practices*
 
-Calling obj.pos.controller is not getting the controller property from the pos member, as one would imagine.  Its actually calling a *double_nested_parameter* from the object node itself.
+Calling obj.pos.controller is not getting the controller property from the pos member, as one would imagine.  Its actually calling a *nested_parameter* from the object node itself.
 
 This only exists in Maxscript, no other language as far as I know.  Its one of the many quirks of the language.
 
