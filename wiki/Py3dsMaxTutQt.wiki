@@ -2,3 +2,17 @@
 #labels Python,3dsMax,Tutorial
 
 == PyQt User Interfaces ==
+
+So now that you're getting a handle on how to program 3dsMax in Python, how do you start building tools?
+
+=== The Bad News ===
+
+You can't create tools the Maxscript way.  Rollouts are not creatable on the fly, they are actually processed directly in C++ through the a parser, which means there is no way to create a rollout in Python.
+
+=== The Good News ===
+
+We really don't want to create Maxscript rollouts anyway.  The Qt C++/Python framework is a powerful, fast, and user friendly model.  For a lot of you Maxscript programmers, it will seem very complex at first (believe me, I've been there), but as you begin working with Qt, you will find it is insanely easy to develop tools (not just for 3dsMax either - you'll be able to write cross-platform applications in PyQt as well!).
+
+== How does it work? ==
+
+To really get started understanding Qt, you should read up about it on their [http://qt.nokia.com website].  Download the code, work through some PyQt examples.  But here is a crash course on using it:
