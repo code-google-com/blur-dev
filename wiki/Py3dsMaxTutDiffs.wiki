@@ -21,8 +21,8 @@ print obj.pos.controller    /* Prints out a controller */
 from Py3dsMax import mxs
 
 obj = mxs.Sphere()
-print obj.pos              /* Prints out a point3 */
-print obj.pos.controller   /* Error: No property controller in Point3 */
+print obj.pos              # Prints out a point3
+print obj.pos.controller   # Error: No property controller in Point3
 }}}
 
 Why does the python code break?  Why can I access the controller property in maxscript but not in python?
