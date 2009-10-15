@@ -40,7 +40,7 @@ print pos.controller       /* Error: No property conroller in Point3 */
 
 Wait...why would *this* code break?  I can access the controller without storing the property, but when I store it, it becomes inaccessible?  Why?
 
-*Maxscript has programmed 'shortcuts' to standard programming practices*
+*Maxscript has programmed 'shortcuts' that bypass standard programming practices*
 
 Calling obj.pos.controller is not getting the controller property from the pos member, as one would imagine.  Its actually calling a *double_nested_parameter* from the object node itself.
 
