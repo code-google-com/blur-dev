@@ -34,4 +34,4 @@ Currently, we are supporting:
 
 == How Does it Work? ==
 
-Once you've gotten everything all setup - start workging through the Py3dsMax [Py3dsMaxTuts tutorials]
+Once you've gotten everything all setup - start workging through the [Py3dsMaxTuts tutorials]
