@@ -4,7 +4,16 @@
 
  * You will need *[BlurCore]*
  * You will need *Python*
- * You will need *Autodesk | Softimage* ([http://usa.autodesk.com/adsk/servlet/pc/index?id=13571168&siteID=123112])
+ * You will need *Autodesk | Softimage* ([http://www.softimage.com])
+
+ * You will need *win32 python packages* (required for XSI: download [http://sourceforge.net/project/showfiles.php?group_id=78018&package_id=79063 here])
+
+ * You will need to setup *Python as the Scripting Language of XSI*
+  * *Q: I have installed the Blur software, but it still does not show up in XSI, why?*
+  * *A:* You need to make sure that XSI can see the Python scripting language and has it set as its language of choice...follow [http://softimage.wiki.softimage.com/index.php/Python_(XSISDK) this XSISDK link] for a tutorial on setting up Python for XSI.
+  * *Q: I am still getting errors running python, why?*
+  * *A: * You may need to uninstall your [PYTHON_PAH]\lib\site-packages\win32com\client\gen_py folder (as described [http://softimage.wiki.softimage.com/index.php/Python_(XSISDK)#Errors_after_re-installation here])
+
 
 == What is it? ==
 
