@@ -29,11 +29,57 @@ spheres = for obj in objects if isKindOf obj Sphere collect obj
 
 *Python Globals Examples*
 {{{
-# some examples of global variables available in python
 from Py3dsMax import mxs
+
+# some examples of global variables available in python
 s = mxs.Sphere( name = 'Test' )  # create a sphere - note optional parameters
 mxs.getNodeByName( "Test" )      # call the getNodeByName method - note the ()'s
 
 # collect the spheres into a list
 spheres = [ obj for obj in mxs.objects if mxs.isKindOf( obj, mxs.Sphere ) ]
+}}}
+
+=== Accessing Variable Properties ===
+
+So, you can access anything from the globals table in python as you can in MAXScript.  But now how do you access local properties from a global variable?  The blurPython plugin will automatically convert any standard variable type from MAXScript to Python (integer to int, string to str, etc.) but any other variable type (complex Value types - Sphere, Polygon, Point3, etc.) is wrapped into a Python object container.
+
+So this way, whatever you can access of a maxscript variable, you can access with a python variable, just like the hash table.
+
+*Maxscript Local Variables*
+{{{
+s = Sphere()        /* create a sphere */
+s.name = "Test"     /* set the name */
+s.radius = 100      /* set the radius */
+s.pos = [20,20,20]  /* set the position to a point3 */
+}}}
+
+*Python Local Variables - Close, but not Quite*
+{{{
+from Py3dsMax import mxs
+
+s = mxs.Sphere()    # create a sphere
+s.name = 'Test'     # set the name
+s.radius = 100      # set the radius
+s.pos = [20,20,20]  # set the position to a ... list?
+}}}
+
+If you just ran the above code - you'll notice that a couple things didn't turn out the way you were expecting.  Why?
+
+A couple reasons:
+ * In MAXScript, every line inherently calls a refresh to the scene, unless you disable the scene redraw, in Python - the scene won't refresh automatically.
+ * In MAXScript, typing [20,20,20] creates a Point3 value instance.  In Python, typing [20,20,20] creates a list with 3 items.  Obviously, you cannot set a sphere's location to a list.
+
+*What now? Can Python not do everything MAXScript can do?*
+
+Not at all, Python can do everything MAXScript can do...this tutorial simply highlights that there will be slight differences between the two systems.  The below example is the proper way to map the above sample from Maxscript to Python.
+
+*Python Local Variables - Proper Python Conversion*
+{{{
+from Py3dsMax import mxs
+
+s = mxs.Sphere()              # create a sphere
+s.name = 'Test'               # set the name
+s.radius = 100                # set the radius
+s.pos = mxs.Point3(20,20,20)  # set the position to a Point3
+mxs.redrawViews()             # update the scene to reflect the position & radius changes
 }}}
