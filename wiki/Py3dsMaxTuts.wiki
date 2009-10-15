@@ -1,35 +1,27 @@
 #summary Python and 3dsMax Tutorials
 
+== Introduction ==
+
+If you've found your way to this page, then you are ready to see what the power of python can bring to 3dsMax.  Its time to say good-bye to the maxscript coding standards of old and adopt the new power of python.
+
+These tutorials will outline the differences between MAXScript and Python, and how to access the information you need out of maxscript, but in the pythonic way.  It'll comprise of a MAXScript sample, followed by the Python equivalent.
+
 == Basics ==
 
+All your standard variable types that exist in MAXScript also exist in Python (also, some extra ones)
 
-*Maxscript Example*
+*Maxscript*
 {{{
-function moveToOrigin objs = (
-   for o in objs do (
-       print ( "Moving " + o.name + " from " + o.position as string + " to [0,0,0]" )
-       o.position = [0,0,0]
-   )
-)
-
-moveToOrigin( objects )
+-- Comment
+a = 1        -- integer
+b = 1.0      -- float
+c = "test"   -- string
 }}}
 
-*Python Equivalent*
+*Python*
 {{{
-# Py3dsMax is the root max module created from blurPython.dlx
-# mxs is an interface to the global namespace of maxscript, whatever methods or variables
-# you would call globally in maxscript (e.g. objects, selection, meshOp, etc.) is
-# accessible by getting it through the mxs instance (e.g. mxs.objects, mxs.selection, etc.)
-from Py3dsMax import mxs 
-
-def moveToOrigin( objs ):
-   # [0,0,0] creates a Point3 in maxscript, but in python creates a list
-   # so we have to actually create a Point3 instance in python to move the objects to
-   origin = mxs.Point3( 0, 0, 0 ) 
-   for o in objs:
-      print "Moving %s from %s to [0,0,0]." % (o.name,o.position)
-      o.position = origin
-
-moveToOrigin( mxs.objects )
+# Comment
+a = 1        # int
+b = 1.0      # float
+c = "test"   # str
 }}}
