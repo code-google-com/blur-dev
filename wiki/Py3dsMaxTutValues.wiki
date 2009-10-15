@@ -1,0 +1,12 @@
+#summary Working with the Py3dsMax module
+#labels Python,3dsMax,Tutorial
+
+== Accessing 3dsMx Values ==
+
+So, now that we know a little bit about the basic differences and similarities between MAXScript and Python as languages...how do we work with Python and 3dsMax together?
+
+There are actually two ways, depending on how you want to go about designing your tool (and this decision should be made entirely based on your needs)
+
+== Running Python inside MAXScript ==
+
+== Running MAXScript inside Python ==
