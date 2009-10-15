@@ -34,35 +34,4 @@ Currently, we are supporting:
 
 == How Does it Work? ==
 
-*Maxscript Example*
-{{{
-function moveToOrigin objs = (
-   for o in objs do (
-       print ( "Moving " + o.name + " from " + o.position as string + " to [0,0,0]" )
-       o.position = [0,0,0]
-   )
-)
-
-moveToOrigin( objects )
-}}}
-
-*Python Equivalent*
-{{{
-# Py3dsMax is the root max module created from blurPython.dlx
-# mxs is an interface to the global namespace of maxscript, whatever methods or variables
-# you would call globally in maxscript (e.g. objects, selection, meshOp, etc.) is
-# accessible by getting it through the mxs instance (e.g. mxs.objects, mxs.selection, etc.)
-from Py3dsMax import mxs 
-
-def moveToOrigin( objs ):
-   # [0,0,0] creates a Point3 in maxscript, but in python creates a list
-   # so we have to actually create a Point3 instance in python to move the objects to
-   origin = mxs.Point3( 0, 0, 0 ) 
-   for o in objs:
-      print "Moving %s from %s to [0,0,0]." % (o.name,o.position)
-      o.position = origin
-
-moveToOrigin( mxs.objects )
-}}}
-
------------------------
+Checkout the Tutorials on the SideBar
