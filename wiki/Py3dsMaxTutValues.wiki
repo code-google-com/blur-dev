@@ -5,6 +5,8 @@
 
 So, now that we know a little bit about the basic differences and similarities between MAXScript and Python as languages...how do we work with Python and 3dsMax together?
 
+Depending on your Python knowledge, you may need to jump over to some "Python basics" tutorials, as these next tutorials start assuming you know some basics of Python.
+
 The blurPython dll generates a Py3dsMax python module from which you can access basic 3dsMax values and methods.  The main one you'll be working with is the mxs submodule:
 
 {{{
@@ -12,3 +14,26 @@ from Py3dsMax import mxs
 }}}
 
 === What is the mxs module? ===
+
+The mxs module is literally a connection into the MAXScript globals hash table of C++.  When you call globals in MAXScript through code or the listener, it can be accessed through the mxs module in Python.
+
+*Maxscript Globals Examples*
+{{{
+/* some examples of global variables available in maxscript */
+s = Sphere name:"Test"        /* create a sphere - note optional parameters */
+getNodeByName "Test"          /* call the getNodeByName method - note no ()'s */
+
+/* collect all spheres into an array */
+spheres = for obj in objects if isKindOf obj Sphere collect obj
+}}}
+
+*Python Globals Examples*
+{{{
+# some examples of global variables available in python
+from Py3dsMax import mxs
+s = mxs.Sphere( name = 'Test' )  # create a sphere - note optional parameters
+mxs.getNodeByName( "Test" )      # call the getNodeByName method - note the ()'s
+
+# collect the spheres into a list
+spheres = [ obj for obj in mxs.objects if mxs.isKindOf( obj, mxs.Sphere ) ]
+}}}
