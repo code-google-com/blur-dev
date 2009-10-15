@@ -10,6 +10,7 @@ These tutorials will outline the differences between MAXScript and Python, and h
 While these are designed to give you a quick start into the conversion of MAXScript to Python, they are not intended to replace all the standard documentation of each language.  View these as a quickstart to your education.
 
  * [Py3dsMaxTutBasics Basics]
+ * [Py3dsMaxTutClasses Structs & Classes]
  * [Py3dsMaxTutValues Accessing 3dsMax Values]
  * [Py3dsMaxTutDiffs Maxscript/Python Differences ]
  * [Py3dsMaxTutQt PyQt User Interfaces]
