@@ -23,5 +23,5 @@
 *Tutorials*
 
  * [Py3dsMaxTuts Python & 3dsMax]
- * [PyQt3dsMaxTuts 3dsMax PyQt Tutorials]
- * [PySoftimageTuts Softimage PyQt Tutorials]
+ * [PyQt3dsMaxTuts PyQt & 3dsMax]
+ * [PySoftimageTuts PyQt & Softimage]
