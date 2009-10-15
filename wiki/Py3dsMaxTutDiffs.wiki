@@ -9,14 +9,14 @@ A lot of the times, we don't even know that they are shortcuts.
 
 === Controller Example ===
 
-*Maxscript Test*
+*Maxscript*
 {{{
 obj = Sphere()
 print obj.pos               /* Prints out a point3 */
 print obj.pos.controller    /* Prints out a controller */
 }}}
 
-*Python Test*
+*Python*
 {{{
 from Py3dsMax import mxs
 
@@ -31,7 +31,7 @@ Why does the python code break?  Why can I access the controller property in max
 
 Consider the following code:
 
-*Maxscript Test*
+*Maxscript*
 {{{
 obj = Sphere()
 pos = obj.pos              /* Store the point3 to a variable */
@@ -50,7 +50,7 @@ This only exists in Maxscript, no other language as far as I know.  Its one of t
 
 So how is this actually being processed then?
 
-*Maxscript Test*
+*Maxscript*
 {{{
 obj = Sphere()
 getProperty obj "pos"              /* returns a point3 */
@@ -59,7 +59,7 @@ getProperty obj "pos.controller"   /* returns a controller */
 
 So, as this example shows, the property "pos" and the property "pos.controller" are both properties of obj.
 
-*Python Test*
+*Python*
 {{{
 from Py3dsMax import mxs
 
