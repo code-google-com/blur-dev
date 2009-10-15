@@ -2,38 +2,39 @@
 #labels Documentation,Softimage,XSI
 
 == Prerequisites ==
- * *Autodesk| Softimage* (http://www.softimage.com/)
 
- * *Python* (http://www.python.org)
-  * *Q: What is Python?*
-  * *A:* Python is a free, powerful scripting language commonly used in 3d production.  We've decided to use it here at Blur for the basis of most of our scripts and tools and has become an integral part of our pipeline
-  * *Q: What version do I need?*
-  * *A:* Depending on the installer you choose, you will need different versions.  Mostly, we've been using *Python24* to date, but will be upgrading soon to Python26 & Python26_64 for x64 bit support.  Simply match the version name on the installer to the python version you need (if the installer says python24, you will need Python 2.4, etc.)
-  * *Q: Where can I get it?*
-  * *A:* You can download or see python at its webpage at http://www.python.org/download, but here is a short cut to the links you'll need now:
-   * [http://www.python.org/ftp/python/2.4.4/python-2.4.4.msi Python 2.4 (windows)]
+ * You will need *[BlurCore]*
+ * You will need *Python*
+ * You will need *win32 python packages* (required for XSI: download [http://sourceforge.net/project/showfiles.php?group_id=78018&package_id=79063 here])
+ * You will need *Autodesk| Softimage* (http://www.softimage.com/)
 
- * *win32 python packages*
-  * *Q: What are the win32 python packages?*
-  * *A:* This is a free python package that provides access to Windows functionality.  It is needed by Softimage to run Python, as well as our blur code calls methods from it as well.
-  * *Q: Where can I get them?*
-  * *A:* You can download them from source forge [http://sourceforge.net/project/showfiles.php?group_id=78018&package_id=79063 here].  Simply choose the build that corresponds with your version of python.
-
- * *Python as the Scripting Language of XSI*
-  * *NOTE:* This section is just links to supporting Python & XSI, if you have both working, you should be able to skip directly to installing the Blur system
+ * You will need to setup *Python as the Scripting Language of XSI*
   * *Q: I have installed the Blur software, but it still does not show up in XSI, why?*
   * *A:* You need to make sure that XSI can see the Python scripting language and has it set as its language of choice...follow [http://softimage.wiki.softimage.com/index.php/Python_(XSISDK) this XSISDK link] for a tutorial on setting up Python for XSI.
   * *Q: I am still getting errors running python, why?*
   * *A: * You may need to uninstall your [PYTHON_PAH]\lib\site-packages\win32com\client\gen_py folder (as described [http://softimage.wiki.softimage.com/index.php/Python_(XSISDK)#Errors_after_re-installation here])
 
-== Installation ==
- # Make sure you have *Autodesk | Softimage* and *Python* installed on your machine
- # Go to the *[http://code.google.com/p/blur-dev/downloads downloads]* page and select the latest installer for the python version you want.
- # Run the installer, this will install code in a variety of places
- # Once you have run the installer, startup Softimage
- # Go to *File->Plugin Manager*, click on *Workgroups*, then *Connect...*
- # This will bring up a folder picker, navigate to the blur Workgroup in *c:/blur/dev/offline/code/maxscript/treegrunt/XSIWorkgroup* (make sure you are actually *IN* the XSIWorkgroup folder when you select it, otherwise you'll get errors)
- # If everything is installed correctly, you should receive no errors on the connect, and you should see a Blur menu at the top of your Softimage session.  Just click that to bring up the *TreeGrunt* utility, and you're all connected to the Blur Softimage Toolset!
+== What is it? ==
+
+These are various tools and utilities developed over the years to speed up the creation of creative content using 3d Studio Max.
+
+== What versions does it support? ==
+
+Currently, we are supporting:
+
+  * Python24 (x32)
+  * Python26 (x64)
+  * Autodesk|Softimage
+  * Softimage|XSI
+
+== How do I get it? ==
+
+ # Download and install [BlurCore]
+ # Download and install [BlurSoftimage] from [http://code.google.com/p/blur-dev/downloads/list]
+ # Follow the installation instructions from [PySoftimage] (the [BlurSoftimage] package includes the [PySoftimage] package)
+ # You should also see the [Blur] menu option next to the [Python] menu option
+
+== How Does it Work? ==
 
 == Production Tools ==
 
