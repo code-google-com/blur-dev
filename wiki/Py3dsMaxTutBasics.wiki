@@ -1,4 +1,5 @@
 #summary Python and 3dsMax Tutorial Basics
+#labels Python,3dsMax,Tutorial
 
 == Basics ==
 
