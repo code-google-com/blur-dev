@@ -27,6 +27,10 @@ Currently, we are supporting:
 
  # Download and install [BlurCore]
  # Download and install Py3dsMax from [http://code.google.com/p/blur-dev/downloads/list]
+ # Startup 3dsMax
+ # You should see a Python menu next to the MAXScript menu at the top of your application
+ # From here, you can create New, Open, or Run python scripts, as well as launch a Python Logger (similar to the MAXscript Listener window)
+ # Start developing Python scripts!
 
 == How Does it Work? ==
 
