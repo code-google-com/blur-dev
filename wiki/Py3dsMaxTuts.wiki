@@ -37,8 +37,9 @@ print a[1]          /* result: 1  - MAXScript has 1 based arrays */
 print a[a.count]    /* result: 20 - MAXScript can access the last index of their arrays */
 print a.count       /* result: 5 */
 
-append a 15         /* adds item to the end of the array
+append a 15         /* adds item to the end of the array */
 insertItem a 1 15   /* inserts 15 at the very beginning of the array */
+findItem a 15       /* returns the index of the first instance of the item */
 deleteItem a 1      /* deletes the item at the index 1 of the array */
 
 /* Creating an array as a collection */
@@ -49,4 +50,17 @@ a = for obj in objects where isKindOf obj Editable_Mesh collect obj
 {{{
 # Lists - Python's Array
 a = [ 1, 2, 3, 8, 20 ]
+print a[0]          # result: 1 - Python has 0 based lists
+print a[len(a)-1]   # result: 20 - Python cannot access the last index of their lists
+print a[-1]         # result: 20 - But, they can do a reverse lookup: if an index is
+                    # negative, then its taking the index relative to the end
+print len(a)        # result: 5  - The way to calculate the length of a list
 
+a.append( 15 )      # adds item to the end of the list
+a.insert( 0, 15 )   # inserts 15 at the very beginning of the list
+a.index( 15 )       # returns the index of the first instance of the item
+a.remove( 15 )      # removes the first item from the desired list
+
+# Creating a list as a collection
+a = [ obj for obj in mxs.objects if mxs.isKindOf( obj, mxs.Editable_Mesh ) ]
+}}}
