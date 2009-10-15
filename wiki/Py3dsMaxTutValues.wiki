@@ -69,9 +69,9 @@ A couple reasons:
  * In Maxscript, every line inherently calls a refresh to the scene, unless you disable the scene redraw, in Python - the scene won't refresh automatically.
  * In Maxscript, typing [[20,20,20]] creates a Point3 value instance.  In Python, typing [[20,20,20]] creates a list with 3 items.  Obviously, you cannot set a sphere's location to a list.
 
-*What now? Can Python not do everything MAXScript can do?*
+*So..wait...can Python do everything that MAXScript can do then?*
 
-Not at all, Python can do everything MAXScript can do...this tutorial simply highlights that there will be slight differences between the two systems.  The below example is the proper way to map the above sample from Maxscript to Python.
+It sure can, this tutorial simply highlights that there will be slight differences between the two systems.  Below is the proper way to map the above example from Maxscript to Python.
 
 *Python Local Variables - Proper Python Conversion*
 {{{
