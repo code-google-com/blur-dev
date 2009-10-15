@@ -19,3 +19,9 @@
 
  * [Blur3dsMax]
  * [BlurSoftimage]
+
+*Tutorials*
+
+ * [Py3dsMaxTuts 3dsMax Python Tutorials]
+ * [PyQt3dsMaxTuts 3dsMax PyQt Tutorials]
+ * [PySoftimageTuts Softimage PyQt Tutorials]
