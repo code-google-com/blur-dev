@@ -1,0 +1,4 @@
+#summary Using PyQt for User Interfaces in 3dsMax
+#labels Python,3dsMax,Tutorial
+
+== PyQt User Interfaces ==
