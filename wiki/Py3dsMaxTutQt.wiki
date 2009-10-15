@@ -7,7 +7,7 @@ So now that you're getting a handle on how to program 3dsMax in Python, how do y
 
 === The Bad News ===
 
-You can't create tools the Maxscript way.  Rollouts are not creatable on the fly, they are actually processed directly in C++ through the a parser, which means there is no way to create a rollout in Python.
+You can't create tools the Maxscript way.  Rollouts are not creatable on the fly, they are actually processed directly in C++ through a string parser, which means there is no way to create a rollout in Python.
 
 === The Good News ===
 
@@ -16,3 +16,43 @@ We really don't want to create Maxscript rollouts anyway.  The Qt C++/Python fra
 == How does it work? ==
 
 To really get started understanding Qt, you should read up about it on their [http://qt.nokia.com website].  Download the code, work through some PyQt examples.  But here is a crash course on using it:
+
+*Maxscript*
+{{{
+rollout uiMainROLL "Rollout Item" (
+   button uiTestBTN "Test"
+
+   on uiTestBTN clicked do ( print "Button Clicked" )
+)
+createDialog uiMainROLL
+}}}
+
+Now, there are a bunch of ways to create Qt widgets and dialogs.  This would be the simplest:
+
+*Python & PyQt*
+{{{
+# Use the blur.wingui package vs. the default PyQt4 packages for windows and dialogs
+# because these items contain 3dsMax specific code needed to run
+
+from blur.wingui import Dialog
+
+# Every other widget can come from default PyQt
+from PyQt4.QtGui import QPushButton
+
+# Create the dialog and add the button
+dialog = Dialog()
+button = QPushButton( dialog )
+button.setText( 'Test' )
+
+# Widgets in PyQt are connected to methods through signals and slots
+from PyQt4.QtCore import SIGNAL
+
+def handleClicked():
+   print 'Button Clicked'
+
+dialog.connect( button, SIGNAL( 'clicked()' ), handleClicked )
+
+# Create the dialog
+dialog.show()
+
+}}}
