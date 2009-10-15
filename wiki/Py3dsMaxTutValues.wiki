@@ -83,3 +83,5 @@ s.radius = 100                # set the radius
 s.pos = mxs.Point3(20,20,20)  # set the position to a Point3
 mxs.redrawViews()             # update the scene to reflect the position & radius changes
 }}}
+
+=== Next Topic ===
