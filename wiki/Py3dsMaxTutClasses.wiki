@@ -134,6 +134,19 @@ class ClassB( ClassA ):
 
    def multiplier( self ):
       return self._multiplier
+
+# Create an instance of ClassA
+
+a = ClassA( 'A' )
+print a.number()
+
+b = ClassB() # Does not need a name argument since its being set in its constructor
+print b.number()
+
+# Ways to check subclass types
+print type( b )                    # Checks the instance's class type
+print issubclass( ClassB, ClassA ) # Checks to see if one class inherits from another
+print isinstance( b, ClassA )      # Check to see if one instance inherits from another class
 }}}
 
 === Next Topic ===
