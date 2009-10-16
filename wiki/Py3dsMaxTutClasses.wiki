@@ -9,8 +9,8 @@ In Maxscript you have the ability to create structs of data.  In Python, classes
 /* create a struct */
 struct MyStruct (
   _myInt     = 10,
-  _myArray   = #( a, b, c ),
-  _myString  = 'Test',
+  _myArray   = #( "a", "b", "c" ),
+  _myString  = "Test",
 
   function addItem item = (
       append _myArray item
@@ -22,13 +22,40 @@ struct MyStruct (
   )
 )
 
+/* Create class instance */
 instA = MyStruct()
-instA.addItem( 10 )
-instA.printAll()
+instA.addItem( "d" )
+instA.printItems()    /* result: #( "a", "b", "c", "d" ) */
 
+/* Create class instance */
 instB = MyStruct()
-instB.addItem( 4 )
-instB.printAll()
+instB.addItem( "e" )
+instB.printItems()    /* result: #( "a", "b", "c", "e" ) */
+}}}
+
+*Python Class*
+{{{
+# Create a class
+class MyClass:
+  _myInt    = 10
+  _myArray  = [ 'a', 'b', 'c' ]
+  _myString = 'Test'
+
+  def addItem( self, item ):
+     self._myArray.append( item )
+ 
+  def printItems( self ):
+     print self._myArray
+
+# Create class instance
+instA = MyClass()
+instA.addItem( 'd' )
+instA.printItems()
+
+# Create class instance
+instB = MyClass()
+instB.addItem( 'e' )
+instB.printItems()
 }}}
 
 === Object-Oriented Programming ===
