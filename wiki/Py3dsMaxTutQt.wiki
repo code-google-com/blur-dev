@@ -83,12 +83,14 @@ Both dialogs and windows can be modal.  However, dialogs are designed for it, wh
 from blur.wingui import Dialog
 dialog = Dialog()
 
-# Launch the dialog
-dialog.show()           # Launch it modelessly
+# Notice how you block interaction with 3dsMax, and wait to continue to the next set of code
 if ( dialog.exec_() ):  # Launch it modally
   print 'Accepted'
 else:
   print 'Rejected'
+
+# Notice how you can still interact with 3dsMax
+dialog.show()           # Launch it modelessly
 }}}
 
 A window on the other hand does not have an exec_ function, and you as the scripter will need to determine if it is accepted or rejected.
