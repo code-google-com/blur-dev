@@ -60,6 +60,46 @@ The 'self' variable is actually the instance of the class being passed into the 
 
 Whenever you're writing methods for a class, you always *must* declare self as the first variable being passed into your class.
 
+==== Wait, but if the 'self' variable is the first variable passed in, why do I see 'd' in the second instances list? ====
+
+This confused me for a long, long time when I started.  So this is the most important piece of information when dealing with classes:
+
+ * Classes have a global scope, and a local scope:
+
+   * Any member defined at the global level of a class becomes a *class member*, a shared member across all instances of that class
+
+==== So how do I declare a member per-instance? ====
+
+Every class in python starts with the __init__ method.  In fact, there are many built-in methods that can be overridden within your subclass.  All python built-in methods start and end with double-underscores - I'd suggest reading more about that online.
+
+The quick-crash course solution to the above problem is like this:
+
+*Python*
+{{{
+# Create a class
+class MyClass:
+  # Create the constructor method
+  def __init__( self ):
+     # So that '_myArray' is a propery of the class instance, and not of the class itself
+     self._myArray  = [ 'a', 'b', 'c' ]
+
+  def addItem( self, item ):
+     self._myArray.append( item )
+ 
+  def printItems( self ):
+     print self._myArray
+
+# Create class instance
+instA = MyClass()
+instA.addItem( 'd' )
+instA.printItems()      # result: [ 'a', 'b', 'c', 'd' ]
+
+# Create class instance
+instB = MyClass()
+instB.addItem( 'e' )
+instB.printItems()      # result: [ 'a', b', 'c', 'e' ]
+}}}
+
 === Object-Oriented Programming ===
 
 Python is an Object-Oriented programming language, which means you can quickly and easily manage inheritance in your objects, something that Maxscript always lacked.
