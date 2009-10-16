@@ -102,7 +102,7 @@ from PyQt4.QtCore import Qt
 
 window = Window()
 window.setWindowModality( Qt.ApplicationModal )   # Makes the window modal
-window.show()  # Executes the window modaly
+window.show()  # Has no 'exec_' so does not return accepted/rejected
 }}}
 
 === Sub-Classing ===
