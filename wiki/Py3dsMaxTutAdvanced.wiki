@@ -226,8 +226,68 @@ You can see Qt's Website [http://qt.nokia.com here]
 
 === Qt Designer ===
 
-One of the main strengths that you can get from Qt is the Designer.  Qt does a good job of creating a true separation between code and graphics.
+One of the main strengths that you can get from Qt is the Designer.  This can really ease your workflow - I recommend looking into it.  You can drag & drop your widgets onto your dialog, setup your layouts - all without the need to touch any code whatsoever.
 
-You can drag and drop widgets onto your dialog, save out an xml (.ui) file that can be loaded in on the fly.  It also has Layouts.  Layouts allow you to easily create *resizable* dialogs (something that was always a problem in Maxscript rollouts)
+I haven't included the (.ui) file in this example, but if you want to make it - its what we coded above and should be pretty straight forward to make in the Designer.
 
-This can really ease your workflow - I recommend looking into it.
+This is what the code would look like with a ui file being loaded - note how much it saves - and imagine if we were making a more complex widget, how much it could save.
+
+
+*Python*
+{{{
+from blur.wingui  import Dialog
+
+from PyQt4.QtCore import SIGNAL           # Signal mapping method for Qt
+from PyQt4.QtGui  import QTreeWidgetItem  # Don't need the other imports, all loaded in the Ui file
+
+import PyQt4.uic # Loader file
+
+from Py3dsMax     import mxs              # Bring in the maxscript module
+
+# Lets subclass a TreeWidget item so we can store objects with them
+class ObjectItem( QTreeWidgetItem ):
+   def __init__( self, msobject ):
+       QTreeWidgetItem.__init__( self, [ msobject.name ] )
+       self._msobject = msobject
+       
+       # Add the children of this item
+       for child in msobject.children:
+           self.addChild( ObjectItem( child ) )
+   
+   def msobject( self ):
+       return self._msobject
+
+class TestDialog( Dialog ):
+   def __init__( self ):
+      Dialog.__init__( self )
+
+      # Load a ui file named 'TestDialog.ui' from the same folder as this script
+      import os.path
+      PyQt4.uic.loadUi( os.path.split( __file__ )[0] + 'TestDialog.ui', self )
+
+      self._connect() # Connect the signals/slots
+      self.refresh()  # Load the data
+
+   def _connect( self ):
+      # Create connections between the different widgets
+      self.connect( self.uiRefreshBTN, SIGNAL( 'clicked()' ), self.refresh ) # custom method
+      self.connect( self.uiOkBTN,      SIGNAL( 'clicked()' ), self.accept ) # built-in dialog method
+      self.connect( self.uiCancelBTN,  SIGNAL( 'clicked()' ), self.reject ) # built-in dialog method
+      self.connect( self.uiObjectTREE, SIGNAL( 'itemClicked(QTreeWidgetItem*,int)' ), self.itemClicked ) # custom method
+
+   def itemClicked( self, item, column ):
+      # Select objects in the scene when they are selected in the tree
+      if ( item.parent() ):
+         # Make sure we dont try to select the root node, or max will crash
+         mxs.select( item.msobject() )
+
+   def refresh( self ):
+      self.uiObjectTREE.clear()
+
+      # Load the scene object hierarchy
+      self.uiObjectTREE.addTopLevelItem( ObjectItem( mxs.rootNode ) )
+
+# Create the dialog
+dialog = TestDialog()
+dialog.show()
+}}}
