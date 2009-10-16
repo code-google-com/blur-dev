@@ -126,6 +126,100 @@ dialog.show()
 
 === Connections ===
 
+Next step is setting up user interactions with the interface.  Qt controls its events through a signal/slot relationship.  Widgets emit out SIGNALs that you can connect methods to to run (for more information on this view [http://qt.nokia.com/ Qt SDK])
+
+*Python*
+{{{
+from blur.wingui  import Dialog
+
+from PyQt4.QtCore import SIGNAL           # Signal mapping method for Qt
+
+from PyQt4.QtGui  import QHBoxLayout      # Spread widgets horizontally
+from PyQt4.QtGui  import QVBoxLayout      # Spread widgets vertically
+
+from PyQt4.QtGui  import QPushButton
+from PyQt4.QtGui  import QTreeWidget      # Lets add a tree to the dialog...why not? its easy!
+from PyQt4.QtGui  import QTreeWidgetItem
+
+from Py3dsMax     import mxs              # Bring in the maxscript module
+
+# Lets subclass a TreeWidget item so we can store objects with them
+class ObjectItem( QTreeWidgetItem ):
+   def __init__( self, msobject ):
+       QTreeWidgetItem.__init__( self, [ msobject.name ] )
+       self._msobject = msobject
+       
+       # Add the children of this item
+       for child in msobject.children:
+           self.addChild( ObjectItem( child ) )
+   
+   def msobject( self ):
+       return self._msobject
+
+class TestDialog( Dialog ):
+   def __init__( self ):
+      Dialog.__init__( self )
+
+      # Lets break the constructor up so its easier to manage
+
+      self._build()   # Generate the widgets
+      self._connect() # Connect the signals/slots
+      self.refresh()  # Load the data
+
+   def _build( self ):
+      # Create the main layout
+      layout = QVBoxLayout()
+      
+      # Add a tree
+      self.uiObjectTREE = QTreeWidget( self )  # Create a tree, as a child of this dialog
+      layout.addWidget( self.uiObjectTREE )    # Add the tree to the layout
+
+      # Add buttons
+      self.uiRefreshBTN = QPushButton( self )
+      self.uiRefreshBTN.setText( 'Refresh' )
+
+      self.uiOkBTN = QPushButton( self )
+      self.uiOkBTN.setText( 'Ok' )
+      
+      self.uiCancelBTN = QPushButton( self )
+      self.uiCancelBTN.setText( 'Cancel' )
+
+      # Lay the buttons out horizontally
+      hlayout = QHBoxLayout()
+      hlayout.addWidget( self.uiRefreshBTN )
+      hlayout.addWidget( self.uiOkBTN )
+      hlayout.addWidget( self.uiCancelBTN )
+
+      # Add the horizontal layout to the main one
+      layout.addLayout( hlayout )
+
+      # Set the dialogs layout to hold all these widgets
+      self.setLayout( layout )
+
+   def _connect( self ):
+      # Create connections between the different widgets
+      self.connect( self.uiRefreshBTN, SIGNAL( 'clicked()' ), self.refresh ) # custom method
+      self.connect( self.uiOkBTN,      SIGNAL( 'clicked()' ), self.accept ) # built-in dialog method
+      self.connect( self.uiCancelBTN,  SIGNAL( 'clicked()' ), self.reject ) # built-in dialog method
+      self.connect( self.uiObjectTREE, SIGNAL( 'itemClicked(QTreeWidgetItem*,int)' ), self.itemClicked ) # custom method
+
+   def itemClicked( self, item, column ):
+      # Select objects in the scene when they are selected in the tree
+      if ( item.parent() ):
+         # Make sure we dont try to select the root node, or max will crash
+         mxs.select( item.msobject() )
+
+   def refresh( self ):
+      self.uiObjectTREE.clear()
+
+      # Load the scene object hierarchy
+      self.uiObjectTREE.addTopLevelItem( ObjectItem( mxs.rootNode ) )
+
+# Create the dialog
+dialog = TestDialog()
+dialog.show()
+}}}
+
 === Qt Designer ===
 
 One of the main strengths that you can get from Qt is the Designer.  Qt does a good job of creating a true separation between code and graphics.
