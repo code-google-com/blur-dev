@@ -2,6 +2,8 @@
 
 == Getting Started ==
 
+Please review the KnownIssues page as well.
+
 The BlurCore is a series of installers that'll install the base libraries and code needed to run all other blur modules.  These include:
 
 == Python ==
