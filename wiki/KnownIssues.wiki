@@ -2,7 +2,14 @@
 
 We've been getting a lot of interest for these installers, so we decided to put them on here even though they are still beta and not 100% complete.
 
+We'll address the issues on here ASAP, but until then, they'll contain the fixes that you'll need to get the system running.
+
 This page has the workarounds for the known issues, but is also where you should comment on new issues that you discover while working with the system.  Thanks!
+
+
+=== Deprecated Downloads ===
+
+I deprecated the BlurTools downloads until I fix the installer - those are confusing a lot of people.  I'll have them back up this afternoon.
 
 === Installation Paths ===
 
@@ -22,11 +29,44 @@ If your local paths don't match these, then you will need to move the installed 
 
 === New Script, Open Script, Run Script Broken from Menu ===
 
-If you experience this, you'll see an error like:
+If you experience this, you'll see an error
 
-{{{ PyQWinHook.core not defined }}}
+{{{
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+AttributeError: 'QApplication' object has no attribute 'openScript'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+AttributeError: 'QApplication' object has no attribute 'newScript'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+AttributeError: 'QApplication' object has no attribute 'runScript'
+}}}
 
-If you open your PYTHON_PATH/lib/site-packages/blur/wingui/__init__.py file, simply replace:
+To Fix:
+
+Edit - MAX_PATH/scripts/startup/__init__.py:
+
+Replace all calls to blur.wingui.app with blur.wingui
+
+{{{
+blur.wingui.app.newScript()
+}}}
+to
+{{{
+blur.wingui.newScript()
+}}}
+
+*If you see this error*
+
+{{{ 
+Traceback (most recent call last):
+  File "C:\Python26\lib\site-packages\blur\wingui\__init__.py", line 83, in openScript
+    fileName = str( QFileDialog.getOpenFileName( PyQWinHook.core, 'Open Script File', LAST_FILENAME, 'Python Files (*.py);;All Files (*.*)' ) )
+NameError: global name 'PyQWinHook' is not defined
+}}}
+
+Open your PYTHON_PATH/lib/site-packages/blur/wingui/__init__.py file, simply replace all calls that look like:
 
 {{{ PyQWinHook.core }}}
 
