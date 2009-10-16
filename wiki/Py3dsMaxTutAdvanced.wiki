@@ -57,6 +57,75 @@ dialog = TestDialog()
 dialog.show()
 }}}
 
+=== Loading Data ===
+
+Lets now populate the tree with some data from Max
+
+*Python*
+{{{
+from blur.wingui  import Dialog
+
+from PyQt4.QtGui  import QHBoxLayout      # Spread widgets horizontally
+from PyQt4.QtGui  import QVBoxLayout      # Spread widgets vertically
+
+from PyQt4.QtGui  import QPushButton
+from PyQt4.QtGui  import QTreeWidget      # Lets add a tree to the dialog...why not? its easy!
+from PyQt4.QtGui  import QTreeWidgetItem
+
+from Py3dsMax     import mxs              # Bring in the maxscript module
+
+# Lets subclass a TreeWidget item so we can store objects with them
+class ObjectItem( QTreeWidgetItem ):
+   def __init__( self, msobject ):
+       QTreeWidgetItem.__init__( self, [ msobject.name ] )
+       self._msobject = msobject
+       
+       # Add the children of this item
+       for child in msobject.children:
+           self.addChild( ObjectItem( child ) )
+   
+   def msobject( self ):
+       return self._msobject
+
+class TestDialog( Dialog ):
+   def __init__( self ):
+      Dialog.__init__( self )
+
+      # Create the main layout
+      layout = QVBoxLayout()
+      
+      # Add a tree
+      self.uiObjectTREE = QTreeWidget( self )  # Create a tree, as a child of this dialog
+      layout.addWidget( self.uiObjectTREE )    # Add the tree to the layout
+
+      # Add buttons
+      self.uiOkBTN = QPushButton( self )
+      self.uiOkBTN.setText( 'Ok' )
+      
+      self.uiCancelBTN = QPushButton( self )
+      self.uiCancelBTN.setText( 'Cancel' )
+
+      # Lay the buttons out horizontally
+      hlayout = QHBoxLayout()
+      hlayout.addWidget( self.uiOkBTN )
+      hlayout.addWidget( self.uiCancelBTN )
+
+      # Add the horizontal layout to the main one
+      layout.addLayout( hlayout )
+
+      # Set the dialogs layout to hold all these widgets
+      self.setLayout( layout )
+
+      # Load the scene object hierarchy
+      self.uiObjectTREE.addTopLevelItem( ObjectItem( mxs.rootNode ) )
+
+# Create the dialog
+dialog = TestDialog()
+dialog.show()
+}}}
+
+=== Connections ===
+
 === Qt Designer ===
 
 One of the main strengths that you can get from Qt is the Designer.  Qt does a good job of creating a true separation between code and graphics.
