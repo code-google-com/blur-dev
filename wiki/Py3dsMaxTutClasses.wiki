@@ -104,6 +104,37 @@ instB.printItems()      # result: [ 'a', b', 'c', 'e' ]
 
 Python is an Object-Oriented programming language, which means you can quickly and easily manage inheritance in your objects, something that Maxscript always lacked.
 
+{{{
+# Base class
+class ClassA:
+   def __init__( self, name ):
+      self._name = name
+      self._number = 10
+
+   def displayName( self ):
+      return '%s-%02i' % (self.name(), self.number())
+
+   def name( self ):
+      return self._name
+
+   def number( self ):
+      return self._number
+
+# ClassB inherits from ClassA
+class ClassB( ClassA ):
+   def __init__( self ):
+     # Call the base class constructor
+     # Since we're calling ClassA's contructor directly, we have to pass in the self instance
+     ClassA.__init__( self, 'MyName' )
+     self._multiplier = 2
+
+   def number( self ):
+      # Overload the number method
+      return ClassA.number( self ) * self.multiplier() # You can see the difference between calling a class method directly and from an instance
+
+   def multiplier( self ):
+      return self._multiplier
+}}}
 
 === Next Topic ===
 
