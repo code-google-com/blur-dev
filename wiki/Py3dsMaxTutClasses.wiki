@@ -8,17 +8,13 @@ In Maxscript you have the ability to create structs of data.  In Python, classes
 {{{
 /* create a struct */
 struct MyStruct (
-  _myInt     = 10,
   _myArray   = #( "a", "b", "c" ),
-  _myString  = "Test",
 
   function addItem item = (
       append _myArray item
   ),
-  function printAll = (
-      print _myInt
+  function printItems = (
       print _myArray
-      print _myString
   )
 )
 
@@ -37,9 +33,7 @@ instB.printItems()    /* result: #( "a", "b", "c", "e" ) */
 {{{
 # Create a class
 class MyClass:
-  _myInt    = 10
   _myArray  = [ 'a', 'b', 'c' ]
-  _myString = 'Test'
 
   def addItem( self, item ):
      self._myArray.append( item )
@@ -50,13 +44,21 @@ class MyClass:
 # Create class instance
 instA = MyClass()
 instA.addItem( 'd' )
-instA.printItems()
+instA.printItems()      # result: [ 'a', 'b', 'c', 'd' ]
 
 # Create class instance
 instB = MyClass()
 instB.addItem( 'e' )
-instB.printItems()
+instB.printItems()      # result: [ 'a', b', 'c', 'd', 'e' ]
 }}}
+
+So, you can see that once again, there is some similarity, and yet, some big differences as well.
+
+==== What is the 'self' variable?  Why don't I pass that into my function? ====
+
+The 'self' variable is actually the instance of the class being passed into the function.  So when you call instA.printItems(), the method is actually getting instA as your first variable.  This way you can easily reference any individual instance of your class, as well as pass it along to other functions.  Something that was never available in Maxscript.
+
+Whenever you're writing methods for a class, you always *must* declare self as the first variable being passed into your class.
 
 === Object-Oriented Programming ===
 
