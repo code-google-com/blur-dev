@@ -2,6 +2,40 @@
 
 = Structs & Classes =
 
-== Next Topic ==
+In Maxscript you have the ability to create structs of data.  In Python, classes can do everything you can in a Maxscript struct - and oh so much more.
+
+*Maxscript Struct*
+{{{
+/* create a struct */
+struct MyStruct (
+  _myInt     = 10,
+  _myArray   = #( a, b, c ),
+  _myString  = 'Test',
+
+  function addItem item = (
+      append _myArray item
+  ),
+  function printAll = (
+      print _myInt
+      print _myArray
+      print _myString
+  )
+)
+
+instA = MyStruct()
+instA.addItem( 10 )
+instA.printAll()
+
+instB = MyStruct()
+instB.addItem( 4 )
+instB.printAll()
+}}}
+
+=== Object-Oriented Programming ===
+
+Python is an Object-Oriented programming language, which means you can quickly and easily manage inheritance in your objects, something that Maxscript always lacked.
+
+
+=== Next Topic ===
 
 [Py3dsMaxTutValues Accessing 3dsMax Values]
