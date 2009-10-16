@@ -1,0 +1,37 @@
+#summary Currently Known Issues in the Installers
+
+We've been getting a lot of interest for these installers, so we decided to put them on here even though they are still beta and not 100% complete.
+
+This page has the workarounds for the known issues, but is also where you should comment on new issues that you discover while working with the system.  Thanks!
+
+=== Installation Paths ===
+
+We are currently working on our installers, but right now, they are hardcoded install locations:
+
+Python 24 x32: c:/python24
+Python 26 x64: c:/python26_64
+
+3dsMax 9    x32: c:/max9
+3dsMax 9    x64: c:/max9_64
+3dsMax 2008 x32: c:/max10
+3dsMax 2008 x64: c:/max10_64
+3dsMax 2009 x32: c:/max2009
+3dsMax 2009 x64: c:/max2009_64
+
+If your local paths don't match these, then you will need to move the installed files to wherever they should be on your computer.  We'll be updating the installers soon.
+
+=== New Script, Open Script, Run Script Broken from Menu ===
+
+If you experience this, you'll see an error like:
+
+{{{ PyQWinHook.core not defined }}}
+
+If you open your PYTHON_PATH/lib/site-packages/blur/wingui/__init__.py file, simply replace:
+
+{{{ PyQWinHook.core }}
+
+with
+
+{{{ core }}}
+
+And that should solve your problem!
