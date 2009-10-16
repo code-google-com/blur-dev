@@ -220,8 +220,14 @@ dialog = TestDialog()
 dialog.show()
 }}}
 
+This is only scratching the surface of the possibilities with Python and Qt.  For more information, and more signals, you'll have to look up help online or see the documentation for Qt (which is very, very well written and documented)
+
+You can see Qt's Website [http://qt.nokia.com here]
+
 === Qt Designer ===
 
 One of the main strengths that you can get from Qt is the Designer.  Qt does a good job of creating a true separation between code and graphics.
 
 You can drag and drop widgets onto your dialog, save out an xml (.ui) file that can be loaded in on the fly.  It also has Layouts.  Layouts allow you to easily create *resizable* dialogs (something that was always a problem in Maxscript rollouts)
+
+This can really ease your workflow - I recommend looking into it.
