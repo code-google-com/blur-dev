@@ -8,15 +8,15 @@ This page has the workarounds for the known issues, but is also where you should
 
 We are currently working on our installers, but right now, they are hardcoded install locations:
 
-Python 24 x32: c:/python24
-Python 26 x64: c:/python26_64
+ * Python 24 x32: c:/python24
+ * Python 26 x64: c:/python26_64
 
-3dsMax 9    x32: c:/max9
-3dsMax 9    x64: c:/max9_64
-3dsMax 2008 x32: c:/max10
-3dsMax 2008 x64: c:/max10_64
-3dsMax 2009 x32: c:/max2009
-3dsMax 2009 x64: c:/max2009_64
+ * 3dsMax 9    x32: c:/max9
+ * 3dsMax 9    x64: c:/max9_64
+ * 3dsMax 2008 x32: c:/max10
+ * 3dsMax 2008 x64: c:/max10_64
+ * 3dsMax 2009 x32: c:/max2009
+ * 3dsMax 2009 x64: c:/max2009_64
 
 If your local paths don't match these, then you will need to move the installed files to wherever they should be on your computer.  We'll be updating the installers soon.
 
