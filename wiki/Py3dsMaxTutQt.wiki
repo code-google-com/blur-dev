@@ -80,6 +80,9 @@ window.show()
 Both dialogs and windows can be modal.  However, dialogs are designed for it, while windows require more from the scripter to do so.  To make a dialog modal, you simply replace the show() call with an exec_() call.
 
 {{{
+from blur.wingui import Dialog
+dialog = Dialog()
+
 # Launch the dialog
 dialog.show()           # Launch it modelessly
 if ( dialog.exec_() ):  # Launch it modally
@@ -94,6 +97,7 @@ A window on the other hand does not have an exec_ function, and you as the scrip
 # Launch the window
 from blur.wingui  import Window
 from PyQt4.QtCore import Qt
+
 window = Window()
 window.setWindowModality( Qt.ApplicationModal )   # Makes the window modal
 window.show()  # Executes the window modaly
