@@ -7,6 +7,8 @@ If you've found your way to this page, then you are ready to see what the power 
 
 These tutorials will outline the differences between MAXScript and Python, and how to access the information you need out of maxscript, but in the pythonic way.  It'll comprise of a MAXScript sample, followed by the Python equivalent.
 
+You will be able to directly copy the maxscript chunks and run them through a script in 3dsMax.  You will also be able to directly copy the Python chunks and run them through a script from 3dsMax (go to Python Menu -> New Script - if that crashes, see KnownIssues).
+
 While these are designed to give you a quick start into the conversion of MAXScript to Python, they are not intended to replace all the standard documentation of each language.  View these as a quickstart to your education.
 
  * [Py3dsMaxTutBasics Basics]
