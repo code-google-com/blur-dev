@@ -129,4 +129,4 @@ dialog.show()
 
 === Next Topic ===
 
-[Py3dsMaxTutAdvanced More Advanced Examples]
+[Py3dsMaxTutAdvanced Advanced PyQt Examples]
