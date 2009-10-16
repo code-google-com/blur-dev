@@ -49,6 +49,56 @@ So, this is a very simple example.  And while it may seem right now in this simp
 
 === Dialogs vs. Windows ===
 
+Inside PyQt (and in our case, the blur.wingui module), you have access to Dialogs and Windows.  While they are very similar, there are some subtle differences.  These are the 2 main ones that I use to determine which to use.
+
+*Menus*
+
+If I need a menu in my tool, I'll use a window, as it natively has support for a menubar
+
+{{{
+from blur.wingui import Window
+from PyQt4.QtGui import QMenu
+
+# Create a window
+window = Window()
+
+# Create a menu
+menu = QMenu( window )
+menu.setTitle( '&File' )
+menu.addAction( '&New File...' )
+menu.addAction( '&Open File..' )
+menu.addSeparator()
+menu.addAction( '&Quit' )
+
+# Add the menu to the menu bar
+window.menuBar().addMenu( menu )
+window.show()
+}}}
+
+*Modality*
+
+Both dialogs and windows can be modal.  However, dialogs are designed for it, while windows require more from the scripter to do so.  To make a dialog modal, you simply replace the show() call with an exec_() call.
+
+{{{
+# Launch the dialog
+dialog.show()           # Launch it modelessly
+if ( dialog.exec_() ):  # Launch it modally
+  print 'Accepted'
+else:
+  print 'Rejected'
+}}}
+
+A window on the other hand does not have an exec_ function, and you as the scripter will need to determine if it is accepted or rejected.
+
+{{{
+# Launch the window
+from blur.wingui  import Window
+from PyQt4.QtCore import Qt
+window = Window()
+window.setWindowModality( Qt.ApplicationModal )   # Makes the window modal
+window.show()  # Executes the window modaly
+}}}
+
 === Sub-Classing ===
 
 While the above example created a dialog and then added a button to it, that is not the generally preferred method to creating dialogs.  Normally, you will subclass a Dialog and create your own Dialog instance.
