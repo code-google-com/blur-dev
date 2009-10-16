@@ -28,7 +28,7 @@ If you experience this, you'll see an error like:
 
 If you open your PYTHON_PATH/lib/site-packages/blur/wingui/__init__.py file, simply replace:
 
-{{{ PyQWinHook.core }}
+{{{ PyQWinHook.core }}}
 
 with
 
