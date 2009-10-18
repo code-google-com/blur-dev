@@ -22,5 +22,6 @@
 
 *Tutorials*
 
+ * [MaxScriptTuts Maxscript]
  * [Py3dsMaxTuts Python & 3dsMax]
  * [PySoftimageTuts PyQt & Softimage]
