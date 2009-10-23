@@ -17,3 +17,4 @@ While these are designed to give you a quick start into the conversion of MAXScr
  * [Py3dsMaxTutDiffs Maxscript/Python Differences ]
  * [Py3dsMaxTutQt PyQt User Interfaces]
  * [Py3dsMaxTutAdvanced Advanced PyQt Examples]
+ * [Py3dsMaxCOMExecute Registering COM Interface]
