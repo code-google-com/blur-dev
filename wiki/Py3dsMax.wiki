@@ -13,7 +13,7 @@
 
 So far, we have not had any problems with this solution, but if you download our software and use it, *please* let us know if you run into any problems.
 
-Again, if you're installing for 3dsMax 2010 - you'll need to rename the Qt libraries (anything starting with Qt in your max install directory to a *.bak instead of a *.dll)
+Again, if you're installing for 3dsMax 2010 - you'll need to rename the Qt libraries (anything starting with Qt in your max install directory to a *.bak* instead of a *.dll*)
 
 == What is it? ==
 
