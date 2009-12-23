@@ -6,6 +6,15 @@
  * You will need *Python*
  * You will need *Autodesk | 3dsMax* ([http://www.autodesk.com/3dsmax])
 
+
+== Warning: Max 2010 ==
+
+3dsMax 2010 now comes with the Qt DLLs installed with it - this causes a clash with the code that we have released to allow the PyQt bindings.  Right now, this is still beta, and we're simply renaming the DLLs shipped with the application so it will load our libraries instead.  
+
+So far, we have not had any problems with this solution, but if you download our software and use it, *please* let us know if you run into any problems.
+
+Again, if you're installing for 3dsMax 2010 - you'll need to rename the Qt libraries (anything starting with Qt in your max install directory to a *.bak instead of a *.dll)
+
 == What is it? ==
 
 Here at Blur we've developed a way to integrate the Python ([http://www.python.org]) programming language into the 3d Studio Max application.  By mapping the basic MAXScript value class to the basic Python PyObject class, we're able to expose MAXScript functionality as a Python module.  All maxscript methods are available using the mxs module and run the same way as they would normally in maxscript, only using a pythonic syntax.
@@ -22,6 +31,7 @@ Currently, we are supporting:
      * max9
      * max2008 (as max10)
      * max2009
+     * max2010
 
 == How do I get it? ==
 
