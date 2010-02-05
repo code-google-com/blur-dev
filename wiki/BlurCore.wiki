@@ -66,7 +66,7 @@ These are common libraries that we have developed that are used across multiple 
 
 ==== Additional Info ====
 
- * Download Blur Libs: [http://code.google.com/p/blur-dev/downloads/list]
+ * Download Blur Libs: Blur Libs have now been wrapped into the Blur Python installer
 
 == Blur Python ==
 
