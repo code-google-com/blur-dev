@@ -50,9 +50,9 @@ Once you've gotten everything all setup - start workging through the [Py3dsMaxTu
 
 === What will you need? ===
 
-* MSVC 2005, 2005 SP1, and/or 2008
-* 3dsMax SDK for v9/10, v2009, and/or v2010
-* Python 24 and/or 26 x64
+ * MSVC 2005, 2005 SP1, and/or 2008
+ * 3dsMax SDK for v9/10, v2009, and/or v2010
+ * Python 24 and/or 26 x64
 
 === What do you get? ===
 
