@@ -60,26 +60,26 @@ We have finally cleaned up the source code and have provided it on our downloads
 
 The MSVC++ Project Files are broken out into the version you will need to compile:
  
- * blurPython_msvc2005.sln     - MSVC 2005 (for max9 & max10)
- * blurPython_msvc2005_sp1.sln - MSVC 2005 Service Pack 1 (for max2009)
- * blurPython_msvc2008         - MSVC 2008 (for max2010+)
+ * *blurPython_msvc2005.sln*     _MSVC 2005 (for max9 & max10)_
+ * *blurPython_msvc2005_sp1.sln* _MSVC 2005 Service Pack 1 (for max2009)_
+ * *blurPython_msvc2008*         _MSVC 2008 (for max2010+)_
 
 All of the solutions load and work with the same source files:
 
- * blurPython.cpp      - 3dsMax plugin initialization
- * blurPython.def      - 3dsMax plugin definition
- * imports.h           - common Python & 3dsMax header includes that will be needed
- * macros.h            - reusable macros to protect maxscript memory
- * protector.h         - Protector Value class to perform garbage collection on Values wrapped in Python usage
- * wrapper.h           - ObjectWrapper and ValueWrapper classes - mapping the base Value* and PyObject* classes together
- * python_struct.h     - Defines the python maxscript struct
- * sudiomax_module.h   - Defines the Py3dsMax python module
+ * *blurPython.cpp*      _3dsMax plugin initialization_
+ * *blurPython.def*      _3dsMax plugin definition_
+ * *imports.h*           _common Python & 3dsMax header includes that will be needed_
+ * *macros.h*            _reusable macros to protect maxscript memory_
+ * *protector.h*         _Protector Value class to perform garbage collection on Values wrapped in Python usage_
+ * *wrapper.h*           _ObjectWrapper and ValueWrapper classes - mapping the base Value* and PyObject* classes together_
+ * *python_struct.h*     _Defines the python maxscript struct_
+ * *sudiomax_module.h*   _Defines the Py3dsMax python module_
 
 Theoretically, all you would need to compile is to alter the project paths to point to where your 3dsMax include's and libs are located, and where your Python include's and libs are located.
 
 This is done by right clicking on the properties of your solution, and editing:
 
-* C/C++ >> General >> Additional Include Directories
-* Linker >> General >> Additional Library Directories
+ * C/C++ >> General >> Additional Include Directories
+ * Linker >> General >> Additional Library Directories
 
 To download, just go to the downloads page, and choose the blurPython Type-Source download.
