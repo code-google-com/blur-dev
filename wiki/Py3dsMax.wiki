@@ -73,3 +73,5 @@ This is done by right clicking on the properties of your solution, and editing:
 
 * C/C++ >> General >> Additional Include Directories
 * Linker >> General >> Additional Library Directories
+
+To download, just go to the downloads page, and choose the blurPython Type-Source download.
