@@ -4,4 +4,4 @@ We've been getting a lot of interest for these installers, so we decided to put 
 
 We'll address the issues on here ASAP, but until then, they'll contain the fixes that you'll need to get the system running.
 
-This page has the workarounds for the known issues, if you run into an issue and have a workaround for it, feel free to add it as a comment at the bottom so others can know how to fix their installs and we'll get to it ASAP.  If you're running into an issue that you can't figure out, feel free to add an issue to the project that we can look into.  Thanks!
+This page has the workarounds for the known issues, if you run into an issue and have a workaround for it, feel free to add it as a comment at the bottom so others can know how to fix their installs and we'll get to it ASAP.  If you're running into an issue that you can't figure out, feel free to add an issue to the project [http://code.google.com/p/blur-dev/issues/list here].  Thanks!
