@@ -1,0 +1,20 @@
+#labels Documentation,Python,3dsMax
+#Py3dsMax Reference Documentation
+
+= Py3dsMax Reference =
+
+== module Py3dsMax ==
+
+
+==== Methods ====
+|| *Method* || *Return Value* || *Description* ||
+|| {{{getVisController(object)}}} || {{{Controller}}} || Returns the visibility controller on the object. ||
+|| {{{setVisController(object,controller)}}} || {{{Bool}}} || Sets the visibility controller on an object. ||
+
+
+== class mxs ==
+This is the central class of the Py3dsMax package. Use this to access Maxscript functions, values, and 3dsMax objects. This documentation focuses mainly on the parts that differ between Maxscript and Py3dsMax.
+
+==== Methods ====
+|| *Method* || *Return Value* || *Description* ||
+|| {{{namify(namevalue)}}} || {{{Name}}} || Returns equivalent of a Maxscript Name object for given string.||
