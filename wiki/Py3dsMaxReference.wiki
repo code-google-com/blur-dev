@@ -1,8 +1,6 @@
 #summary Py3dsMax Reference Documentation
 #labels Documentation,Python,3dsMax
 
-= !Py3dsMax Reference =
-
 == module !Py3dsMax ==
 
 
