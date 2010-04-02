@@ -6,7 +6,7 @@
 
 ==== Methods ====
 || *Method* || *Return Value* || *Description* ||
-|| {{{getVersion()}}} || {{{string}}} || Returns a string representing the !Py3dsMax plugin version as Major,Minor,Patch,Revision.||
+|| {{{getVersion()}}} || {{{string}}} || Returns a string representing the !Py3dsMax plugin version as Major,Minor,Patch,Revision. (Since 0.8.0.9407)||
 || {{{getVisController(object)}}} || {{{Controller}}} || Returns the visibility controller on the object. ||
 || {{{setVisController(object,controller)}}} || {{{bool}}} || Sets the visibility controller on an object. ||
 
