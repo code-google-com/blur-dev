@@ -1,0 +1,12 @@
+#summary Py3dsMax caveats, warnings, etc.
+#labels Py3dsMax,Python
+
+== Intro ==
+Collection of known Py3dsMax quirks, caveats, etc.
+----
+
+
+=== Py3dsMax and "__main__" ===
+When running scripts using the logger's {{{Evaluate}}} scripts are not run as {{{__main__}}}.
+
+Using Python -> Run Script and Python -> Logger -> Run Script will execute scripts as {{{__main__}}}. {{{Py3dsMax.runScript()}}} will also execute the script in the top-level environment.
