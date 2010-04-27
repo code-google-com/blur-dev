@@ -1,4 +1,4 @@
-#summary Integration of Python and PyQt into 3d Studio Max
+#summary Integration of Python and PyQt into XSI
 
 == Prerequisites ==
 
