@@ -4,7 +4,12 @@
 
  * [Installing]
 
-*Tutorials*
+*Artist Tools*
+
+ * [Treegrunt]
+ * [Tools]
+
+*Developer Tools*
 
  * [BlurIDE]
  * [PyQtIntro Introduction to PyQt]
