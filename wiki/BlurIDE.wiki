@@ -1,0 +1,19 @@
+#summary Introduction to the Blur IDE
+
+= Blur IDE Documentation =
+
+To fully integrate Python into 3dsMax, we set out to build a simple editor using the Python & PyQt system that we had setup.  This led us to develop the Blur IDE system.
+
+Built using the QScintilla plugin for Qt for highlighting, the editor is a lightweight, yet powerful editing program that is cross-platform, as well as cross-application.
+
+It runs as a standalone application, as well as a nested program within 3dsMax and Softimage for rapid development.
+
+Found in the PYTHON_PATH/lib/site-packages/blurdev/ide package, the system includes:
+
+=== Code Editor ===
+
+=== Treegrunt ===
+
+=== Logger ===
+
+=== SDK Window ===
