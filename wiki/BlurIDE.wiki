@@ -61,17 +61,17 @@ Where, {{{ PYTHON_PATH }}} is the location that you installed the blurdev packag
 
 === Running from 3dsMax ===
 
-To run the IDE from 3dsMax, first, make sure that you have Python properly installed in 3dsMax.  If it is, you will see a Python menu next to the Maxscript menu.
+To run the IDE from 3dsMax, make sure that you have setup your Py3dsMax system properly.  The instructions for that can be found [[Py3dsMax here]].
 
-All you have to do is choose {{ Python >> Show IDE Editor }}, and this will launch the editor as a child window of 3dsMax and you can start developing in [Py3dsMax Python for Max]!
-
-==== Missing Python in 3dsMax? ====
-
-If you don't have that, then make sure you checked off the right version of Max (3ds Max 2010 Plugins for instance) in the right version of the installer (32-bit or 64-bit), and chose your computer's 3dsMax installation location.  If you are positive that you have run through these steps properly, make an issue and we will try to look at it.  *Note that supporting the offline tools is a low priority as we have limited resource and we supply the code AS IS.*
+All you have to do is choose {{{ Python >> Show IDE Editor }}}, and this will launch the editor as a child window of 3dsMax and you can start developing in [Py3dsMax Python for Max]!
 
 === Running from Softimage ===
 
-== What comes with the IDE? ==
+To run the IDE from Softimage, make sure that you have setup your PySoftimage system properly.  The instructions for that can be found [[PySoftimage here]].
+
+All you have to do is choose {{{ Python >> Show IDE Editor }}}, and this will launch the editor as a child window of Softimage and you can start developing with [PySoftimage PyQt for Softimage]!
+
+== What comes in the Blur IDE? ==
 
 === IDE Editor ===
 
