@@ -127,7 +127,7 @@ The only caveat of this, is that if a module cannot be imported, it cannot be do
 
 == Creating a Project ==
 
-=== Creating a project for BlurOffline ===
+=== Create a project for BlurOffline ===
 
 So, lets create a simple project in the IDE now, and so everyone has the same code to start with - lets make a project for the BlurOffline code.
 
@@ -151,12 +151,32 @@ You can leave the rest of the settings the way they are and click *Ok*.
 
 If you want to edit the settings for this at any time, you can always right-click on an item in the navigator tree, and choose {{{ Edit Project... }}}.
 
+=== Managing Multiple Projects ===
+
+If you want to create other projects, the process is the same.
+
+As your projects grow, you'll want to quickly be able to toggle between them - you can go setup your favorites by going to
+
+{{{
+Project >> Open Favorites...
+}}}
+
+From here, you can right-click and add any project you want as a favorite, then double-clicking on that will load it up.
+
+This is a good, fast way to toggle between projects.
+
 == Managing Preferences ==
 
+You'll notice as you start doing more development, that even though the IDE is the same _code_, the _settings_ will change if you're in 3dsMax or Softimage.
 
+This is because of the internal preference management system of the blurdev packages.
 
-== Developing Tools ==
+All user prefs for tools developed for the blurdev environment/treegrunt system, will save to:
 
-So, now that you have a run down of some of the basic functions of the IDE editor, what next?
+{{{
+c:/blur/userprefs/[application]/[pref]
+}}}
 
-We have written a number of tools and systems to speed up Tools development procedures within the IDE Editor, which we'll go over in the [PyQt intro to PyQt documentation].
+The core system will know what application is being run, so tools, such as the IDE editor, will only know about their own preferences.  This way, you can setup different project favorites for 3dsMax from Softimage, from Standalone.
+
+We'll delve into this more when we talk about [PyQt developing Tools].
