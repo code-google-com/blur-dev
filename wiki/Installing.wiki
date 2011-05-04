@@ -5,7 +5,6 @@
 This page will walk you through how to install the BlurOffline system to your computer.
 
 <wiki:toc max_depth="4" />
-
 <hr />
 
 == Pre-Requisites ==
