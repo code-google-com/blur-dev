@@ -11,7 +11,7 @@ It runs as a standalone application, as well as a nested program within 3dsMax a
 
 == Why another IDE? ==
 
-The IDE (Integrated Development Environment) is an open source code editing program with multi-language support.  The main ones that we use it for are Python, Maxscript, XML, HTML, Javascript, and CSS, but can support as many as QScintlla supports.
+The Blur IDE (Integrated Development Environment) is an open source code editing program with multi-language support.  The main ones that we use it for are Python, Maxscript, XML, HTML, Javascript, and CSS, but can support as many as QScintlla supports.
 
 So, with many editors out there, why reinvent the wheel?
 
