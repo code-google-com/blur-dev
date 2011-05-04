@@ -26,13 +26,8 @@ First up, fire open your IDE Editor (can be standalone, or in an application of 
 Click {{{ Ctrl+N }}} or {{{ File >> New }}} and type:
 
 {{{
-# import the dialog base class
-# note, this is not QDialog from PyQt4.QtGui,
-# as will explain in a minute
-
 from blurdev.gui import Dialog
 
-# create our own dialog class
 class HelloWorldDialog(Dialog):
     def __init__( self, parent = None ):
         Dialog.__init__( self, parent )
@@ -42,3 +37,66 @@ class HelloWorldDialog(Dialog):
 import blurdev
 blurdev.launch(HelloWorldDialog)
 }}}
+
+Save this file to {{{ c:/blur/dev/offline/code/python/scripts/test.py }}}
+
+=== Dialog vs. QDialog ===
+
+The first thing to note, is our first line.
+{{{
+from blurdev.gui import Dialog
+}}}
+
+We're importing our own {{{ Dialog }}} class, not a standard {{{ PyQt4.QtGui.QDialog }}} class.
+
+In fact, the {{{ Dialog }}} class inherits from the standard {{{ QDialog }}} class, but it also provides some important wrapper code around it.  The wrapper code works with the blurdev/core logic to determine the proper parenting based on the application it's running in.
+
+When standalone, no parent is needed, but if running within 3dsMax for instance, a Dialog MUST be a child of a {{{ QWinWidget }}} class.  Rather than making the developer check for the proper parenting, we just wrote our own base class to support it.
+
+We did this for the 3 base classes that we'll use when developing tools:
+
+ # `blurdev.gui.Dialog` vs. `PyQt4.QtGui.QDialog`
+ # `blurdev.gui.Window` vs. `PyQt4.QtGui.QWindow`
+ # `blurdev.gui.Wizard` vs. `PyQt4.QtGui.QWizard`
+
+=== blurdev.launch ===
+
+The next thing to note from this example is the way that we run the tool.
+
+The last line of code for this example calls
+{{{
+blurdev.launch(HelloWorldDialog)
+}}}
+
+What the `blurdev.launch` code is doing for us is managing the QApplication system.
+
+In a standard PyQt application, a developer would have to maintain their application instance, however, there can only ever be 1 instance of a QApplication running per thread.
+
+In the case of 3dsMax and Softimage, we'll have 1 QApplication instance running for ALL tools that are created.  When we're running standalone though, we're going to have 1 QApplication PER tool.
+
+Again, to abstract our code to be able to work in multiple applications, it was easiest to build the system into the core to maintain the application instancing.
+
+By calling `blurdev.launch` on your dialog, this will allow you to develop a tool that can run both IN and OUT of another application.
+
+*Note: You only need to do this for your root dialogs.  If you have say, an About dialog that is a sub-dialog of your main Tool, you can just show it in a standard Qt way*.
+
+=== Running the Example ===
+
+So, what does this all mean?  Lets give it a test.
+
+ # Navigate to `python/scripts` in your IDE
+ # Right-click on `test.py` and choose `Run`
+
+This will launch your dialog, and you'll notice that it is parented to the IDE Editor (if running standalone) or your application window (if running in 3dsMax or Softimage).
+
+This is because its running within the current thread, which already has a QApplication instance running, and so parents to the root window.
+
+Now try:
+
+  # Right-click on `test.py` and choose `Run (Standalone)`
+
+This will run your script as its own application - so it actually creates a full standalone application, creating its own QApplication and runs within its own thread.
+
+This now runs outside of the IDE editor and/or application.
+
+*Note: if you are building tools that need to access information inside of an application like 3dsMax or Softimage, they CANNOT access the Py3dsMax or PySoftimage libraries, so you have to program accordingly.*
