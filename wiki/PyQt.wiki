@@ -1,0 +1,44 @@
+#summary One-sentence summary of this page.
+
+= Introduction to PyQt =
+
+If you are completely new to Python and/or PyQt, then I would recommend working through some online tutorials - there are a TON of them out there.
+
+This tutorial is about working with PyQt as it relates to the Blur systems, not a basic introduction to PyQt in general.
+
+The tutorials on this page are for generic development - everything in these docs can and does apply to code for 3dsMax and Softimage - as the system we developed is application agnostic.
+
+<wiki:toc max_depth="4" />
+<hr />
+
+== Pre-requistes ==
+
+I'm assuming that you've read through the [BlurIDE] documentation and are setup with the BlurOffline code project.
+
+== Hello, World ==
+
+Everyone's favorite - Hello World.
+
+For this example, we'll go into a couple of differences between the basics of PyQt and the system that we have in place.
+
+First up, fire open your IDE Editor (can be standalone, or in an application of choice) and make sure we are in the BlurOffline project.
+
+Click {{{ Ctrl+N }}} or {{{ File >> New }}} and type:
+
+{{{
+# import the dialog base class
+# note, this is not QDialog from PyQt4.QtGui,
+# as will explain in a minute
+
+from blurdev.gui import Dialog
+
+# create our own dialog class
+class HelloWorldDialog(Dialog):
+    def __init__( self, parent = None ):
+        Dialog.__init__( self, parent )
+        
+        self.setWindowTitle('Hello, World')
+
+import blurdev
+blurdev.launch(HelloWorldDialog)
+}}}
