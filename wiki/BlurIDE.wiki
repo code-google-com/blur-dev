@@ -2,18 +2,85 @@
 
 = Blur IDE Documentation =
 
-To fully integrate Python into 3dsMax, we set out to build a simple editor using the Python & PyQt system that we had setup.  This led us to develop the Blur IDE system.
-
 Built using the QScintilla plugin for Qt for highlighting, the editor is a lightweight, yet powerful editing program that is cross-platform, as well as cross-application.
 
 It runs as a standalone application, as well as a nested program within 3dsMax and Softimage for rapid development.
 
-Found in the PYTHON_PATH/lib/site-packages/blurdev/ide package, the system includes:
+<wiki:toc max_depth="4" />
+<hr />
 
-=== Code Editor ===
+== Why another IDE? ==
+
+The IDE (Integrated Development Environment) is an open source code editing program with multi-language support.  The main ones that we use it for are Python, Maxscript, XML, HTML, Javascript, and CSS, but can support as many as QScintlla supports.
+
+So, with many editors out there, why reinvent the wheel?
+
+We had a couple of needs that we wanted to solve with the creation of our own editor.  
+
+ # We needed an easy way to support non-standard languages (such as Maxscript) since we do development in a number of languages.
+ # We needed an editor that would work stand-alone...BUT ALSO inside of 3dsMax and Softimage to fully support our workflow
+ # We needed a test case for a complex application that CAN run inside of 3dsMax and Softimage with absolutely no code changes...
+ # We wanted a way to provide our TDs with a robust Wizard system to quickly create Tools and code without needing to remember all the ins and outs of the technical requirements.
+
+== Where is it Installed? ==
+
+The code for the IDE is actually installed as a sub-package within the blurdev python package.  This will be installed to:
+
+{{{
+
+PYTHON_PATH/lib/site-packages/blurdev/ide 
+
+}}}
+
+We are actively developing this editor, so we'll try to continue to roll out updates as we add useful features.  SO, if you choose to modify this code in anyway, I'd recommend doing it externally from this installed location so as to avoid any overwrites during a future upgrade.
+
+One of the ideas we've had is adding a more robust plugin/addon system to the code so that external developers can add changes to it
+
+== How do I use it? ==
+
+=== Pre-requisites ===
+
+If you followed the [Installing] instructions, then you'll know that the pre-requisites for this are:
+
+ # Python
+ # Qt 4.6+
+ # QScintilla
+ # PyQt4
+
+=== Running Standalone ===
+
+To run the IDE standalone, you should have installed the Development Tools section from the Installers, and now see a Blur IDE or Blur IDE_64 link on your desktop.
+
+If you don't, no worries - you can just create a link to the IDE directly:
+
+{{{
+PYTHON_PATH\pythonw.exe PYTHON_PATH\lib\site-packages\blurdev\runtimes\ide_editor.py
+}}}
+
+Where, {{{ PYTHON_PATH }}} is the location that you installed the blurdev package to.
+
+=== Running from 3dsMax ===
+
+To run the IDE from 3dsMax, first, make sure that you have Python properly installed in 3dsMax.  If it is, you will see a Python menu next to the Maxscript menu.
+
+All you have to do is choose {{ Python >> Show IDE Editor }}, and this will launch the editor as a child window of 3dsMax and you can start developing in [Py3dsMax Python for Max]!
+
+==== Missing Python in 3dsMax? ====
+
+If you don't have that, then make sure you checked off the right version of Max (3ds Max 2010 Plugins for instance) in the right version of the installer (32-bit or 64-bit), and chose your computer's 3dsMax installation location.  If you are positive that you have run through these steps properly, make an issue and we will try to look at it.  *Note that supporting the offline tools is a low priority as we have limited resource and we supply the code AS IS.*
+
+=== Running from Softimage ===
+
+== What comes with the IDE? ==
+
+=== IDE Editor ===
+
+=== Logger Window ===
+
+=== SDK Window ===
+
+== Developing Tools ==
 
 === Treegrunt ===
 
-=== Logger ===
-
-=== SDK Window ===
+=== IDE Tool Wizard ===
