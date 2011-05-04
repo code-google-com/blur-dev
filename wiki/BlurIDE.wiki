@@ -125,6 +125,36 @@ What that means is, the moment your code changes - your documentation is up to d
 
 The only caveat of this, is that if a module cannot be imported, it cannot be documented...which, may or may not be a good thing.
 
+== Creating a Project ==
+
+=== Creating a project for BlurOffline ===
+
+So, lets create a simple project in the IDE now, and so everyone has the same code to start with - lets make a project for the BlurOffline code.
+
+In the IDE Editor, go to {{{ Project >> New Project }}}
+
+The first field will contain the path to your project file's location - this is where the {{{ *.blurproj }}} file will be saved.  This will default to the standard blur location: {{{ c:/blur/dev }}} for Windows, but you can save your project file wherever you want.
+
+In the {{{ project name }}} field, type {{{ BlurOffline }}}.
+
+This will update the first tree item to the match the title - as this will be the root item for your project.
+
+From here, you have a few options - you can point the head item to an actual path, and it will just recursively add all the files/folders within that path, or you can create custom groups.
+
+For now, we'll keep it simple.  Right-click on the {{{ BlurOffline }}} tree item and choose {{{ Edit Item }}}.
+
+Uncheck the {{{ custom group }}} option, and for the {{{ path }}} field, navigate to {{{ c:/blur/dev/offline/code }}}.
+
+You can leave the rest of the settings the way they are and click *Ok*.
+
+*Save* your project, and it will then switch your IDE to the BlurOffline project.
+
+If you want to edit the settings for this at any time, you can always right-click on an item in the navigator tree, and choose {{{ Edit Project... }}}.
+
+== Managing Preferences ==
+
+
+
 == Developing Tools ==
 
 So, now that you have a run down of some of the basic functions of the IDE editor, what next?
