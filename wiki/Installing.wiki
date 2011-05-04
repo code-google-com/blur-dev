@@ -134,7 +134,7 @@ This will install:
   * c:/blur/dev/offline
   * DESKTOP/Treegrunt
 
-==== 3dsMax XXX Plugins ===
+==== 3dsMax Plugins ===
 
 This will install all the required DLLs that we have made for 3dsMax.  This includes the blurPython DLL as well as additional DLLs that we have made over the years to extend Max.
 
