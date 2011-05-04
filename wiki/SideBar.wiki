@@ -12,6 +12,6 @@
 *Developer Tools*
 
  * [BlurIDE]
- * [PyQtIntro Introduction to PyQt]
+ * [PyQt PyQt Introduction]
  * [Py3dsMax PyQt in 3dsMax]
  * [PySoftimage PyQt in Softimage]
