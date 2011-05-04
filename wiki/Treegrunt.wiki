@@ -16,7 +16,7 @@ So if this is the Tool launching system...where are all the tools?  For offline 
 If you don't see any tools, or if you are a Developer who created a new tool, in your Treegrunt:
 
  # Right-click in Treegrunt
- # Choose {{ Environments >> Rebuild Index }}
+ # Choose {{{ Environments >> Rebuild Index }}}
  # Hit OK on the popup dialog
 
 This will rebuild the XML index of tools that Treegrunt uses to launch tools from.
