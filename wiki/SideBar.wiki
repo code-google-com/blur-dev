@@ -1,27 +1,15 @@
 === Quick Links ===
 
-*Required Modules*
+*Installation*
 
- * [BlurCore]
-
-*General Packages*
-
- * [Py3dsMax]
- * [PySoftimage]
- 
-*Applications*
-
- * [Assburner]
- * [Assfreezer]
- * [Trax]
-
-*Tools & Scripts*
-
- * [Blur3dsMax]
- * [BlurSoftimage]
+ * [Installing]
+ * [InstalledModules Installed Modules]
+ * [InstalledSources Installed Source Code]
+ * [Uninstalling]
 
 *Tutorials*
 
- * [MaxScriptTuts Maxscript]
- * [Py3dsMaxTuts Python & 3dsMax]
- * [PySoftimageTuts PyQt & Softimage]
+ * [BlurIDE]
+ * [PyQtIntro Introduction to PyQt]
+ * [Py3dsMax PyQt in 3dsMax]
+ * [PySoftimage PyQt in Softimage]
