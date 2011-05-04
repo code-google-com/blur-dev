@@ -67,7 +67,10 @@ We have improved our installer system - so now it wraps all of the required modu
 
 === Steps to Install ===
 
- # Download the version you want to install from [[http://blur-dev.googlecode.com here]
+*Imporant Note: The paths for installs are hardcoded to our installation 
+paths at Blur, so you will need to navigate to the proper Python & 3dsMax paths for your computer.  Don't just assume that clicking "next" will install to the right location.*
+
+ # Download the version you want to install from [http://blur-dev.googlecode.com here]
  # Save the file to your computer
  # Run the installer
  # Choose the components you wish to install
@@ -126,6 +129,7 @@ For more detailed information on this, see the [BlurTools tools docs] and [Insta
 This will install:
 
   * c:/blur/dev/offline
+  * DESKTOP/Treegrunt
 
 ==== 3dsMax XXX Plugins ===
 
