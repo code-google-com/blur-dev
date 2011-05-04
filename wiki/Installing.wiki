@@ -1,8 +1,12 @@
 #summary How to Install the BlurOffline package
 
-= Introduction =
+= Installation Guide =
 
-This tutorial will walk you through how to install the BlurOffline system to your computer.
+This page will walk you through how to install the BlurOffline system to your computer.
+
+<wiki:toc max_depth="4" />
+
+<hr />
 
 == Pre-Requisites ==
 
@@ -39,7 +43,7 @@ Here are some instructions to get Python up and running in Softimage if you have
 
  * http://xsisupport.wordpress.com/2010/02/22/getting-python-to-show-up-in-softimage/
 
-=== How to get Qt/PyQt ===
+=== How to get Qt ===
 
 Qt is an open-source C++ framework originally developed by Trolltech, and now maintained by Nokia.
 
