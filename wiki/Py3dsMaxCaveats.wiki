@@ -1,6 +1,0 @@
-#summary Py3dsMax caveats, warnings, etc.
-#labels Py3dsMax,Python
-
-== Intro ==
-Collection of known Py3dsMax quirks, caveats, etc.
-----
