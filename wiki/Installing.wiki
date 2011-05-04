@@ -138,6 +138,8 @@ Check off the ones you want to install, and it will install:
   * MAX_PATH/scripts/python/
   * MAX_PATH/scripts/startup/init_python.ms
 
+If everything works smoothly - you should see a Python menu in your 3dsMax right next to the Maxscript menu.
+
 *Note: For later versions of 3dsMax (2010+), Autodesk started including Qt DLLs in their base installation, but were only including Qt 4.5.  To support our code, we're actually moving their DLLs out of the root folder to MAX_PATH/bin/qt_bak/  This will ensure that our DLLs are loaded, and they are backward compatible.  If, for any reason, something starts misbehaving, you can remove the above installed components, and copy the DLLs back out of that qt_bak folder*
 
 ==== Softimage Plugins ====
