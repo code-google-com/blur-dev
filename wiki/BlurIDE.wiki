@@ -75,12 +75,58 @@ All you have to do is choose {{{ Python >> Show IDE Editor }}}, and this will la
 
 === IDE Editor ===
 
+The IDE Editor is the main window that you see.  This is the "base" application for the IDE system, however, it is all integrated.
+
+All of the code runs through the base blurdev system, for instance, you can actually program the IDE Editor IN the editor itself...which, we do quite frequently.
+
+Try this.
+
+With the Editor open, hit F2, or go to {{{ Tools >> Show Logger }}.
+
 === Logger Window ===
+
+This will bring up the interactive Python console logger, which you can type Python commands on the fly - this is the same console that will run externally, as well as in Max and Softimage (which we'll see in the other tutorials).
+
+Now, we can access the ide itelf:
+
+{{{
+>>> import blurdev
+>>> ide = blurdev.core.ideeditor()
+>>> ide.setWindowTitle( 'Testing' )
+}}}
+
+You should now see the editor's title has changed to {{{ 'Testing' }}}.
+
+{{{
+>>> ide.documentNew()
+}}}
+
+We just created a new document!  How fun...
+
+All of the source code for the IDE is found in the blurdev/ide package, and takes advantage of other libraries developed within the blurdev package.
+
+Feel free to check out the SDK for hit by hitting F1 or choosing {{{ Help >> SDK Help }}}.
 
 === SDK Window ===
 
+This will bring up the SDK Window.  What the SDK Window is, is a Python based help document generator.
+
+The first time you run it, you'll have to specify the SDK file to load, so choose this one:
+
+{{{
+PYTHON_PATH/lib/site-packages/blurdev/resource/sdk/blurdev.sdk
+}}}
+
+It doesn't really "generate" the documentation (like Doxygen does) as much as dynamically generate the HTML for the content on the fly.
+
+It only works for Python (at the moment), but works by importing python modules and using the built-in python documentation inspection methods to generate code documentation on the fly.
+
+What that means is, the moment your code changes - your documentation is up to date.
+
+The only caveat of this, is that if a module cannot be imported, it cannot be documented...which, may or may not be a good thing.
+
 == Developing Tools ==
 
-=== Treegrunt ===
+So, now that you have a run down of some of the basic functions of the IDE editor, what next?
 
-=== IDE Tool Wizard ===
+We have written a number of tools and systems to speed up Tools development procedures within the IDE Editor, which we'll go over in the [PyQt intro to PyQt documentation].
