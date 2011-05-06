@@ -123,4 +123,4 @@ This would be a basic structure for a tool.  Creating python tools as packages a
 
 === How to Develop Tools ===
 
-Look through the [[PyQtIntro]] tutorial for more information.
+Look through the [PyQt] tutorial for more information.
