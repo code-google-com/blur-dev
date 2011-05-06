@@ -11,7 +11,8 @@
 
 *Developer Tools*
 
- * [BlurIDE]
- * [PyQt PyQt Introduction]
- * [Py3dsMax PyQt in 3dsMax]
- * [PySoftimage PyQt in Softimage]
+ * [BlurIDE Blur IDE]
+ * [ToolsEnvironment Blur Tools Environments]
+ * [PyQt Blur Qt Introduction]
+ * [Py3dsMax Blur Qt in 3dsMax]
+ * [PySoftimage Blur Qt in Softimage]
