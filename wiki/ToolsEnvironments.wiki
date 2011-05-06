@@ -74,7 +74,9 @@ Softimage plugins and scripts used to drive the Softimage addons we've developed
 
 === What is a tool vs. a script? ===
 
-For the purpose of our code base - a *Tool* is a bundle of code that gets registered to the Treegrunt system and as such, follows some coding standards not enforced in scripts.
+A *Script* can really be anything a developer wants it to be - we don't apply restrictions to it.  For this reason, scripts have to be accessed differently based on their contents, and are managed by the TDs who have developed them.  Its an easy way for sharing code without putting much pressure on consistency.
+
+A *Tool* is a bundle of code that gets registered to the Treegrunt system and as such, follows some coding standards not enforced in scripts.  These are reviewed and maintained so that all tools follow the same standard.
 
 Tools will be found in:
 
@@ -86,3 +88,39 @@ Scripts will be found in:
 {{{
 [environment]/code/[language]/scripts
 }}}
+
+=== Tool Structure ===
+
+Scripts, being simple as they are, won't be covered here.
+
+Within a tools folder hierarchy, there are 2 types of folders, `tool` and `category` folders.
+
+The only difference between them, is a `tool` contains a `__meta__.xml` file within it that contains registration information for the Treegrunt.
+
+This includes icon, main file, and description information.
+
+All other folders are `category` folders - which will define the Category tree structure within Treegrunt.
+
+While there are no restrictions on the naming of category folders, we've been marking categories as starting with an `_`, so that a developer can easily tell through the folder structure what is a `tool` and what is a `category`.
+
+=== Common Tool Structure ===
+
+An example of a tools structure is:
+
+{{{
+
+[tool]/
+      /img/icon.png       (icon for treegrunt)
+      /ui/[tool]Dialog.ui (Qt Designer UI file for the main dialog)
+      /__init__.py        (registers a tool as a python package)
+      /__meta__.xml       (registers tool to treegrunt)
+      /[tool]Dialog.py    (main dialog class for the tool)
+      /main.pyw           (creates the main application)
+
+}}}
+
+This would be a basic structure for a tool.  Creating python tools as packages allows us to quickly and easily manage multiple scripts and dialogs all within a single entity.
+
+=== How to Develop Tools ===
+
+Look through the [[PyQt]] tutorial for more information.
