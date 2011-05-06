@@ -55,9 +55,17 @@ When standalone, no parent is needed, but if running within 3dsMax for instance,
 
 We did this for the 3 base classes that we'll use when developing tools:
 
- # `blurdev.gui.Dialog` vs. `PyQt4.QtGui.QDialog`
- # `blurdev.gui.Window` vs. `PyQt4.QtGui.QWindow`
- # `blurdev.gui.Wizard` vs. `PyQt4.QtGui.QWizard`
+ * `blurdev.gui.Dialog` vs. `PyQt4.QtGui.QDialog`
+ * `blurdev.gui.Window` vs. `PyQt4.QtGui.QWindow`
+ * `blurdev.gui.Wizard` vs. `PyQt4.QtGui.QWizard`
+
+A couple of notes about the differences between the 3:
+
+ # A Dialog can be run modally
+ # A Window contains a menu bar by default, but cannot be run modally
+ # A Wizard will drive a multi-step process.
+
+This is obviously a dumbed down version of the differences between the 3, but is most often what drives our decision when to use each.
 
 === blurdev.launch ===
 
@@ -107,9 +115,28 @@ This now runs outside of the IDE editor and/or application.
 
 Before we get into developing tools, you should read up on how the [ToolsEnvironments a tool is structured].
 
-So, now that we can make a simple dialog, we need to learn how to build a tool that can integrate into the environment system of `blurdev`
+Once you have a grasp of what a Tool _is_, lets create a more advanced script than our Hello, World example from above - this time, lets create a new tool.
 
-=== Blur IDE Wizards ===
+=== Creating Categories ===
+
+ # Navigate to `BlurOffline/code/python/tools/General_Use_Tools`
+ # Right-click on `General_Use_Tools` and choose `New Folder`
+ # Type in `_Examples`
+
+This will create a new folder at:
+{{{
+c:/blur/dev/offline/code/python/tools/General_Use_Tools/_Examples
+}}}
+
+Thats all you have to do to create a new category - create a new folder within the `tools` folder.
+
+*Note: For readability, its recommended to start categories with an underscore.*
+
+=== Creating Tools ===
+
+You could create a folder the way you just did, and then create a `__meta__.xml` file within it with the proper settings...but thats just not fun...
+
+=== IDE Tool Wizard ===
 
 Instead of forcing a developer to remember everything that goes into a Tool, it was much easier to build a Wizard that we could reuse.
 
@@ -117,12 +144,83 @@ With that in mind, we built a robust and extensible wizard system into the IDE E
 
 We have wizards for creating more Wizards, creating tools Environments, gui components, and for Tools.
 
-=== Tool Wizard ===
+This time, right click on your `_Examples` folder and choose `New From Wizard`
 
-So - lets create a more advanced script than our Hello, World example from above - this time, lets create a new tool.
+This will bring up the Wizard chooser dialog.  Since right now we're creating a new tool, lets choose:
 
-In the IDE Project Tree, navigate to:
+`User Interface` and then `Tool`
 
-{{{
-blurdev/python/General_Use_Tools
-}}}
+The Wizard you'll see will give you a couple of options.
+
+ * The button on the left will let you choose the icon for your tool
+ * Name field will be the name of your tool
+ * Choosing simple script will build the tool with no GUI, and just register code to run within your `main.pyw`
+ * Base Class field lets you choose from the 3 basic Tools UI options (Dialog,Window,Wizard)
+ * Create Ui File will alter whether or not to create a Qt Designer file for you GUI, or if you want to define it programmatically
+ * Description is just the tooltip for your new tool
+ * ToolTypes registers where this tool can be run from.  As we'll show, you can actually develop a single tool that can run in 3dsMax, Softimage and External applications.  Extensions for Maya and Houdini are easily created, we just don't support them at Blur.
+
+For now, lets set:
+
+ * *name* SampleTool
+ * *toolTypes* External, Studiomax, Softimage
+ * *description* Sample tool for learning the IDE
+
+We'll leave the other settings as they are by default (if you want to choose an icon, go ahead and do so).
+
+ * Click `Continue`
+
+The next page you'll see will outline the files and folders that will be created for your wizard.  You'll see this as the last page for all IDE Wizards, so you can always preview your files before you create them.
+
+Only checked files will be created, so if for whatever reason you don't need or want certain files or folders, you can disable them through this view.
+
+If you want to see the difference between what gets created, you can click back and toggle the *simple script* and/or *create ui file* fields, and this will alter the template for the tool that gets created.
+
+For now, we'll just create with the standard settings, so click `Done`
+
+You'll then be prompted if you want to change projects - when a tool gets created, it actually makes a new IDE Project specifically for that tool.
+
+For now, click no - we'll just stay in the current project.
+
+=== Running the Tool ===
+
+If you expand the `_Examples` folder, you'll now see your `SampleTool` tool folder, and all the files from the Wizard are setup for you.
+
+If you right click on the `main.pyw` file and choose any of the three:
+
+ # Run
+ # Run (Standalone)
+ # Run (Debug)
+
+You can see your tool running as a child of the IDE Editor, and/or as a standalone application.
+
+All you'll see right now is a blank Dialog with the title `SampleTool`
+
+=== Modifying the Interface ===
+
+Pretty simple to get started, but also boring.
+
+Lets add a few GUI components.
+
+ # Navigate to `BlurOffline/python/tools/General_Use_Tools/_Examples/SampleTool/ui`
+ # Double-click on `sampletooldialog.ui'
+
+This should open the Qt Designer with your UI file.
+
+*Note: If you're not using the standard blur installed version of designer, you can register your version to the IDE by setting the `BDEV_QT_DESIGNER' value in `PYTHON_PATH/lib/site-packages/blurdev/resource/settings.ini' to the path of your Designer.*
+
+Otherwise, you can drag & drop the file from the IDE Editor into an open instance of the Designer.
+
+We aren't going to go into Qt Designer tutorials - there are plenty of those online.
+
+Instead, I'll just say add 3 components: add a tree named "uiBrowserTREE", a button called "uiLoadBTN", and a button called "uiSaveBTN".
+
+It doesn't matter how its layed out for the sake of this tutorial, as long as the components are created and named properly.
+
+Save the UI, and rerun the code.  You'll now see your tool with your components - without having to change any code!
+
+=== Running through Treegrunt ===
+
+So now that you have your tool - you'll want to be able to register it to treegrunt.
+
+If you run Treegrunt.
