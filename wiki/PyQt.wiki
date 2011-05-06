@@ -223,4 +223,10 @@ Save the UI, and rerun the code.  You'll now see your tool with your components 
 
 So now that you have your tool - you'll want to be able to register it to treegrunt.
 
-If you run Treegrunt.
+If you run Treegrunt, you'll notice that your Tool doesn't popup.  Whenever you modify the tools structure (add a tool, move a tool, rename a tool) you'll actually have to rebuild your XML index file.
+
+Right-click on the Window and choose `Environments >> Rebuild Index`
+
+Now you'll find `General_Use_Tools >> Examples >> SampleTool` and you can double-click on it to run it.
+
+Thats all you have to do to register the tool to the system, the wizard took care of the rest.
