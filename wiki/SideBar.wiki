@@ -12,7 +12,7 @@
 *Developer Tools*
 
  * [BlurIDE Blur IDE]
- * [ToolsEnvironment Blur Tools Environments]
+ * [ToolsEnvironments Blur Tools Environments]
  * [PyQt Blur Qt Introduction]
  * [Py3dsMax Blur Qt in 3dsMax]
  * [PySoftimage Blur Qt in Softimage]
