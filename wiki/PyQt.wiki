@@ -105,10 +105,24 @@ This now runs outside of the IDE editor and/or application.
 
 == Building Tools ==
 
-Before we get into developing tools, you should read up on how the [ToolsEnvironments tools environments are structured].
+Before we get into developing tools, you should read up on how the [ToolsEnvironments a tool is structured].
 
 So, now that we can make a simple dialog, we need to learn how to build a tool that can integrate into the environment system of `blurdev`
 
 === Blur IDE Wizards ===
 
-One of the goals that we had when setting out developing our tools was building a flexible and expansible code wizard system.
+Instead of forcing a developer to remember everything that goes into a Tool, it was much easier to build a Wizard that we could reuse.
+
+With that in mind, we built a robust and extensible wizard system into the IDE Editor.
+
+We have wizards for creating more Wizards, creating tools Environments, gui components, and for Tools.
+
+=== Tool Wizard ===
+
+So - lets create a more advanced script than our Hello, World example from above - this time, lets create a new tool.
+
+In the IDE Project Tree, navigate to:
+
+{{{
+blurdev/python/General_Use_Tools
+}}}
