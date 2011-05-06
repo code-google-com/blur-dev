@@ -102,3 +102,13 @@ This now runs outside of the IDE editor and/or application.
 *Note: if you are building tools that need to access information inside of an application like 3dsMax or Softimage, they CANNOT access the Py3dsMax or PySoftimage libraries, so you have to program accordingly.*
 
 *Note 2: if you choose `Run (Debug)` it is the same as running standalone, except that you'll get the command prompt window as well.*
+
+== Building Tools ==
+
+Before we get into developing tools, you should read up on how the [ToolsEnvironments tools environments are structured].
+
+So, now that we can make a simple dialog, we need to learn how to build a tool that can integrate into the environment system of `blurdev`
+
+=== Blur IDE Wizards ===
+
+One of the goals that we had when setting out developing our tools was building a flexible and expansible code wizard system.
