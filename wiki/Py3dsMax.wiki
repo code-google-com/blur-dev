@@ -1,0 +1,114 @@
+#summary how to run python & Qt in 3dsMax
+
+= Python and 3dsMax =
+
+This tutorial will walk you through some of the basics of using Python in 3dsMax.
+
+<wiki:toc depth="4"/>
+
+== Basics ==
+
+=== About Py3dsMax ===
+
+Py3dsMax is the term that we use to refer to Python in 3dsMax.  Its technically a plugin installed to:
+
+{{{
+MAX_PATH/plugins/blur/blurPython.dlx
+}}}
+
+And is a C/C++ plugin that creates a mapping between a basic Maxscript Value class and a basic Python PyObject class.
+
+Essentially, its just a way to convert a Maxscript value to Python, and vice versa.
+
+This allows us to directly access information in max - including plugins and dynamically created maxscripts, as well as all Python modules, including compiled pyd files without having to work through COM, .Net or ActiveX.
+
+=== Python in Maxscript ===
+
+The first example we'll do will be written in maxscript, and will use python modules, so - open the maxscript listener and type:
+
+{{{
+re = python.import "re"
+}}}
+
+What we have just done is import the Python regular expression module (re) as a Maxscript value.
+
+Now type:
+
+_maxscript code_
+{{{
+results = re.match "Sc(\d+)" "Sc001"
+print (results.groups()[1])
+}}}
+
+You should see an output of `001`
+
+This is just a simple example of running some python code through 3dsMax.  In this fashion, you can import and use any standard Python module in your maxscript tools - Python has a lot of very powerful built-in libraries that can really enhance your programming.
+
+BUT...the far better way is to actually shift to Python programming all together...
+
+=== Maxscript in Python ===
+
+The greater trick than running Python in Maxscript, is actually running Maxscript in Python.
+
+In the above example, your main code would still be written in Maxscript, and then invoking python calls when useful or necessary.
+
+The way that we are developing moving forward is the opposite - we are developing in Python, and invoking maxscript calls when useful or necessary.
+
+This allows us to take advantage of the python language as a whole - not just useful modules.
+
+This includes Object-Oriented Programming, the Qt toolkit, native Database connections, more powerful syntaxes and more.
+
+At this point you should have noticed that there is a new `Python` menu in your 3dsMax window.  If you don't see that, make sure that you have properly [installing installed your BlurOffline code].
+
+==== Python Logger ====
+
+Once you see the Python menu, choose `Python >> Show Logger`
+
+This will bring up the interactive Python console - the same one you've seen in the [BlurIDE Blur IDE], but now running as a child window of 3dsMax and running natively within the 3dsMax event loop.
+
+Type:
+
+_python code_
+{{{
+>>> from Py3dsMax import mxs
+}}}
+
+Theoretically, this should not give you any errors - if you do get any errors, make sure that you have everything [installing installed correctly] and is for the proper version (x32/x64 & release) of 3dsMax.
+
+Assuming that import was successful, what you have just done is imported all of Maxscript.
+
+We didn't wrap any code or modify anything - so all of your maxscript commands that you would type are simply accessible through this new `mxs` module.
+
+For instance, if I wanted to create a new sphere in maxscript, I would type in the maxscript listener
+
+_maxscript code_
+{{{
+Sphere name:"MySphere"
+}}}
+
+In the Python Logger, I would type:
+{{{
+>>> mxs.Sphere( name = "MySphere" )
+}}}
+
+All this is doing, is looking up the 'Sphere' command in the maxscripts globals, and calling it, passing in the optional parameter 'name'.  Same exact process as the maxscript code, simply with Pythonic syntax.
+
+This is true for every maxscript command written.
+
+It even works on dynamically created commands.
+
+Try this, in the maxscript listener type:
+
+_maxscript code_
+{{{
+function foo = ( print "bar" )
+}}}
+
+and then in the Python logger type:
+
+_python code_
+{{{
+>>> mxs.foo()
+}}}
+
+You should see "bar" print in the Maxscript listener.  This is important to note - maxscript's `print` command will log to the listener, while python's `print` command will log to the logger.
