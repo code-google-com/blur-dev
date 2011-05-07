@@ -228,12 +228,24 @@ You can call:
 
 _maxscript code_
 {{{
-getPropertyController s "position"
+getPropertyController s.controller "position"
 }}}
 
 So, Python's equivalent would be:
 
 _python code_
 {{{
->>> mxs.getPropertyController( s, "position" )
+>>> mxs.getPropertyController( s.controller, "position" )
 }}}
+
+It may not be that intuitive...but it works.
+
+We're actually in the process of abstracting this entire system - not just for 3dsMax but for all 3d Applications.  For more information about that, look at the [blur3d] system.
+
+== PyQt4 ==
+
+As you saw in the [PyQt PyQt tutorial], you can use the Blur IDE to generate Tools.
+
+If you run your Treegrunt in 3dsMax (`MainMenu >> Python >> Treegrunt`), you'll be able to find your SampleTool available to you.
+
+This is becuase when you ran the tutorial, you registered the Tool to the Studiomax Application.
