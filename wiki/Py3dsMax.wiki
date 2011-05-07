@@ -115,3 +115,125 @@ _python code_
 }}}
 
 You should see "bar" print in the Maxscript listener.  This is important to note - maxscript's `print` command will log to the listener, while python's `print` command will log to the logger.
+
+== Caveats ==
+
+So - what you have now is a Pythonic entrance to 3dsMax.
+
+Any code you see in the Maxscript docs can and will work in Python, however, some things about the _way_ maxscript was programmed make it not translate to Python properly.
+
+=== Type Conversion ===
+
+One of the differences in Maxscript that does not translate to Python is the way that Maxscript works with type conversion.
+
+_maxscript code_
+{{{
+"1" as integer
+1
+}}}
+
+Invoking the `as` command will convert a one variable to another type.  In Python there is no `as` command, rather you actually `instantiate` a variable type with another.
+
+_python code_
+{{{
+>>> int("1")
+1
+}}}
+
+Base types (int,float,bool,list/array,string,etc.) will be automatically converted between the two languages.
+
+More complex variables (classes,modules,structs,etc.) will be wrapped in a language specific accessor.
+
+Something like a Maxscript Name however, will be automatically converted to a Python string.
+
+In Maxscript its easy to convert a string to a Name type:
+
+_maxscript code_
+{{{
+"testing" as name
+#testing
+}}}
+
+In Python however, this is not as easy to manage.  The convention `as` in Maxscript is a Parser level command - meaning there is no programmatic way to access it.
+
+Also, a Maxscript Name class does not support instantiation like Python would.
+
+_python code_
+{{{
+>>> mxs.Name("testing")
+ERROR
+}}}
+
+What we have done in these cases is provide a maxscript struct called the PyHelper struct.  It can be found at:
+
+{{{
+MAX_PATH/scripts/startup/init_pyhelper.ms
+}}}
+
+This provides utility methods to maxscript that can be invoked in Python to get around some of Maxscripts quirks.  The above problem would then be solved by writing:
+
+_python code_
+{{{
+>>> mxs.pyhelper.namify("testing")
+#testing
+}}}
+
+=== Nested Parameters ===
+
+There is another concept that defies common programmatic syntax, and this was found buried in the Maxscript SDK called `nested parameters`.
+
+This is essentially a programmatic shortcut written directly into the Maxscript language.
+
+For instance, if you were to do:
+
+_maxscript code_
+{{{
+>>> s = Sphere()
+>>> s.position
+[0,0,0]
+>>> s.position.controller
+Controller
+}}}
+
+There would be no problem.
+
+However, if you were to do:
+
+_maxscript code_
+{{{
+>>> s = Sphere()
+>>> pos = s.position
+>>> pos.controller
+ERROR
+}}}
+
+You would run into an error.  Logically, this is not intuitive.  In most programming syntaxes, the line `s.position.controller` implies that `controller` is a property of `s.position`.
+
+In Maxscript, this is not actually the case however.  Instead, Maxscript implemented a concept called `nested parameters`, by which they register the property `position.controller` to the `Sphere` object.
+
+So, how does this relate to Python?
+
+The way we have implemented the Python code, is that it accesses properties in a standard programmatic fashion.  Meaning when you access `s.position`, you have already interpreted the property of the `Sphere` instance.  If you were then to try to access the `controller` parameter, the code would fail, as `controller` is not a property of `s.position`.
+
+The bad news is that there is nothing in the documentation that will aide you in finding these cases.  The good news is there is always an alternative way to access the information.
+
+Instead of calling:
+
+_maxscript code_
+{{{
+s.position.controller
+}}}
+
+You can call:
+
+_maxscript code_
+{{{
+getPropertyController s "position"
+}}}
+
+So, Python's equivalent would be:
+
+_python code_
+{{{
+>>> mxs.getPropertyController( s, "position" )
+}}}
