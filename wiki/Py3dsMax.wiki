@@ -26,6 +26,7 @@ This allows us to directly access information in max - including plugins and dyn
 
 The first example we'll do will be written in maxscript, and will use python modules, so - open the maxscript listener and type:
 
+_maxscript code_
 {{{
 re = python.import "re"
 }}}
@@ -87,6 +88,8 @@ Sphere name:"MySphere"
 }}}
 
 In the Python Logger, I would type:
+
+_python code_
 {{{
 >>> mxs.Sphere( name = "MySphere" )
 }}}
