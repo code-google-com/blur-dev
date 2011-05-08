@@ -14,7 +14,7 @@ This page will walk you through how to install the BlurOffline system to your co
  * Python24  (for 32-bit components)
  * Python26  (for 64-bit components)
 
- * pywin32   (for Softimage)
+ * pywin32   (3rd party module)
 
  * Qt 4.6+   (32-bit/64-bit)
  * PyQt4     (32-bit/64-bit)
@@ -36,7 +36,13 @@ For Python, its very easy - you simply have to go to http://www.python.org/ and 
 
 === How to get pywin32 ===
 
-If you intend to use our tools in Softmiage, you'll need the win32com Python package.  You can download the it from sourceforge [http://sourceforge.net/projects/pywin32/files/pywin32/ here].
+Some of our tools will use the pywin32 package for Python, which is a 3rd-party package that can be found here:
+
+[http://sourceforge.net/projects/pywin32/files/pywin32/ pywin32]
+
+Direct links to the latest Python24 x32 version are [http://sourceforge.net/projects/pywin32/files/pywin32/Build216/pywin32-216.win32-py2.4.exe/download here].
+
+Direct links to the latest Python26 x64 version are [http://sourceforge.net/projects/pywin32/files/pywin32/Build216/pywin32-216.win32-py2.4.exe/download here]
 
 Here are some instructions to get Python up and running in Softimage if you have not already done so:
 
