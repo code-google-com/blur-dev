@@ -42,7 +42,7 @@ Some of our tools will use the pywin32 package for Python, which is a 3rd-party 
 
 Direct links to the latest Python24 x32 version are [http://sourceforge.net/projects/pywin32/files/pywin32/Build216/pywin32-216.win32-py2.4.exe/download here].
 
-Direct links to the latest Python26 x64 version are [http://sourceforge.net/projects/pywin32/files/pywin32/Build216/pywin32-216.win32-py2.4.exe/download here]
+Direct links to the latest Python26 x64 version are [http://sourceforge.net/projects/pywin32/files/pywin32/Build216/pywin32-216.win-amd64-py2.6.exe/download here]
 
 Here are some instructions to get Python up and running in Softimage if you have not already done so:
 
