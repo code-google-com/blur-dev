@@ -7,10 +7,10 @@ This page contains a quick summary of changes that have happened between release
 <wiki:toc depth="3"/>
 <hr/>
 
-== Version 1.0.1 ==
+== Version 1.01 ==
 
  * Upgrades to the Blurdev IDE - the initial release contained a slightly older version than what was latest.
 
-== Version 1.0.0 ==
+== Version 1.00 ==
 
  * Initial version of the BlurOffline code released
