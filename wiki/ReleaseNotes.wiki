@@ -1,0 +1,16 @@
+#summary Summary of changes that have happened between releases
+
+= Release Notes =
+
+This page contains a quick summary of changes that have happened between releases.
+
+<wiki:toc depth="3"/>
+
+== Version 1.0.1 ==
+
+ * Upgrades to the Blurdev IDE - the initial release contained a slightly older version than what was latest.
+
+== Version 1.0.0 ==
+
+ * Initial version of the BlurOffline code released
+
