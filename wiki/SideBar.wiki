@@ -3,6 +3,7 @@
 *Installation*
 
  * [Installing]
+ * [ReleaseNotes Release Notes]
 
 *Artist Tools*
 
