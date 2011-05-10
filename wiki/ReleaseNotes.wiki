@@ -5,6 +5,7 @@
 This page contains a quick summary of changes that have happened between releases.
 
 <wiki:toc depth="3"/>
+<hr/>
 
 == Version 1.0.1 ==
 
@@ -13,4 +14,3 @@ This page contains a quick summary of changes that have happened between release
 == Version 1.0.0 ==
 
  * Initial version of the BlurOffline code released
-
