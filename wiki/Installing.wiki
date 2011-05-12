@@ -21,6 +21,8 @@ This page will walk you through how to install the BlurOffline system to your co
 
 There is no limitation on this if you wish to compile the code for yourself for different versions of Qt,PyQt, and/or Python.  We will only support the configurations that we require however.  To learn more about what to do, you need to read about the [InstalledSource Installed Source Code]
 
+Having trouble?  See the [FAQ]
+
 === Cross-platform Support ===
 
 The frameworks that we work with (Python,Qt,PyQt) are all cross-platform, and all of the code that we have developed CAN be modified to support cross-platform (we have some working on Linux right now), however, we don't officially support it, as 3dsMax is our primary application, so we use Windows exclusively at Blur.
@@ -133,7 +135,7 @@ This section will install all the Blur tools, as well as source code for all of 
 
 *Note: This does not include the source code for Qt/PyQt as those can be found on the above links - we have not modified the code in anyway, simply compiled it for our needs.*
 
-For more detailed information on this, see the [BlurTools tools docs] and [InstalledSource source code docs].
+For more detailed information on this, see the [Tools tools docs] and [InstalledSource source code docs].
 
 This will install:
 
