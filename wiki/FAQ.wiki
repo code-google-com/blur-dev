@@ -1,0 +1,14 @@
+#summary Frequently Asked Questions
+
+= Frequently Asked Questions =
+
+This is a list of all the most common questions about the Blur tools.
+
+<wiki:toc depth="4" />
+<hr />
+
+== Tools ==
+
+=== Where are all the Treegrunt Tools? ===
+
+The first time you run Treegrunt, you need to build the tools index that Treegrunt accesses.  There is a step by step process for it [Treegrunt here].
