@@ -4,6 +4,7 @@
 
  * [Installing]
  * [ReleaseNotes Release Notes]
+ * [FAQ]
 
 *Artist Tools*
 
