@@ -19,6 +19,8 @@ This page will walk you through how to install the BlurOffline system to your co
  * Qt 4.6+   (32-bit/64-bit)
  * PyQt4     (32-bit/64-bit)
 
+ * Visual Studio C++ Redistributable (For Max 2012)
+
 There is no limitation on this if you wish to compile the code for yourself for different versions of Qt,PyQt, and/or Python.  We will only support the configurations that we require however.  To learn more about what to do, you need to read about the [InstalledSource Installed Source Code]
 
 Having trouble?  See the [FAQ]
@@ -157,7 +159,7 @@ If everything works smoothly - you should see a Python menu in your 3dsMax right
 
 *Note: For later versions of 3dsMax (2010+), Autodesk started including Qt DLLs in their base installation, but were only including Qt 4.5.  To support our code, we're actually moving their DLLs out of the root folder to MAX_PATH/bin/qt_bak/  This will ensure that our DLLs are loaded, and they are backward compatible.  If, for any reason, something starts misbehaving, you can remove the above installed components, and copy the DLLs back out of that qt_bak folder*
 
-===== Microsoft Visual C++ 2010 Redistributable Package =====
+==== Microsoft Visual C++ 2010 Redistributable Package ====
 
 For 3dsMax 2012 you will need to instal Microsoft's C++ redistributable dlls available here.
 
