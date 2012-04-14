@@ -4,3 +4,18 @@
 
 
 = Details =
+
+== Softimage extra instructions ==
+
+There are a few extra steps required to use BlurOffline in Softimage.
+
+=== Use python installed with windows ===
+In Softimage 2012 and newer you need tell xsi to not use its own python. Skip this step for older versions of Softimage
+ # Open the preferences. Select File -> Preferences...
+ # In the preferences dialog select Scripting
+ # Uncheck Use Python Installed with Softimage(Windows Only)
+=== Patch pywin32 ===
+Softimage will use the last installed version of pywin32 to run python code.
+ # Navigate to your python install folder. If you installed python and pywin32 using the BlurOffline installer it will most likely be c:\python26 for Softimage 64bit, and c:\python24 for Softimage 32bit.
+ # Now browse to the correct file. Lib\site-packages\win32com\client\__init__.py
+ # Replace it with this file 
