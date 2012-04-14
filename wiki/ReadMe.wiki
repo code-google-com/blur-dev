@@ -1,4 +1,4 @@
-#Additional information after installing Blur Offline
+#summary Additional information after installing Blur Offline
 
 = Softimage extra instructions =
 
