@@ -1,4 +1,4 @@
-#summary ~~How to Install the BlurOffline package~~
+#summary How to Install the BlurOffline package
 
 = Installation Guide =
 
