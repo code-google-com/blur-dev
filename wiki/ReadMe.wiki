@@ -11,10 +11,10 @@ Newer versions of Softimage come with qt dlls that will prevent the tools from r
   # Click on Open File Location. This should take you to the Application\bin folder
  # Create a new folder called qt_backup
  # Move these files into the newly created folder.
-  * QtCore4.dll
-  * QtGui4.dll
+  * !QtCore4.dll
+  * !QtGui4.dll
   * QtOpenGL4.dll
-  * QtXml4.dll
+  * !QtXml4.dll
 
 == Use python installed with windows ==
 In Softimage 2012 and newer you need tell xsi to not use its own python. Skip this step for older versions of Softimage
