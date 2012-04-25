@@ -58,7 +58,7 @@ Qt is an open-source C++ framework originally developed by Trolltech, and now ma
 
 PyQt is a python wrapper on top of that framework.
 
-If you do not have Qt/PyQt already installed, we actually provide the necessary Qt DLLs and PyQt packages for you in the BlurOffline install.
+If you do not have Qt/PyQt already installed, we actually provide the necessary Qt DLLs and PyQt packages for you in the !BlurOffline install.
 
 We ship:
  
@@ -74,7 +74,7 @@ If you want to get your own versions of Qt, you'll need:
  * [http://www.riverbankcomputing.co.uk/software/qscintilla/intro QScintilla]
  * [http://www.riverbankcomputing.co.uk/software/pyqt/download PyQt4]
 
-== Installing BlurOffline ==
+== Installing !BlurOffline ==
 
 We have improved our installer system - so now it wraps all of the required modules into a single installer.  Well, 2 installers.  One installer for the 32-bit components, and one installer for the 64-bit components.
 
