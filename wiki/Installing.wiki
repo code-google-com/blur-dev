@@ -1,8 +1,8 @@
-#summary How to Install the BlurOffline package
+#summary ~~How to Install the BlurOffline package~~
 
 = Installation Guide =
 
-This page will walk you through how to install the BlurOffline system to your computer.
+This page will walk you through how to install the !BlurOffline system to your computer.
 
 <wiki:toc max_depth="4" />
 <hr />
