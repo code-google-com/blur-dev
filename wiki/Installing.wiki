@@ -1,4 +1,5 @@
 #summary How to Install the BlurOffline package
+#labels Deprecated
 
 = Installation Guide =
 
