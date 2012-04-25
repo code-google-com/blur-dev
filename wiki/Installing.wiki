@@ -112,12 +112,12 @@ Installs Qt DLLs
 For 32-bit, this will install:
 
   * c:/blur/common/
-  * PYTHON24_PATH/lib/site-packages/PyQt4
+  * PYTHON24_PATH/lib/site-packages/!PyQt4
 
 For 64-bit, this will install:
 
   * c:/Windows/system32/blur64/
-  * PYTHON26_PATH/lib/site-packages/PyQt4
+  * PYTHON26_PATH/lib/site-packages/!PyQt4
 
 ==== Developer Tools ====
 
