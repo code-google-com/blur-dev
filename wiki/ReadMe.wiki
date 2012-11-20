@@ -25,8 +25,8 @@ In Softimage 2012 and newer you need tell xsi to not use its own python. Skip th
  # In Softimage, open the Plug-in Manager. Select File -> Plug-in Manager...
  # Select the Workgroups tab.
  # Add the workgroups
-  * C:\blur\dev\offline\workgroups\xsi_common
   * C:\blur\dev\offline\workgroups\xsi_blurdev
+  * C:\blur\dev\offline\workgroups\xsi_common
   # Repeat these steps for each path.
    # Click Connect...
    # Paste the folder path in the text box labeled Pick the root location of an existing workgroup. Then click Ok
