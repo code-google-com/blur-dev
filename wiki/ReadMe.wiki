@@ -32,3 +32,25 @@ In Softimage 2012 and newer you need tell xsi to not use its own python. Skip th
    # Paste the folder path in the text box labeled Pick the root location of an existing workgroup. Then click Ok
 
 == Restart Softimage ==
+
+= Offsite Blur Employees =
+
+If you receive the following error when trying to open a file given to you by Blur Studiomax will crash when you try to save.
+
+{{{
+-- Error occurred in PxSetPhysXPanelInterfaceFromGlobalParams(); filename: C:\Program Files\Autodesk\3ds Max 2012\stdplugs\stdscripts\(MassFX)\px_PhysXPanel.ms; position: 32995; line: 1218
+--  Frame:
+--   called in px_filePostOpen(); filename: C:\Program Files\Autodesk\3ds Max 2012\stdplugs\stdscripts\(MassFX)\px_watcher.ms; position: 1198; line: 64
+--  Frame:
+--   curType: undefined
+--   scale: undefined
+--   pxType: undefined
+--   called in anonymous codeblock
+--  Frame:
+>> MAXScript Callback script Exception:
+-- Unknown system exception <<
+}}}
+
+To fix this you need to install the Nvidia PhysX plugin.
+
+Unfortunately I cant just provide you with a direct download link. First follow this [http://supportcenteronline.com/ics/support/default.asp?deptID=1949 link] and login/create a account. After that you can click on these links for the installer you need for your install of max. [http://supportcenteronline.com/ics/support/DLRedirect.asp?fileID=123798 3ds Max 2012 64bit] [http://supportcenteronline.com/ics/support/DLRedirect.asp?fileID=123797 3ds Max 2012 32bit] 
