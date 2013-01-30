@@ -54,3 +54,5 @@ If you receive the following error when trying to open a file given to you by Bl
 To fix this you need to install the Nvidia PhysX plugin.
 
 Unfortunately I cant just provide you with a direct download link. First follow this [http://supportcenteronline.com/ics/support/default.asp?deptID=1949 link] and login/create a account. After that you can click on these links for the installer you need for your install of max. [http://supportcenteronline.com/ics/support/DLRedirect.asp?fileID=123798 3ds Max 2012 64bit] [http://supportcenteronline.com/ics/support/DLRedirect.asp?fileID=123797 3ds Max 2012 32bit] 
+
+= Unable to update the path environment variable =
