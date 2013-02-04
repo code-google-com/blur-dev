@@ -56,3 +56,33 @@ To fix this you need to install the Nvidia PhysX plugin.
 Unfortunately I cant just provide you with a direct download link. First follow this [http://supportcenteronline.com/ics/support/default.asp?deptID=1949 link] and login/create a account. After that you can click on these links for the installer you need for your install of max. [http://supportcenteronline.com/ics/support/DLRedirect.asp?fileID=123798 3ds Max 2012 64bit] [http://supportcenteronline.com/ics/support/DLRedirect.asp?fileID=123797 3ds Max 2012 32bit] 
 
 = Unable to update the path environment variable =
+
+Because of a limitation of the NSIS language we use to compile the installers if your path is longer than 1024 characters or is empty we can not add the path required to install the Qt dlls.
+
+If you received the message:
+{{{
+Unable to update the path environment variable automatically.
+You will need to add C:\windows\system32\blur64; at the START path environment variable. Including the semi-colon.
+
+You can copy this message using Ctrl+C.
+}}}
+or
+{{{
+Unable to update the path environment variable automatically.
+You will need to add C:\blur\common; at the START path environment variable. Including the semi-colon.
+
+You can copy this message using Ctrl+C.
+}}}
+
+You will need to manually update your system path. You only need to update this the first time you install the 32bit and 64bit installers, after that you can ignore this message.
+
+ # Click on the start menu.
+ # Type sysdm.cpl in the search area and hit enter.
+ # The System Properties dialog will open, click on the Advanced tab.
+ # Click on the Environment Variables... button
+ # Locate path in the list box under System Variables and select it.
+ # Click the Edit... button.
+ # The Edit System Variable dialog will show up.
+ # *Insert* the correct path at the *Start* of Variable value:. Make sure you don't remove anything unless you know what you are doing.
+  * The correct path for 64bit installs of BlurOffline is "C:\windows\system32\blur64;" excluding the quotes. Make sure you include the semi-colon.
+  * The correct path for 32bit installs of BlurOffline is "C:\blur\common;" excluding the quotes. Make sure you include the semi-colon.
