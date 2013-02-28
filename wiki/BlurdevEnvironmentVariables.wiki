@@ -3,6 +3,7 @@
 = Introduction =
 
 Blurdev is aware of these environment variables.
+
 If True is in the settings.ini column a default is provided in blurdev\resource\settings.ini.
 
 = Details =
