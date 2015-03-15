@@ -1,0 +1,124 @@
+# Understanding the Tools Environments #
+
+This tutorial will walk you through how our code is structured and why.
+
+
+
+## Tools Environments ##
+
+The Treegrunt system is built upon the ToolsEnvironment system.  This allows us to maintain and deploy tools across multiple environments simply - so we can have local, beta, gold, project, etc. environment locations that the Treegrunt can switch between.
+
+You'll get one environment - the Blur Offline environment.  This has all of our Blur tools built as an installer and installed on your local machine at:
+
+```
+c:/blur/dev/offline/
+```
+
+This path represents a Environment.
+
+### appdata ###
+
+This folder contains additional settings information pertaining to 3rd-party applications.
+
+
+### bin ###
+
+The bin folder contains compiled versions of the DLLs that we deploy, as well as any installed scripts and is used by our installation system when creating builds.
+
+It represents the folder structure that will be installed for different packages, so you can see what will be installed into your applications.
+
+### code ###
+
+The code folder is our **new** coding location - this is where all of our source code lives, broken down by language.
+
+For instance, python based tools will be found in:
+
+```
+[environment]/code/python/tools
+```
+
+and source code for plugins found in:
+```
+[environment]/code/cpp/plugins
+```
+
+We'll discuss the difference between `scripts` and `tools` in a little bit.
+
+### common ###
+
+Contains reusable resources that are not coding related.
+
+### docs ###
+
+Contains user and technical documentation (very limited, if any, at the moment)
+
+### fusion ###
+
+**Legacy** Location for fusion scripts, will eventually migrate to `code/python` and 'code/eyeonscript`
+
+### maxscript ###
+
+**Legacy** Location for all of Blur's original code base for 3dsMax & XSI tools.  Initially, this only contained maxscript tools, however, with the integration of Softimage, we began writing python tools in this trunk as well - before switching over to the new system.
+
+### resource ###
+
+Additional resources - mostly used for internal use.
+
+### workgroups ###
+
+Softimage plugins and scripts used to drive the Softimage addons we've developed.
+
+## Developing Tools & Scripts ##
+
+### What is a tool vs. a script? ###
+
+A **Script** can really be anything a developer wants it to be - we don't apply restrictions to it.  For this reason, scripts have to be accessed differently based on their contents, and are managed by the TDs who have developed them.  Its an easy way for sharing code without putting much pressure on consistency.
+
+A **Tool** is a bundle of code that gets registered to the Treegrunt system and as such, follows some coding standards not enforced in scripts.  These are reviewed and maintained so that all tools follow the same standard.
+
+Tools will be found in:
+
+```
+[environment]/code/[language]/tools
+```
+
+Scripts will be found in:
+```
+[environment]/code/[language]/scripts
+```
+
+### Tool Structure ###
+
+Scripts, being simple as they are, won't be covered here.
+
+Within a tools folder hierarchy, there are 2 types of folders, `tool` and `category` folders.
+
+The only difference between them, is a `tool` contains a `__meta__.xml` file within it that contains registration information for the Treegrunt.
+
+This includes icon, main file, and description information.
+
+All other folders are `category` folders - which will define the Category tree structure within Treegrunt.
+
+While there are no restrictions on the naming of category folders, we've been marking categories as starting with an `_`, so that a developer can easily tell through the folder structure what is a `tool` and what is a `category`.
+
+### Common Tool Structure ###
+
+An example of a tools structure is:
+
+```
+
+[tool]/
+      /img/icon.png       (icon for treegrunt)
+      /ui/[tool]Dialog.ui (Qt Designer UI file for the main dialog)
+      /__init__.py        (registers a tool as a python package)
+      /__meta__.xml       (registers tool to treegrunt)
+      /[tool]Dialog.py    (main dialog class for the tool)
+      /main.pyw           (creates the main application)
+
+```
+
+This would be a basic structure for a tool.  Creating python tools as packages allows us to quickly and easily manage multiple scripts and dialogs all within a single entity.
+
+### How to Develop Tools ###
+
+Look through the [PyQt](PyQt.md) tutorial for more information.

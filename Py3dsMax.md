@@ -1,0 +1,265 @@
+# Python and 3dsMax #
+
+This tutorial will walk you through some of the basics of using Python in 3dsMax.
+
+
+
+## Basics ##
+
+### About Py3dsMax ###
+
+Py3dsMax is the term that we use to refer to Python in 3dsMax.  Its technically a plugin installed to:
+
+```
+MAX_PATH/plugins/blur/blurPython.dlx
+```
+
+And is a C/C++ plugin that creates a mapping between a basic Maxscript Value class and a basic Python PyObject class.
+
+Essentially, its just a way to convert a Maxscript value to Python, and vice versa.
+
+This allows us to directly access information in max - including plugins and dynamically created maxscripts, as well as all Python modules, including compiled pyd files without having to work through COM, .Net or ActiveX.
+
+### Python in Maxscript ###
+
+The first example we'll do will be written in maxscript, and will use python modules, so - open the maxscript listener and type:
+
+_maxscript code_
+```
+re = python.import "re"
+```
+
+What we have just done is import the Python regular expression module (re) as a Maxscript value.
+
+Now type:
+
+_maxscript code_
+```
+results = re.match "Sc(\d+)" "Sc001"
+print (results.groups()[1])
+```
+
+You should see an output of `001`
+
+This is just a simple example of running some python code through 3dsMax.  In this fashion, you can import and use any standard Python module in your maxscript tools - Python has a lot of very powerful built-in libraries that can really enhance your programming.
+
+BUT...the far better way is to actually shift to Python programming all together...
+
+### Maxscript in Python ###
+
+The greater trick than running Python in Maxscript, is actually running Maxscript in Python.
+
+In the above example, your main code would still be written in Maxscript, and then invoking python calls when useful or necessary.
+
+The way that we are developing moving forward is the opposite - we are developing in Python, and invoking maxscript calls when useful or necessary.
+
+This allows us to take advantage of the python language as a whole - not just useful modules.
+
+This includes Object-Oriented Programming, the Qt toolkit, native Database connections, more powerful syntaxes and more.
+
+At this point you should have noticed that there is a new `Python` menu in your 3dsMax window.  If you don't see that, make sure that you have properly [installed your BlurOffline code](installing.md).
+
+#### Python Logger ####
+
+Once you see the Python menu, choose `Python >> Show Logger`
+
+This will bring up the interactive Python console - the same one you've seen in the [Blur IDE](BlurIDE.md), but now running as a child window of 3dsMax and running natively within the 3dsMax event loop.
+
+Type:
+
+_python code_
+```
+>>> from Py3dsMax import mxs
+```
+
+Theoretically, this should not give you any errors - if you do get any errors, make sure that you have everything [installed correctly](installing.md) and is for the proper version (x32/x64 & release) of 3dsMax.
+
+Assuming that import was successful, what you have just done is imported all of Maxscript.
+
+We didn't wrap any code or modify anything - so all of your maxscript commands that you would type are simply accessible through this new `mxs` module.
+
+For instance, if I wanted to create a new sphere in maxscript, I would type in the maxscript listener
+
+_maxscript code_
+```
+Sphere name:"MySphere"
+```
+
+In the Python Logger, I would type:
+
+_python code_
+```
+>>> mxs.Sphere( name = "MySphere" )
+```
+
+All this is doing, is looking up the 'Sphere' command in the maxscripts globals, and calling it, passing in the optional parameter 'name'.  Same exact process as the maxscript code, simply with Pythonic syntax.
+
+This is true for every maxscript command written.
+
+It even works on dynamically created commands.
+
+Try this, in the maxscript listener type:
+
+_maxscript code_
+```
+function foo = ( print "bar" )
+```
+
+and then in the Python logger type:
+
+_python code_
+```
+>>> mxs.foo()
+```
+
+You should see "bar" print in the Maxscript listener.  This is important to note - maxscript's `print` command will log to the listener, while python's `print` command will log to the logger.
+
+## Caveats ##
+
+So - what you have now is a Pythonic entrance to 3dsMax.
+
+Any code you see in the Maxscript docs can and will work in Python, however, some things about the _way_ maxscript was programmed make it not translate to Python properly.
+
+### Type Conversion ###
+
+One of the differences in Maxscript that does not translate to Python is the way that Maxscript works with type conversion.
+
+_maxscript code_
+```
+"1" as integer
+1
+```
+
+Invoking the `as` command will convert a one variable to another type.  In Python there is no `as` command, rather you actually `instantiate` a variable type with another.
+
+_python code_
+```
+>>> int("1")
+1
+```
+
+Base types (int,float,bool,list/array,string,etc.) will be automatically converted between the two languages.
+
+More complex variables (classes,modules,structs,etc.) will be wrapped in a language specific accessor.
+
+Something like a Maxscript Name however, will be automatically converted to a Python string.
+
+In Maxscript its easy to convert a string to a Name type:
+
+_maxscript code_
+```
+"testing" as name
+#testing
+```
+
+In Python however, this is not as easy to manage.  The convention `as` in Maxscript is a Parser level command - meaning there is no programmatic way to access it.
+
+Also, a Maxscript Name class does not support instantiation like Python would.
+
+_python code_
+```
+>>> mxs.Name("testing")
+ERROR
+```
+
+What we have done in these cases is provide a maxscript struct called the PyHelper struct.  It can be found at:
+
+```
+MAX_PATH/scripts/startup/init_pyhelper.ms
+```
+
+This provides utility methods to maxscript that can be invoked in Python to get around some of Maxscripts quirks.  The above problem would then be solved by writing:
+
+_python code_
+```
+>>> mxs.pyhelper.namify("testing")
+#testing
+```
+
+### Nested Parameters ###
+
+There is another concept that defies common programmatic syntax, and this was found buried in the Maxscript SDK called `nested parameters`.
+
+This is essentially a programmatic shortcut written directly into the Maxscript language.
+
+For instance, if you were to do:
+
+_maxscript code_
+```
+>>> s = Sphere()
+>>> s.position
+[0,0,0]
+>>> s.position.controller
+Controller
+```
+
+There would be no problem.
+
+However, if you were to do:
+
+_maxscript code_
+```
+>>> s = Sphere()
+>>> pos = s.position
+>>> pos.controller
+ERROR
+```
+
+You would run into an error.  Logically, this is not intuitive.  In most programming syntaxes, the line `s.position.controller` implies that `controller` is a property of `s.position`.
+
+In Maxscript, this is not actually the case however.  Instead, Maxscript implemented a concept called `nested parameters`, by which they register the property `position.controller` to the `Sphere` object.
+
+So, how does this relate to Python?
+
+The way we have implemented the Python code, is that it accesses properties in a standard programmatic fashion.  Meaning when you access `s.position`, you have already interpreted the property of the `Sphere` instance.  If you were then to try to access the `controller` parameter, the code would fail, as `controller` is not a property of `s.position`.
+
+The bad news is that there is nothing in the documentation that will aide you in finding these cases.  The good news is there is always an alternative way to access the information.
+
+Instead of calling:
+
+_maxscript code_
+```
+s.position.controller
+```
+
+You can call:
+
+_maxscript code_
+```
+getPropertyController s.controller "position"
+```
+
+So, Python's equivalent would be:
+
+_python code_
+```
+>>> mxs.getPropertyController( s.controller, "position" )
+```
+
+It may not be that intuitive...but it works.
+
+We're actually in the process of abstracting this entire system - not just for 3dsMax but for all 3d Applications.  For more information about that, look at the [blur3d](blur3d.md) system.
+
+### Commands with spaces ###
+
+Commands like "at time" do not translate to python. We have made a wrapper for this function in Py3dsMax.AtTime
+
+```
+from Py3dsMax import AtTime
+at = AtTime()
+at(10)
+# All commands run now will return results at frame 10
+at(20)
+# All commands run now will return results at frame 20
+del(at) # remove the at time functionality. As long as the at object exists it will be applied.
+```
+
+This system will probably be replaced by using python's with call, but we haven't had time to implement it yet.
+
+## PyQt ##
+
+As you saw in the [PyQt tutorial](PyQt.md), you can use the Blur IDE to generate Tools.
+
+If you run your Treegrunt in 3dsMax (`MainMenu >> Python >> Treegrunt`), you'll be able to find your SampleTool available to you.
+
+This is becuase when you ran the tutorial, you registered the Tool to the Studiomax Application.

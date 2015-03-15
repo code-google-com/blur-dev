@@ -1,0 +1,18 @@
+# Release Notes #
+
+This page contains a quick summary of changes that have happened between releases.
+
+
+
+
+&lt;hr/&gt;
+
+
+
+## Version 1.01 ##
+
+  * Upgrades to the Blurdev IDE - the initial release contained a slightly older version than what was latest.
+
+## Version 1.00 ##
+
+  * Initial version of the BlurOffline code released
